@@ -1,0 +1,30 @@
+# Study the interview Questions Flow
+ - JS, Es6
+ - Observables
+ - Angular
+ - Vue
+ - React
+ - HTML5
+ - CSS, SCSS
+ - PHP
+ - PYTHON
+ - MYSQL
+ - Redis
+ - Mongo
+
+
+# Install Softwares
+
+ - Beyond Compare
+ - Sublime
+ - Visual Studio Code Editor
+ - Windows Terminal
+ - nodejs
+ - mysql workbench
+ - mysql
+ - git
+ - tortisesvn
+ - pointer focus
+ - BurpSuite
+ - Postman
+ - Mozilla
