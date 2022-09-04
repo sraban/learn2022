@@ -1,0 +1,12 @@
+{
+  "name": "react-app-toolchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/adebiyial/react-app-toolchain.git",
+  "author": "adebiyi adedotun",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

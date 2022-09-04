@@ -1,7 +1,7 @@
 node -v
 npm -v
-sudo npm cache verify
-sudo npm cache clean
+$npm cache verify
+$npm cache clean
 
 1. npm list -g --depth=0
 2. webpack-dev-server ------------  {inline: true,}
@@ -30,7 +30,17 @@ sudo npm cache clean
 25. 
 
 #ToolChain
+https://www.npmjs.com/package/@ebsolutions/generate-react-templates
 https://blog.logrocket.com/creating-a-react-app-toolchain-from-scratch/
+
+npm i react react-dom
+npm i parcel-bundler --save-dev
+npm i prettier --save-dev
+npm i eslint babel-eslint eslint-plugin-react-hooks eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react --save-dev
+npm lint
+npm i styled-components --save-dev
+npm i prop-types --save-dev
+
 
 
 #Create Project
