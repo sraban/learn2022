@@ -1,0 +1,209 @@
+node -v
+npm -v
+sudo npm cache verify
+sudo npm cache clean
+
+1. npm list -g --depth=0
+2. webpack-dev-server ------------  {inline: true,}
+3. React Developer Chrome Extenion, React-detector Extension {  outline react components on the page }
+4. CDN Link test npm packgist    react.js, react-dom.js
+5. Es5, ES6, ES7
+6. https://kangax.github.io/compat-table/es6/
+7. code ./
+8. VS Code Snippets Extension --- ES7 React/Redux/GraphQL/React Native/JS Snippet
+9. node node_modules/babel-cli/bin/babel.js --presets { es2015, react --watch src --out-dir dist }
+10. 
+11. 
+12. 
+13. npx create-react-app Sraban  ||||   npm init react-app <react-app-name>
+14. npm start  \\\\ set HTTPS=true && npm start
+15. npm install redux react-redux --save
+16. npm install uuid --save
+17. npm install react-transition-group --save
+18. npm install --save @testing-library/react @testing-library/jest-dom
+19. npm test
+20. npm install jest -g
+21. $jest ----- in root of the project
+22. $create-react-app my-app --template typescript
+23. $npm run build  ////// $npm run build -- --profile
+24. $npm install -g server ---------- $serve -s build
+25. 
+
+#ToolChain
+https://blog.logrocket.com/creating-a-react-app-toolchain-from-scratch/
+
+
+#Create Project
+$npm install serve -g  ----- [ serve . ]
+$npm install babel-cli@6 babel-preset-react-app@3 -g
+$npm install -g create-react-app
+$npm install react-scripts@latest
+$
+$
+$npm init -y
+$npm install react@^17.0.0 react-dom@^17.0.0 --save
+$npm install @babel/preset-env @babel/preset-react @babel/core @babel/plugin-proposal-class-properties -D
+$npm i -D rollup postcss@8.1 @rollup/plugin-babel 
+@rollup/plugin-commonjs @rollup/plugin-node-resolve 
+@rollup/plugin-replace rollup-plugin-livereload 
+rollup-plugin-postcss rollup-plugin-serve postcss@8.1 
+postcss-modules@4 rollup-plugin-postcss
+
+$npm i regenerator-runtime core-js
+$npm start
+$npm install -g parcel-bundler
+$
+$
+- React.createElement
+- React.component
+- ReactDOM.render
+- useState(), useEffect()
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+.......UI to create project like vue-ui
+##############################################################################
+References
+• https://reactjs.org/
+• https://babeljs.io/
+• https://webpack.js.org/concepts
+
+References
+• https://reactjs.org/docs/introducing-jsx.html
+• http://blog.tamizhvendan.in/blog/2015/11/23/a-beginner-guide-to-setup-react-dot-js-environment-using-babel-6-and-webpack/
+
+References
+• https://reactjs.org/docs/introducing-jsx.html
+• https://reactjs.org/docs/jsx-in-depth.html
+• https://www.reactenlightenment.com/react-jsx/5.1.html
+• http://sindr-yet.com/zcvisitor/a3900495-2b86-11ed-8d38-0a91e53f8295/72092e88-2c53-401c-b988-51ef43ce1034?campaignid=593ab8e0-23ca-11ed-9a6c-12beee04f19b
+
+References
+• https://reactjs.org/docs/components-and-props.html
+• https://reactjs.org/docs/state-and-lifecycle.html
+• https://www.tutorialspoint.com/reactjs/reactjs_component_life_cycle.htm
+• https://www.codecademy.com/articles/react-virtual-dom
+• https://reactjs.org/docs/handling-events.html
+• https://reactjs.org/docs/composition-vs-inheritance.html
+• https://www.javascriptstuff.com/component-communication
+
+References
+• http://jkaufman.io/reusable-react-components/
+• https://shripadk.github.io/react/docs/clone-with-props.html
+• https://www.sitepoint.com/work-with-forms-in-react/
+• https://reactjs.org/docs/forms.html
+• https://reactjs.org/docs/uncontrolled-components.html
+• https://ultimatecourses.com/blog/stateful-stateless-components
+• https://www.bennadel.com/blog/2916-attaching-dynamic-event-handlers-to-proxied-child-elements-in-reactjs.htm
+
+References
+• https://blog.pshrmn.com/simple-react-router-v4-tutorial/
+• https://reacttraining.com/react-router/web/guides/server-rendering/adding-app-specific-context-information
+• https://www.npmjs.com/package/react-router-server#react-router-usage
+
+References
+• https://medium.com/hacking-and-gonzo/flux-vs-mvc-design-patterns-57b28c0f71b7
+• https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture
+• https://code-cartoons.com/a-cartoon-guide-to-flux-6157355ab207
+• https://www.freecodecamp.org/news/an-introduction-to-the-flux-architectural-pattern-674ea74775c9/
+
+References
+http://redux.js.org/
+
+References
+• https://jestjs.io/
+• https://flaviocopes.com/jest/
+
+References
+Material-UI
+https://mui.com/
+• Material-UI Installation
+• Material-UI along with React.js
+
+$npm install @material-ui/core --save
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+$npm install @material-ui/icons --save
+
+References React JS
+https://egghead.io/
+https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
+https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
+https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
+https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
+
+############### React Component Lifecycle ###################
+- defaultProps
+- displayName
+- props
+- state
+
+# Mounting
+  - constructor
+  - static getDerivedStateFromProps
+  - render
+  - componentDidMount
+
+# Updating
+  - static getDerivedStateFromProps
+  - shouldComonentUpdate
+  - render
+  - getSnapshotBeforeUpdate
+  - componentDidUpdate
+
+
+# Unmounting
+  - componentWillUnmount()
+
+
+  - setState()
+  - forceUpdate()
+
+
+###################### React CDN #############################
+https://www.copycat.dev/blog/reactjs-cdn/
+https://reactjs.org/docs/cdn-links.html
+https://github.com/iamshaunjp/react-redux-complete-playlist/tree/lesson-15
+
+
+
+###################### Small Proeject Task in React #############################
+
+1. Withouting routing a project with 10 componets
+   - Componet communication
+   - Event hubs
+   - *componet life cycles
+   - *directive cycle
+   - build
+   - Testing using Jest
+   - serverside
+   - webpack confiuration - Proxy Api, bundler size
+   - Form Validation
+   - Bootstrap SCSS
+   - SCSS implemetation
+   - muliptle pages for iframe
+   - profiling / optimizing / sourceMapper
+
+
+2. With routing in lazy loading
+  - Mulitple pages routing example
+  - Forms in every page
+  - Communication Component
+  - Event Hub commincation
+  - Interceptor
+  - Routing Guards
+  - axios for calling the API
+  - Server Side Rendering
+  
+
+3. 
+
+
+
+
