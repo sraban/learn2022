@@ -46,7 +46,7 @@
 -------------------------------------
 - @Team - comunicated
 - Normal DataTable for fecthing the records
-- 
+- DataTable implementation for React
 
 
 
