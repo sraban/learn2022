@@ -29,6 +29,7 @@ $npm cache clean
 24. $npm install -g server ---------- $serve -s build
 25. 
 
+https://docs.npmjs.com/adding-dist-tags-to-packages
 #ToolChain
 https://www.npmjs.com/package/@ebsolutions/generate-react-templates
 https://blog.logrocket.com/creating-a-react-app-toolchain-from-scratch/
@@ -181,6 +182,47 @@ https://www.copycat.dev/blog/reactjs-cdn/
 https://reactjs.org/docs/cdn-links.html
 https://github.com/iamshaunjp/react-redux-complete-playlist/tree/lesson-15
 
+###################### React Functional Approach ################################
+https://ordinarycoders.com/blog/article/react-functional-components-state-props
+@State:-
+[state, setState] = useState(inital)
+onClick = { ()=> setState({modifyState}) }
+
+[stateMulti, dispatchAction] = useReducer(reduceFn, initalStateMulti)
+reduceFn = (state, action) => { return modifyState; }
+onClick = { ()=> dispatchAction({'type':'add'}) }
+
+@Lifecycle:-
+mounting, updating, and unmounting
+useEffect(fn), useEffect(fn,[a,b,c]), useEffect(() => fn, [])
+
+@EventBus for receiving data in a emitted callback
+
+@Generate a functional component using CLI
+
+
+React.memo(EmployeeList);
+import { useCallback } from 'react';
+const onItemClick = useCallback(event => {},[])
+
+import { pure } from 'recompose'; 
+export default pure(Component);
+
+@focus, test selection, media playback, triggering mandatory animations, or integrating with the third-party DOM library
+const inputEl = useRef(null);  
+<input ref={inputEl} type="text" />
+
+@prop validation
+import PropTypes from 'prop-types';
+
+ReactComponent.propTypes = {
+    name: PropTypes.string.isRequired,
+}
+
+
+import { useHistory, useParams } from "react-router";
+useHistory() , useParams()
+https://www.knowledgehut.com/blog/web-development/react-functional-components
 
 
 ###################### Small Proeject Task in React #############################

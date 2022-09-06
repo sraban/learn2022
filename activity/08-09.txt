@@ -33,16 +33,20 @@
 
 #05-09-2022
 -------------------------------------
-- 
-- 
-- 
-- 
-
-
+- @asked - the documnet for the project, working on a table view - don't have the access to the doc
+- Woked from office on swagger - contact merger API - 8hr 
+- @Studied - React function based componet 
+- @Studied - React form handling using functional component
+- @studied - debugging
+- @studied - observing the state changes variable
+- @ - event comunnication
+- generate functional componet
 
 #06-09-2022
 -------------------------------------
-
+- @Team - comunicated
+- Normal DataTable for fecthing the records
+- 
 
 
 
