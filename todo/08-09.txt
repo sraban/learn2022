@@ -40,3 +40,11 @@
 # Testing
 - Using Cypress to Write Tests for a React Application
 - 
+
+
+# Docker
+- https://www.youtube.com/watch?v=3c-iBn73dDE
+
+
+
+# React Profiling

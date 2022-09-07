@@ -46,12 +46,22 @@
 -------------------------------------
 - @Team - comunicated
 - Normal DataTable for fecthing the records
-- DataTable implementation for React
+- DataTable implementation for React - Completed Request Page
+- Udemy devops training video
 
 
 
 #07-09-2022
 -------------------------------------
+- Azure cloud devops clarification
+- Udemy devops training video
+- Build and Release Pipline for react
+
+- Udemy devops training
+- Azure Cloud must have the tools [Kubernate, Terafounds] creates images(OS)
+- Build Package Path [ config, sqlfiles, codes(UI+backend) ] when release happens
+- 
+
 
 
 
