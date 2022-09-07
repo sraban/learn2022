@@ -1,0 +1,28 @@
+$npm install -g generate-react-cli
+$npx generate-react-cli component Box
+$npx generate-react-cli component Box --withTest=true
+$npx generate-react-cli component HomePage --type=page
+$npx generate-react-cli component BoxLayout --type=layout
+https://www.npmjs.com/package/generate-react-cli
+
+
+$npx create-react-app my-project
+$npm i sass --save-dev    (Keep in mind that node-sass in deprecated and we are using Dart Sass instead of it)
+--save-dev    (at build time package will work)
+
+import in your component: import example from './example.scss'
+https://www.robinwieruch.de/create-react-app-with-sass-support/
+
+---------------------------------------
+in config/webpack.config.prod.js
+in config/webpack.config.dev.js
+{
+  test: /\.scss$/,
+
+------------------------------------------
+npm run eject
+npm run audit
+
+------------------------------------------
+https://www.w3schools.com/react/react_memo.asp
+https://medium.com/front-end-weekly/how-to-add-sass-or-scss-to-create-react-app-c303dae4b5bc

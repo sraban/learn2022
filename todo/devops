@@ -1,10 +1,15 @@
+https://www.airpair.com/docker/posts/8-proven-real-world-ways-to-use-docker
+
 ##---- Devops Questions ----##
 ------------------------------
 
 # 06/09/2022 - Tuesday
-
-
-
+Q. What is the purpose of Docker Images in various systems/clouds in terms of developer.
+Q. What is the use cases for docker images ? one live example.
+E. help you achieve zero change in application runtime environments across dev through production.
+Q. How the storage issues are handled if it comes in case of file and database docker-images.
+Q. How to get the logs that due to docker-container instability, system is slow or not accessible.
+Q. 
 
 
 # 07/09/2022 - Wednesday

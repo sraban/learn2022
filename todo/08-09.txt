@@ -35,3 +35,8 @@
  - Two years worked from Home was able to focus more on work, do the job comfortably
  - Update twice to the team in morning and evening
  - 
+
+
+# Testing
+- Using Cypress to Write Tests for a React Application
+- 

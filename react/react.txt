@@ -2,6 +2,15 @@ node -v
 npm -v
 $npm cache verify
 $npm cache clean
+$npm root -g / npm config get prefix / npm bin -g
+$where npm
+$which npm
+$npm list -g | head -1
+$npm list -g | more
+$npm list -g > ~/Desktop/npmfiles.txt
+$npm config edit
+$npm bin
+
 
 1. npm list -g --depth=0
 2. webpack-dev-server ------------  {inline: true,}
