@@ -8,37 +8,75 @@ Q. What is the purpose of Docker Images in various systems/clouds in terms of de
 Q. What is the use cases for docker images ? one live example.
 E. help you achieve zero change in application runtime environments across dev through production.
 Q. How the storage issues are handled if it comes in case of file and database docker-images.
-Q. Docker Level erros - How to get the logs that due to docker-container instability, system is slow or not accessible.
+Q. Docker Level errors - How to get the logs that due to docker-container instability, system is slow or not accessible.
+  - what are the errors available all availble error codes
+  - like if volume alloted the memory
+  - security
+  - 
 Q. 
 
 
 # 07/09/2022 - Wednesday
+
 ~~~ Automated Build and Release Create React App -Swagger
 --- https://www.youtube.com/watch?v=QbmLxfRCt38
 --- Azure DevOps & Create React App : Build/Release Pipeline
 
 1. push repository to azureDevops using ssh
+   
    $git init
    $git add .
-   $git remote add origin https://......
-   $
+   $git commit -m "initial commit"
+   
+
+   -------------------------------------
+   https://srabanpahadasingh@dev.azure.com/srabanpahadasingh/swagger/_git/swagger
+   $git remote add origin https://srabanpahadasingh@dev.azure.com/srabanpahadasingh/swagger/_git/swagger
+   $git push -u origin --all
+   -------------------------------------
+
+   create a pipeline -- [azure-pipelines.yml]
+     - select [azure repos git yml]
+     - select project
+     - select application [nodejs with react]
+     - review pipeline yml file --- modify command to give src and build path
+     - Archieve Files for generating the artifact zip {artficat created in staging directory}
+     - publish build artifact -- see artifact staging directory
+     - 
+
+   Release pipeline
+   	- Azure app service deployment
+   	- Choose env for Testing / Exp / Prod / Dev
+   	- Add an artifact
+   	- enable the contnious deployment trigger checkbox + Add branch[master] filter
+   	- Azure App Service Details: For Domain URL Path 
+   	    - subscription to check
+   	    - service name
 
 2. Go to release pipeline in azure devops
-	- run a application from url - default hoat by azure pipeline
+	- run a application from url - default host by azure pipeline
+	- 
+	- 
 	- 
 3. 
 
 4. 
 
 5. 
-
-
+=======
+- Build and pipeline for React : video classes
+- Docker classes : udemy
+- Confirm modal : bootstrap swagger
+- 
 
 
 
 # 08/09/2022 - Thursday
 
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:port
 
+git config --global --unset http.proxy
+git config --global --unset https.proxy
 
 
 
