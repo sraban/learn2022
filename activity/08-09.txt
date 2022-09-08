@@ -69,8 +69,15 @@
 
 #08-09-2022
 -------------------------------------
-
-
+- Azure Repo Mangement with pipeline study from udemy
+    - azure-pipeline.yml created 
+    - $git push failed due to no access
+    - "$npm run build" : failed in pipeline with a error log path
+    - artifact.zip is archieved
+    - publishing the artifact to service - not done
+    - any [artifact.zip] + any [Test/Dev/Stage/Exp/Prod Env]  ---- not done due to subscription of service required
+    - no web server [pm2 for nodejs] available installation done due to [hosting service subscription not available]
+    - 
 
 
 #09-09-2022

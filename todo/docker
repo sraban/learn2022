@@ -1,0 +1,165 @@
+
+
+----------------------------------------------------------------------------------------------
+
+https://www.airpair.com/docker/posts/8-proven-real-world-ways-to-use-docker
+https://www.udemy.com/course/docker-tutorial-for-devops-run-docker-containers
+
+----------------------------------------------------------------------------------------------
+
+https://www.level-up.one/deep-dive-into-docker-logging/
+
+git clone -b v0.1 https://github.com/jleetutorial/dockerapp.git
+
+https://www.level-up.one/things-watch-working-docker-containers/
+
+https://docs.docker.com/engine/swarm/#create-a-swarm-cluster
+
+---------------------------------------------------------------------------------------------
+#### Text Direction: Introduction to Continuous Integration
+
+URL of the Github account to fork:
+
+	https://github.com/jleetutorial/dockerapp
+
+Checking for existing SSH keys:
+
+	https://help.github.com/articles/checking-for-existing-ssh-keys/
+
+Generating a new SSH key and adding it to the ssh-agent:
+
+	https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+Adding a new SSH key to your GitHub account:
+
+	https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+
+---------------------------------------------------------------------------------------------
+
+#### Trouble Shooting: Push Docker Images to Docker Hub
+
+
+If you are able to run docker login , but encountered the following unauthorized: authentication required error while running docker push  
+
+[root@terry ~]# docker login --username=1972
+Password: 
+Login Succeeded
+[root@terry ~]# 
+[root@terry ~]# docker push asiye_yigit_tutorial/debian:1.01
+The push refers to a repository [docker.io/asiye_yigit_tutorial/debian]
+29303f03b719: Preparing 
+77a77cd4826d: Preparing 
+fe4c16cbf7a4: Preparing 
+unauthorized: authentication require
+Solution:
+
+Creating the repository on Docker hub before running docker push.
+
+Take a look at 
+
+http://stackoverflow.com/questions/36663742/docker-unauthorized-authentication-required-upon-push-with-successful-login
+
+
+------------------------------------------------------------------------------
+
+Text Direction: Deploy Docker Application to the Cloud with Docker Machine
+Docker Machine Create command
+
+docker-machine create --driver digitalocean --digitalocean-access-token <xxxxx> docker-app-machine
+
+
+------------------------------------------------------------------------------
+
+Extra learning Material: Dockers Monitoring Tools
+We didn't cover much about Docker monitoring strategy in this course. However, monitoring tools are handy option for a smooth functioning of your ops. If properly configured, logs and visual data can make a huge difference during troubleshooting.
+We have written a post to summarize some of the popular Docker monitoring tools that you can choose for your environment depending upon your needs.
+
+Check this up if you are interested.
+
+https://www.level-up.one/dockers-monitoring-tools/
+
+
+------------------------------------------------------------------------------
+
+What is new in Docker 17.06
+Docker 17.06
+Docker 17.06 (stable) was out at June 2017!  Docker moves very fast, with an edge channel released every month and a stable release every 3 months. 
+
+Watch a Video of Mano giving an overview of the new features in Docker 17.06 Community Edition.
+
+For a detailed list of changes, look through the Docker CE release notes on GitHub.
+
+
+------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------
+Docker's Native support for Kubernetes
+At DockerCon 2017 in Copenhagen, Docker announced that it's adding support to run applications using Docker’s Swarm orchestrator with Kubernetes on the same computer cluster itself!
+
+Kubernetes is an container orchestration platform which we didn't cover much in this course(We are going to have a course about Kubernetes soon!) . You can think of Kubernetes as a Docker Swarm alternative, but Kubernetes is more production ready than Docker Swarm.
+
+This is an exiting news! The introduction of Docker's native support for Kubernetes gives us the ability to make an orchestration choice with the added security, management and end-to-end Docker experience that we have expected for so long!
+
+Want to read more? Check the news out!
+
+https://www.level-up.one/dockers-native-support-to-kubernetes-for-a-containerization-revolution/
+
+------------------------------------------------------------------------------
+Text Lecture: Future Learning
+Get a FREE copy of our DevOps book
+https://www.level-up.one/devops-pdf-book/
+
+Join our DevOps Facebook Group 
+https://www.facebook.com/groups/1911219079195863/
+
+------------------------------------------------------------------------------
+
+Coupons to Our Other Courses
+
+We are happy to offer a $15 discount to our existing students for all our other Udemy courses.
+
+The Complete Jenkins Course For Developers and DevOps($15, Udemy Best Seller in Jenkins category)
+
+IntelliJ IDEA Tricks to Boost Productivity for Java Devs ($15)
+
+Apache Spark with Java - Mastering Big Data! ($15, Udemy Best Seller in Apache Spark Category)
+
+Apache Spark with Scala - Learn Spark from a Big Data Guru($15, Udemy Best Seller in Apache Spark Category)
+
+Apache Spark with Python - Big Data with PySpark and Spark($15, Udemy Best Seller in Apache Spark Category)
+
+Learn Kubernetes from a DevOps guru (Kubernetes + Docker)
+
+If you want more discounts, you can join my mailing list and you will get any of these courses with only $10 (more than 90% discount)
+
+http://www.level-up.one/join/
+
+As always, thanks for having us in your learning journey!
+
+James and Tao
+
+
+
+
+
+------------------------------------------------------------------------------
+
+Text Direction: Deploy Docker Application to the Cloud with Docker Machine
+Docker Machine Create command
+
+$docker-machine create --driver digitalocean --digitalocean-access-token <xxxxx> docker-app-machine
+
+------------------------------------------------------------------------------
+https://level-up.one/dockers-monitoring-tools/
+https://www.level-up.one/dockers-native-support-to-kubernetes-for-a-containerization-revolution/
+------------------------------------------------------------------------------
+https://github.com/docker/docker-ce/releases
+
+
+------------------------------------------------------------------------------
+#dockercon
+https://www.level-up.one/devops-pdf-book/
+https://www.facebook.com/groups/1911219079195863/
+http://www.level-up.one/join/

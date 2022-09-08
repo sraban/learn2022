@@ -10,8 +10,8 @@ E. help you achieve zero change in application runtime environments across dev t
 Q. How the storage issues are handled if it comes in case of file and database docker-images.
 Q. Docker Level errors - How to get the logs that due to docker-container instability, system is slow or not accessible.
   - what are the errors available all availble error codes
-  - like if volume alloted the memory
-  - security
+  - like if volume alloted the storage
+  - security concerns with containers
   - 
 Q. 
 
