@@ -22,6 +22,8 @@ in config/webpack.config.dev.js
 ------------------------------------------
 npm run eject
 npm run audit
+npm run audit --fix --force
+
 
 ------------------------------------------
 https://www.w3schools.com/react/react_memo.asp

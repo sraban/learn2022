@@ -44,6 +44,9 @@
 
 # Docker
 - https://www.youtube.com/watch?v=3c-iBn73dDE
+- https://level-up.one/things-watch-working-docker-containers/
+- https://level-up.one/deep-dive-into-docker-logging/
+- 
 
 
 
