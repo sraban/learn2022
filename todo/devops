@@ -13,7 +13,24 @@ Q.
 
 
 # 07/09/2022 - Wednesday
+~~~ Automated Build and Release Create React App -Swagger
+--- https://www.youtube.com/watch?v=QbmLxfRCt38
+--- Azure DevOps & Create React App : Build/Release Pipeline
 
+1. push repository to azureDevops using ssh
+   $git init
+   $git add .
+   $git remote add origin https://......
+   $
+
+2. Go to release pipeline in azure devops
+	- run a application from url - default hoat by azure pipeline
+	- 
+3. 
+
+4. 
+
+5. 
 
 
 
