@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.scss';
+
+import {
+  BrowserRouter as Router,
+  Routes, Route
+} from "react-router-dom";
+
+import Ticket from './pages/ticket/ticket.js';
+import Report from './pages/report/report.js';
+import Dashboard from './pages/dashboard/dashboard.js';
+import Home from './pages/home/home.js';
+import Admin from './pages/admin/admin.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        { logo }
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />}> { /* Layout Page */ }
+            <Route index element={<Report />} />
+            <Route path="admin" element={<Admin />} />
+            <Route path="ticket" element={<Ticket />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </Router>
   );
 }
 
 export default App;
+
+function NoPage() {
+  return (
+    <div>
+      <h2>404..............</h2>
+    </div>
+  );
+}
