@@ -69,15 +69,19 @@
 
 #08-09-2022
 -------------------------------------
-
+- Udemy Azure Devops Classes
+- Completed Dummy Azure Build and Release for React
+- 
 
 
 
 #09-09-2022
 -------------------------------------
-
-
-
+- React Test coverage support to Mahentesh
+- BGV File Sharing
+- React Test coverage support to Mahentesh
+- BGV File Sharing
+- 
 
 
 #12-09-2022
