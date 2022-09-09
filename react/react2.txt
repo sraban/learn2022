@@ -24,12 +24,16 @@ npm run eject
 npm run audit
 npm run audit --fix --force
 
-
+npm run test -- --coverage --no-cache
 ------------------------------------------
 https://www.w3schools.com/react/react_memo.asp
 https://medium.com/front-end-weekly/how-to-add-sass-or-scss-to-create-react-app-c303dae4b5bc
 
 
+@Test - https://www.codegrip.tech/productivity/everything-you-need-to-know-about-code-coverage/
+
+
+@Structure - https://medium.com/geekculture/react-js-architecture-features-folder-structure-design-pattern-70b7b9103f22
 -------------------------------------------
 
 

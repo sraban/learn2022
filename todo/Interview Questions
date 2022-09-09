@@ -1,0 +1,35 @@
+
+
+******************************************** GE - Interview ***************************************************
+
+1. Destructuring in JS
+2. About Project
+3. About setState
+4. About UseMemo
+5. what was the most used Hook?
+6. let a=["hi","hello", "good", "moring"] using map make data into UpperLetters(coding)
+7. coding question about filter method
+
+8. expect output from below code:
+
+var objInst = {a:4};
+var num = 1;
+
+function X(obj, n) {
+            obj.a = obj.a + 1;
+            obj.b = 2;
+
+n=n+1
+           
+}
+
+X(objInst, num);
+console.log(objInst, num)
+ 
+9. how to bind data in Vue Js
+
+
+10. About positions in css
+
+
+******************************************** ********************************************
