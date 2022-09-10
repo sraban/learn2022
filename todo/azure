@@ -1,11 +1,22 @@
 https://www.udemy.com/course/azure-devops-for-beginners
 ------------------------------------------------------------
 
+azure.microsoft.com
+dev.azure.com
 
-
+https://portal.azure.com/#create/Microsoft.WebSite
+https://appsraban.azurewebsites.net/
 ------------------------------------------------------------
-
-
+1. Login to portal.azure.com
+2. Take free trial a subscription and create one "App Service name" ex. appsraban --> appsraban.azurewebsites.net
+3. login devops into dev.azure.com
+4. create a src repo
+5. commit and merge code to repo
+7. run the pipeline
+    - create a build from pipeline, drop/artifact[n].zip is generated for every pipelince successful
+    - 
+6. release every time after a pipeline is successful
+   - deploy the artifact[n].zip to a new release version[n] 
 
 ------------------------------------------------------------
 
