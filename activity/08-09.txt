@@ -78,13 +78,20 @@
     - any [artifact.zip] + any [Test/Dev/Stage/Exp/Prod Env]  ---- not done due to subscription of service required
     - no web server [pm2 for nodejs] available installation done due to [hosting service subscription not available]
     - 
+=======
+- Udemy Azure Devops Classes
+- Completed Dummy Azure Build and Release for React
+- 
+
 
 
 #09-09-2022
 -------------------------------------
-
-
-
+- React Test coverage support to Mahentesh
+- BGV File Sharing
+- React Test coverage support to Mahentesh
+- BGV File Sharing
+- 
 
 
 #12-09-2022
