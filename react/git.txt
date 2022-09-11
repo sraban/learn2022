@@ -2,13 +2,68 @@ git config --global -e
 
 
 ----------------------------------------
+tree src //A //F
+
+tree -Exclude node_modules -Ascii > tree.txt
+tree /A | Where-Object {$_ -notlike "*node_modules"} > tree.txt
 
 
+
+tree /A /F | awk 'BEGIN{FS=OFS="."} {gsub(/./, " ", $1)} 1'
+tree | awk '{if(NR>1)print}'
+
+ls -lart | tail -n +2 #argument means starting with line 2
+ls -lart | sed "1 d"  #sed "1 d" means only print everything but first line.
+
+ls -lart | grep -v ^total # remove any lines that start with "total",  
+tree | grep -v ^total
+tree src //F //A | grep -i test  # only words
+ree src //F //A | grep -0 'test'
+tree src //F //A | grep -v test  # does not contain word
+tree src //F //A | grep -c test  # count line of matched words
+
+# grep Command
 ----------------------------------------
 
 
-----------------------------------------
 
+----------------------------------------
+https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
+https://levelup.gitconnected.com/confusing-terms-in-the-git-terminology-c7115d6febc7
+### Organisation Set UP in GIT Repo
+@Repo: https://github.com/sraban/test.git
+
+# Pradipta - Master ----- 
+1. @Company Owner of Repo - git clone https://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@github.com/ppradipta/test.git
+
+
+# Pradipta - Branch  ----- 
+1. @Company Owner of Repo - git clone https://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@github.com/ppradipta/test.git
+
+
+# sraban - branch  ----- 
+1. @Fork Repo --- git clone https://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@github.com/sraban/test.git
+
+
+# pahad - branch   ------ 
+1. @Fork Repo --- git clone https://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@github.com/pahadasingh/test.git
+2. @Company Repo --- git remote add upstream https://github.com/ppradipta/test.git
+2. git add .
+3. git commit -m "Done"
+4. git pull upstream main
+5. git push ----> to your repo with latest code
+6. ---------
+   Send the pull request url to Comany
+   Jenkins server will give you the output after static and vunerabiltiy check -- else if no error COMPANY will merge it
+
+7. If No Error Comapny from there git credential will merge it to orginal master --> will be avialble to every one.
+
+8. [keep the url and file path for DTS System to main the task/fix activity]
+ex.
+   https://github.com/ppradipta/test/pull/1
+   Files Changed:
+                 index.html
+                 index.js
 
 ----------------------------------------
 

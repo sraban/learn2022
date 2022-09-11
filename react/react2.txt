@@ -6,6 +6,18 @@ $npx generate-react-cli component BoxLayout --type=layout
 https://www.npmjs.com/package/generate-react-cli
 
 
+# Component Communication
+npx generate-react-cli component com/grandparent --withTest=false
+npx generate-react-cli component com/parent --withTest=false
+npx generate-react-cli component com/child --withTest=false
+npx generate-react-cli component com/grandchild --withTest=false
+
+# Common Service Commincation
+
+
+
+## Create Project ------------
+
 $npx create-react-app my-project
 $npm i sass --save-dev    (Keep in mind that node-sass in deprecated and we are using Dart Sass instead of it)
 --save-dev    (at build time package will work)
@@ -61,3 +73,30 @@ https://medium.com/front-end-weekly/how-to-add-sass-or-scss-to-create-react-app-
 "react-scripts": "5.0.1",
 "web-vitals": "^2.1.4",
 "xlsx": "^0.18.5"
+
+
+
+# Errors
+https://www.techiediaries.com/react-18-useeffect/#:~:text=If%20you%20have%20just%20made,upgraded%20to%20React%20version%2018.
+
+https://dev.to/nilanth/how-to-use-axios-in-an-optimized-and-scalable-way-with-react-518n
+
+--------jenkins azure react
+React-JS Code Coverage in Jenkins Server
+Jenkins Tutorial - Create a Pipeline Job to build Node.js and React Application using npm
+React Course - Deployment - CI / CD
+How to Configuring Jenkins Server using CI Pipeline - Azure DevOps Tutorials
+React, Vue, Angular on Linux Azure App Service Update
+Deploying React apps to Azure Web App with Azure DevOps
+Jenkins Tutorial - Build a Node JS and React Application using npm in a pipeline without Docker
+
+
+
+# Context API for data communication
+
+
+# Redux Saga
+
+npm i redux
+npm i react-redux
+npm i react-saga

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.scss';
 
 import {
@@ -12,7 +12,14 @@ import Dashboard from './pages/dashboard/dashboard.js';
 import Home from './pages/home/home.js';
 import Admin from './pages/admin/admin.js';
 
+
+
 function App() {
+
+  useEffect(() => {
+    // Start initaitng csrf Token
+  }, []);
+
   return (
       <Router>
         <Routes>

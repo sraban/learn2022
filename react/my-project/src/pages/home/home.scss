@@ -1,7 +1,88 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
 .home {
-	.navbar li{
-	  display: inline;
-	  padding:2px;
-	  border:1px solid grey;
+		
+	/* Style the header */
+	header {
+		height: 50px;
+		line-height: 50px;
+		text-align: left;
+		border-bottom: 1px solid #c0c0c0;
+		background-color: rgb(8, 27, 132);
+
+		a:visited, header a:link {
+			color: #fff;
+		}
+		.logo {
+			float: left;
+			color: #fff;
+			margin-left:5px;
+			margin-right: 50px;
+			display: inline;
+			// border:1px solid red;
+		}
+		.navbar {
+			float: left;
+			// border:1px solid red;
+			li {
+				display: inline;
+				padding:0px 5px;
+			}
+		}
+	}
+	
+
+	/* Create two columns/boxes that floats next to each other */
+	nav {
+		height: calc(100vh - 100px);
+		width: 10vw;
+		float: left;
+		background: #ccc;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 20px;
+		}
+	}
+
+	article {
+		height: calc(100vh - 100px);
+		width: calc(100vw - 10vw);
+		float: left;
+		background-color: #f1f1f1;
+
+		.outlet {
+			margin: 5px;
+		}
+	}
+
+	
+	/* Clear floats after the columns */
+	section::before, section::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	/* Style the footer */
+	footer {
+		background-color: #777;
+		height: 50px !important;
+		line-height: 50px !important;
+		text-align: center;
+		color: white;
+	}
+	
+	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+	@media (max-width: 600px) {
+		nav, article {
+		width: 100vw;
+		height: auto;
+		}
 	}
 }
