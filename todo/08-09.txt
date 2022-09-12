@@ -29,7 +29,7 @@
  - sqlYog
  - BurpSuite
  - Postman
-
+ - enable Hibernate
 
 # Communicating with Manager
 
