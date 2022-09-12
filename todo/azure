@@ -4,8 +4,10 @@ https://www.udemy.com/course/azure-devops-for-beginners
 azure.microsoft.com
 dev.azure.com
 
+
 https://portal.azure.com/#create/Microsoft.WebSite
 https://appsraban.azurewebsites.net/
+https://appsraban.scm.azurewebsites.net/DebugConsole
 ------------------------------------------------------------
 1. Login to portal.azure.com
 2. Take free trial a subscription and create one "App Service name" ex. appsraban --> appsraban.azurewebsites.net
@@ -19,12 +21,54 @@ https://appsraban.azurewebsites.net/
    - deploy the artifact[n].zip to a new release version[n] 
 
 ------------------------------------------------------------
+Youtube
+1. without Arichieve https://www.youtube.com/watch?v=Ny5vJRfQito
+2. Windows: https://www.youtube.com/watch?v=aMO-NQ1Xza0
+3. Linux: https://www.youtube.com/watch?v=HLhlKIIfaZs
+4. Release Variable:  https://www.youtube.com/watch?v=OFr6Vkw0mq8
+5. https://www.youtube.com/watch?v=xH5EY7FCFQw
 
+5. Jenkins
+   - https://www.youtube.com/watch?v=xH5EY7FCFQw
+   - https://www.youtube.com/watch?v=o3AOhXQ4Mnc
+   - https://www.youtube.com/watch?v=t_z0IwdAgYs
+   
+Youtube Search
+- build and release pipeline with jenkins sever azure devops
 
 
 ------------------------------------------------------------
+CI-CD STEPS
+1. azure devops repo setup
+2. azure app service in portal from a license using subscription
+3. Build pipeline -----CI
+   --- need to enable continious integration "trigger" after every modification in master branch
+   need to select a template which genearates a pipeline.yml file
+   project-repo-path need to add
+   project-repo-build-path need to add
+   - npm install
+   - npm build
+   - archieve zip it to a drop folder --- which can be downloaded
+   then run the build after template set up
+   - view every step must pass
 
+4. Create a release pipeline ----CD
+   - select a release template yml
+   - create one envirnemt [exp, test, development, prod]
+   - Configure the app service domain which is subscribe before from portal  to the env
+   - Link the build pipeline artifact(output.zip)  to the env
+   - Enable the continious deployment option to artifact after every every artifact generated
+   - 
 
+5. For Linux Server
+   - use nodejs servers
+   - use node pm2 for manging advance servers
+   - pm2 serve -s /home/site/wwwroot/ -no-daemon    #...... as a start up command
+   - 
+6. 
+7. 
+8. 
+9. 
 
 ------------------------------------------------------------
 

@@ -12,14 +12,32 @@ https://www.pluralsight.com/guides/how-to-communicate-between-independent-compon
 https://stackoverflow.com/questions/53329773/event-bus-in-react
 
 ----------------------------------
+# redux-saga
+
+https://www.blog.duomly.com/implement-redux-saga-with-reactjs-and-redux/
+
+Youtube  - Watched till before async call --Hindhi
+https://www.youtube.com/watch?v=MQVcgb2ImV0&list=PL8p2I9GklV44lOq17oCf9_f40oXPWvwyS&index=11
+
+1. static Data: https://github.com/anil-sidhu/react-redux-saga/blob/redux-toolkit/src/components/Header.js
+2. Asyn Data: 
+----------------------------------
+# Settting up Envirnment Variables
+  https://create-react-app.dev/docs/adding-custom-environment-variables
+
 
 ----------------------------------
+# FormLink, Form.Group, Form.Control
+
 
 ----------------------------------
-
+# Routing Middleware
+1. Route Level Guard middleware
+2. Function level Guard authenitcation
 ----------------------------------
 
-----------------------------------
+# Code Spliting - Loading routes based on demand
+https://create-react-app.dev/docs/code-splitting/
 
 ----------------------------------
 
