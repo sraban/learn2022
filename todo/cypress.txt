@@ -1,0 +1,45 @@
+# Admin Login
+Username: Subash.Kandangapurath
+Password: SuperFast23!
+--------------------------------------------------
+
+
+Cypress Connect Errors: https://stackoverflow.com/questions/71294032/cypress-econnreset
+NodeJS Errors: https://nodejs.org/api/errors.html
+
+$npx cypress run
+$npx cypress open
+$npx browserslist
+
+$node_modules/.bin/cypress open
+$node_modules/.bin/cypress run
+./node_modules/.bin/cypress run -- browser chrome
+
+npx cypress open --config defaultCommandTimeout=5000 --env staging=true
+
+
+---------------------------------------------
+ENV HTTPS_PROXY = https://qa3-curio.saal.ai
+
+-------------------------------
+cypress 3.4.1 and chrome 77, you can update and let me know the result.
+-------------------------------
+Just an FYI, I was able to figure out why my cypress pipeline was hanging. I had to do what @tilman suggested and pushed '--disable-dev-shm-usage' as a chrome option. This fixed that issue for me.
+
+-------------------------------
+
+okay, got it working with following config:
+environment: gitlab shared runner ci pipline
+image: cypress/browsers:node12.13.0-chrome78-ff70
+cypress command args: --browser chrome
+cypress.json: "video": false
+cypress/plugins/index.js:
+
+
+------------------------------
+npx cypress open
+
+------------------------------------------
+
+#### Javascript / Basics of React / HTML / CSS / Test cases
+

@@ -25,9 +25,10 @@
  - git
  - tortisesvn
  - pointer focus
+ - Mozilla
+ - sqlYog
  - BurpSuite
  - Postman
- - Mozilla
 
 
 # Communicating with Manager

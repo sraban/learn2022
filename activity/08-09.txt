@@ -96,7 +96,11 @@
 
 #12-09-2022
 -------------------------------------
-
+- CI & CD set up for react
+- 
+Q. What are the tools available in azure for static checks
+Q. Jenkins and its plugins from statrting client integrated
+Q. 
 
 
 #13-09-2022
