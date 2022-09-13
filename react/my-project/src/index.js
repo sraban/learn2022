@@ -11,6 +11,7 @@ import store from './redux/store';
 import { createBrowserHistory } from 'history';
 export const history = createBrowserHistory();
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} history={history}>
