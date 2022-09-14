@@ -14,13 +14,47 @@ Sraban - can you give ur Introduction / can you brief about background or profil
 - Testing/debugging  $$$$$
 - Framework  $$$$$
 
-# JS and JS Versions
+# JS and JS Versions - created by "Brendan Eich" in 1995 -https://www.interviewbit.com/javascript-interview-questions/
 $$$$$
-1. What are data types in js[primitive and not primitive]
+1. What are diff data types in js[primitive(single value) and not primitive(complex stucture)]
+   - Explain Hoisting
+5. declaring variables using var, let and const
+   - let, const [--> code understands more], var is for hoisting purpose
+   - global scope, function scope, block scope, can be reassigned
+   - statically typed or a dynamically typed
+   - Implicit Type Coercion (String, Boolean)
+   - Difference between “ == “ and “ === “
+   - NaN property in JavaScript
 2. Some of the strings and array functions in JS mostly used
+    - passed by value and passed by reference.
+    - Immediately Invoked Function / Self Invoking Functions
+    - strict mode in javascript
+    - Explain “this” keyword
+    - difference between exec () and test () methods 
+    - currying in JavaScript - multipy(1)(2)(3)
+    - Scope and Scope Chain in javascript.
+    - Explain Closures
+    - memoization in Javascript
+    - function recursion
+3. constructor function in javascript
+   - DOM
+   - BOM
+   - prototype design pattern - object template replaced
+4. rest parameter and spread operator
+   - 
+5. promises in javascript and catching() error from the chain
+   - Pending, Fulfilled ,Rejected ,Settled 
+6. generator functions - no mutiple return , multiple yeild can keep in memory with pointer, last value
+7. WeakSet,WeakMap in javascript new Set([]), new Map()
+8. Object Destructuring
+9. Temporal Dead Zone
+   x = 10; let/const x;
+10. JavaScript Design Patterns
+11. Async/Await and Generators
+12. deferred scripts in JavaScript?
+
 3. How to freeze a variable freeze(), entries(), fromEntreies(), ... 
 4. Diff between slice(), splice()
-5. let, const [--> code understands more], var is for hoisting purpose
 Q. NaN === NaN
 Q. Star Triangle, Diamond
 Q. Count the duplicate occurence of element in array
@@ -47,7 +81,7 @@ https://www.geeksforgeeks.org/javascript-generator/
 
 $$$$$
 1. What is inheritance how to write in javascript class
-2. Prototypical Chaining and inhertiance
+2. Object prototypes , Prototypical inhertiance
 3. Different ways to create object in Javascript
 4. Deep Clone -- structuredClone(), Shallow clone -- Object.assign()
 5. JSON.stringfy(), parseJSON()
@@ -63,7 +97,7 @@ $$$$$
 5. indexOf(), endsWith(), includes()
 Q. Math.max([...]), Date()
 Q. can you return inside try() or catch() ?
-Q. 
+Q. factorial of a number using recursion
 
 $$$$$
 1. Event Loop, call stack, callback Queue, Event table, mapping, Microtask 
@@ -85,12 +119,41 @@ $$$$$
 ----------------------------------------------------------------
 # CSS
 $$$$$
-1. Box Model
-2. Flex Model
-3. Position Attributes(Fixed,Sticky,relative,absolute), transalte3D()
+0. CSS stands for ? - advantages of using CSS
+   - include CSS in the webpage
+   - different types of Selectors
+   - CSS Preprocessor[sass, less, stylus] - variables, functions, mixins, code nesting, and inheritance
+   - VH/VW
+   - reset vs normalize CSS
+   - inline, inline-block, and block
+   - Pseudo elements[::before, after, :fisrt-letter, first-line, selection] and Pseudo classe[:link,:hover]
+   - pecify units in the CSS
+   - margin-top or margin-bottom have an effect on inline element
+   - adaptive design and responsive design?
+   - border-box different from content-box?
+   - opacity specified in CSS3?
+   - should we use float property in CSS?
+   - z-index, how does it function
+   - properties of flexbox
+   - cascading in CSS
+   - :root pseudo-class refer to
+   -  grid system
+   - What does Accessibility (a11y) mean
+   - CSS grid vs flexbox
+   - nth-child(1,2,3,), nth-of-type(even/odd) 
+   - importance of CSS Sprites
+   - understand by tweening in CSS
+   
+1. Box Model - properties
+2. Flex Model- 
+3. Position Attributes(Fixed,Sticky,relative,absolute), advantages of using translate3D() instead of absolute position -
+   - Translate() does not cause the browser to trigger repaint, only act on compositor
 4. Display: Attributes
 5. how many ways can we specify the CSS styles
-Q. Using Flex model create 3 columns , keep the data at center and middle with complete width 
+6. What is specificity? How to calculate specificity?
+Q. Order of css execution
+Q. Using Flex model create 3 columns, Keep the data at center and middle with complete width 
+Q. select the second last element using css
 
 $$$$$
 1. transform: rotate(1turn), 
@@ -129,6 +192,19 @@ Q. transition: width 2s;  when state changes like hovering - width chane with tr
 ----------------------------------------------------------------
 # HTML5
 $$$$$
+0. What is HTML means?
+   - Tags? 
+   - types of heading does an HTML
+   - nested webpage in HTML
+   - layout of HTML
+   - marquee
+   - empty elements - <br>, <hr>
+   - entities in HTML -- reserved characters in html
+   - URL encoded in HTML -- To convert non-ASCII characters into a ASCII format
+   - canvas element in HTML5, SVG
+   - progress and meter tag
+   - figcaption tag in HTML 5
+0. metadata, docttype declaration, <!DOCTYPE html> will HTML 5 work ?
 1. Semantic elements, <dailog open>, <aside>, <section>, <article>, <nav>, <header>, <footer>, <summary>, <details>, <datalist>
 2. Diff [<b>-<strong>, <datalist>-<select>, <em>-<i>]
 3. Document refresher in html <meta http-equiv="refresh" content="30">
@@ -216,6 +292,7 @@ $$$$$
 ----------------------------------------------------------------
 # Debugging/Testing Skills
 $$$$$
+0. types of errors[syntax, logical]
 1. debugger
 2. Chrome tools
 3. Profiling The component
@@ -227,7 +304,7 @@ $$$$$
 2. Best pratices to write code in framework
 3. What are Teardown methods available for Unit Testing
 4. what is async() , await fetch(), try() catch()
-5. 
+5. How to determine if the browser supports a certain feature
  
 $$$$$
 1. How do you comment the codes
@@ -237,15 +314,15 @@ $$$$$
 5. 
 
 $$$$$
-1. 
-2. 
+1. CSP
+2. XSS
 3. 
 4. 
 5. 
 
 $$$$$
-1. 
-2. 
+1. npm run build -- --profile
+2. npm run test -- --coverage
 3. 
 4. 
 5. 
