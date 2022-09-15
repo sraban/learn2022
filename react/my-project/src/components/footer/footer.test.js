@@ -9,12 +9,3 @@ it('It should mount', () => {
   createRoot(div).unmount();
 });
 
-beforeEach(() => {
-  render(<Footer />);
-  return initializeCityDatabase();
-});
-
-afterEach(() => {
-  render(<Footer />);
-  clearCityDatabase();
-});

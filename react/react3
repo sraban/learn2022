@@ -42,8 +42,19 @@ https://create-react-app.dev/docs/code-splitting/
 ----------------------------------
 
 ----------------------------------
+npm test my-component.test --coverage --collectCoverageFrom=src/components/my-component/my-component.tsx
 
+--collectCoverageFrom='["packages/**/index.js"]' --coverage
 ----------------------------------
+https://www.digitalocean.com/community/tutorials/how-to-test-a-react-app-with-jest-and-react-testing-library
+https://jestjs.io/docs/mock-function-api
+
+import {rest} from "msw"
+import { setupServer } from "msw/node"
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
 
 ----------------------------------
 

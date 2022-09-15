@@ -10,33 +10,21 @@ import UserContextProvider from './../../context/index1.js';
 
 import * as APIService from './api';
 
-const tableDUmmy = [
-  {
-    company:"1111",
-    country:"222",
-    contact:"99999999999"
-  },
-  {
-    company:"1111",
-    country:"222",
-    contact:"99999999999"
-  },
-  {
-    company:"1111",
-    country:"222",
-    contact:"99999999999"
-  },
-  {
-    company:"1111",
-    country:"222",
-    contact:"99999999999"
-  }
-];
-
 const Report = () => {
   
-  const [table, setTable] = useState(tableDUmmy);
+  const loadTable = () => {
+    APIService.getData().then( res => {
+      setTable( res );
+    });
+  };
 
+  useEffect( () => {
+    loadTable();
+  },[]);
+
+
+
+  const [table, setTable] = useState([]);
   const [state, setState] = useState({
     message: '',
     post: ''
@@ -44,7 +32,7 @@ const Report = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const response = await APIService.getData(state.post);
+    const response = await APIService.postData(state.post);
     if(response.ok) {
       setState({
         message: 'posted successfully',
@@ -57,7 +45,8 @@ const Report = () => {
     <div className="report">
       Report Component
 
-      <table border="1" rules="all" cellspacing="5" cellpadding="5" width="100%">
+      <span onClick={loadTable}>Load</span>
+      <table border="1" rules="all" width="100%">
         <thead>
         <tr>
           <th>Company</th>
@@ -71,13 +60,15 @@ const Report = () => {
           <td>Maria Anders</td>
           <td>Germany</td>
         </tr>
+
         {table.map((tr, index) => (
           <tr key={index}>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
+            <td>{ tr.company }</td>
+            <td>{ tr.country }</td>
+            <td>{ tr.contact }</td>
           </tr>
         ))}
+
         </tbody>
       </table>
 
@@ -89,7 +80,7 @@ const Report = () => {
             Body:
           <input type="text" />
         </label>
-        <input type="submit" value="Post" />
+        <input type="submit" value="Post"/>
       </form>
 
       <br/>

@@ -5,13 +5,34 @@ https://jestjs.io/docs/using-matchers
 https://testing-library.com/docs/queries/about/#screendebug
 
 --------------------------------------------
+https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd&index=1
+https://github.com/tkssharma/javascript-testing-world/tree/main
+
+##
+https://www.youtube.com/watch?v=gA-uNj2FgdM
+https://github.com/Jimmydalecleveland/jest-mock-async-example
+
+--
+
+https://egghead.io/
+https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
+https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
+https://scotch.io/tutorials/learning-react-getting-started-and-concepts
+https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
+https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 
 
 --------------------------------------------
-
+1. jest.mock("axios");
 
 --------------------------------------------
-
+$set HTTPS=true && npm start
+$npm run build -- --profile
+$npm install -g server
+$serve -s .
+$
+$
 
 --------------------------------------------
 

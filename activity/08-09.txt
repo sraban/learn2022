@@ -119,21 +119,6 @@ Q.
 
 #15-09-2022
 -------------------------------------
-https://github.com/tkssharma/javascript-testing-world/tree/main
-
-##
-https://www.youtube.com/watch?v=gA-uNj2FgdM
-https://github.com/Jimmydalecleveland/jest-mock-async-example
-
---
-
-https://egghead.io/
-https://scotch.io/tutorials/learning-react-getting-started-and-concepts
-https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
-https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
-https://scotch.io/tutorials/learning-react-getting-started-and-concepts
-https://scotch.io/tutorials/creating-a-simple-shopping-cart-with-react-js-and-flux
-https://facebook.github.io/react/blog/2014/07/30/flux-actions-and-the-dispatcher.html
 
 
 #16-09-2022
