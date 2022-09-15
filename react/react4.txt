@@ -5,6 +5,8 @@ https://jestjs.io/docs/using-matchers
 https://testing-library.com/docs/queries/about/#screendebug
 
 --------------------------------------------
+https://blog.bitsrc.io/how-to-test-react-components-using-jest-and-enzyme-fab851a43875
+https://stackoverflow.com/questions/41829301/how-to-mock-e-preventdefault-in-react-components-child
 https://www.youtube.com/watch?v=T2sv8jXoP4s&list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd&index=1
 https://github.com/tkssharma/javascript-testing-world/tree/main
 
