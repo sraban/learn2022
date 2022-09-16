@@ -37,6 +37,8 @@ $
 $
 
 --------------------------------------------
+npm test -- --coverage --watchAll --collectCoverageFrom='src/compomets/**/*.{ts,tsx}'
+--collectCoverageFrom='!src/compomets/**/*.{spec,stories, constants, test, spec}.{ts,tsx}'
 
 
 --------------------------------------------

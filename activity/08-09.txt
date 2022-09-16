@@ -113,12 +113,14 @@ Q.
 
 #14-09-2022
 -------------------------------------
-- took screening interviews 3 trainee engineer
+- took screening test 3 trainee engineer
 - Unit test cases for using mock API
 
 
 #15-09-2022
 -------------------------------------
+- took screening test 3 trainee engineer
+- Unit test cases for using mock API
 
 
 #16-09-2022
