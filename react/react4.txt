@@ -42,6 +42,20 @@ npm test -- --coverage --watchAll --collectCoverageFrom='src/compomets/**/*.{ts,
 
 
 --------------------------------------------
+https://devhints.io/jest
+https://til.secretgeek.net/jest/tips_and_tricks.html
+https://testing-library.com/docs/react-testing-library/api
+https://github.com/testing-library
+https://testing-library.com/docs/vue-testing-library/examples
+
+--------------------------------------------
+# React
+https://github.com/safak/youtube2022/tree/react-testing
+
+--------------------------------------------
+git remote -v
+git remote show origin
+git clone --branch <branchname> <remote-repo-url>
 
 
 --------------------------------------------
@@ -49,20 +63,22 @@ npm test -- --coverage --watchAll --collectCoverageFrom='src/compomets/**/*.{ts,
 
 --------------------------------------------
 
-
+https://cheatography.com/taotao/cheat-sheets/cyber-security-basic/
 --------------------------------------------
 
 
 --------------------------------------------
+# Coverage Errors:
 
+https://stackoverflow.com/questions/60115885/how-to-solve-the-update-was-not-wrapped-in-act-warning-in-testing-library-re
 
---------------------------------------------
-
-
---------------------------------------------
-
+https://github.com/mrdulin/react-apollo-graphql-starter-kit/tree/master/stackoverflow/60115885
 
 --------------------------------------------
+# Axios in jest with component and utility:
+
+https://vhudyma-blog.eu/3-ways-to-mock-axios-in-jest/
+https://stackoverflow.com/questions/62026593/why-am-i-getting-typeerror-axios-default-get-mockresolvedvalue-is-not-a-funct
 
 
 --------------------------------------------
