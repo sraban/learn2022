@@ -74,25 +74,39 @@ https://stackoverflow.com/questions/60115885/how-to-solve-the-update-was-not-wra
 
 https://github.com/mrdulin/react-apollo-graphql-starter-kit/tree/master/stackoverflow/60115885
 
+
+npm install --save-dev @testing-library/react@latest
+npm install --save-dev @testing-library/jest-dom@latest
+npm install --save-dev @testing-library/user-event@latest
 --------------------------------------------
 # Axios in jest with component and utility:
 
-https://vhudyma-blog.eu/3-ways-to-mock-axios-in-jest/
-https://stackoverflow.com/questions/62026593/why-am-i-getting-typeerror-axios-default-get-mockresolvedvalue-is-not-a-funct
+1. https://vhudyma-blog.eu/3-ways-to-mock-axios-in-jest/
+2. https://stackoverflow.com/questions/62026593/why-am-i-getting-typeerror-axios-default-get-mockresolvedvalue-is-not-a-funct
 
+*https://snyk.io/advisor/npm-package/jest-mock-axios/example
 
+3. https://github.com/vspedr/movile-messaging/pull/8/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519
+
+# on useEffect using enzyme
+4. https://stackoverflow.com/questions/64101927/how-to-implement-jest-test-for-axios-and-hooks-useeffect
+https://www.robinwieruch.de/axios-jest/
+
+# Learn:
+https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-useeffect-hook-in-react
 --------------------------------------------
 
 
 --------------------------------------------
 
-
+"api": "json-server db.json -p 3333 --delay 1500",
 --------------------------------------------
 
 
 --------------------------------------------
 
-
+# code spliting
+https://github.com/safak/youtube2022/tree/react-testing
 --------------------------------------------
 
 
