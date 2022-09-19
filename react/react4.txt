@@ -41,6 +41,7 @@ npm test -- --coverage --watchAll --collectCoverageFrom='src/compomets/**/*.{ts,
 --collectCoverageFrom='!src/compomets/**/*.{spec,stories, constants, test, spec}.{ts,tsx}'
 
 
+
 npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/**/*.{ts,tsx,js}'
 npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/report/*.{ts,tsx,js}'
 npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/report/report.js'
@@ -86,6 +87,23 @@ https://www.youtube.com/watch?v=m4StBAl2egg
 --------------------------------------------
 @Tips:
 https://medium.com/@manojvgl/tips-to-debug-and-increase-code-coverage-react-unit-test-with-jest-and-react-testing-library-or-7d837f14073
+=======
+--------------------------------------------
+https://devhints.io/jest
+https://til.secretgeek.net/jest/tips_and_tricks.html
+https://testing-library.com/docs/react-testing-library/api
+https://github.com/testing-library
+https://testing-library.com/docs/vue-testing-library/examples
+
+--------------------------------------------
+# React
+https://github.com/safak/youtube2022/tree/react-testing
+
+--------------------------------------------
+git remote -v
+git remote show origin
+git clone --branch <branchname> <remote-repo-url>
+
 
 --------------------------------------------
 
@@ -95,6 +113,55 @@ https://medium.com/@manojvgl/tips-to-debug-and-increase-code-coverage-react-unit
 
 --------------------------------------------
 
+
+=======
+https://cheatography.com/taotao/cheat-sheets/cyber-security-basic/
+--------------------------------------------
+
+
+--------------------------------------------
+# Coverage Errors:
+
+https://stackoverflow.com/questions/60115885/how-to-solve-the-update-was-not-wrapped-in-act-warning-in-testing-library-re
+
+https://github.com/mrdulin/react-apollo-graphql-starter-kit/tree/master/stackoverflow/60115885
+
+
+npm install --save-dev @testing-library/react@latest
+npm install --save-dev @testing-library/jest-dom@latest
+npm install --save-dev @testing-library/user-event@latest
+--------------------------------------------
+# Axios in jest with component and utility:
+
+
+1. https://vhudyma-blog.eu/3-ways-to-mock-axios-in-jest/
+2. https://stackoverflow.com/questions/62026593/why-am-i-getting-typeerror-axios-default-get-mockresolvedvalue-is-not-a-funct
+
+*https://snyk.io/advisor/npm-package/jest-mock-axios/example
+
+3. https://github.com/vspedr/movile-messaging/pull/8/files#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519
+
+# on useEffect using enzyme
+4. https://stackoverflow.com/questions/64101927/how-to-implement-jest-test-for-axios-and-hooks-useeffect
+https://www.robinwieruch.de/axios-jest/
+
+# Learn:
+https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-useeffect-hook-in-react
+--------------------------------------------
+@Mock Jquery:
+https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
+
+
+--------------------------------------------
+
+"api": "json-server db.json -p 3333 --delay 1500",
+--------------------------------------------
+
+
+--------------------------------------------
+
+# code spliting
+https://github.com/safak/youtube2022/tree/react-testing
 
 --------------------------------------------
 

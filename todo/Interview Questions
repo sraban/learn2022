@@ -8,6 +8,13 @@
 4. About UseMemo
 5. what was the most used Hook?
 6. let a=["hi","hello", "good", "moring"] using map make data into UpperLetters(coding)
+
+let a = ["hi","hello", "good", "moring"];
+arr.map( (row) => {
+        return row.toUpperCase();
+});
+console.log(a);
+
 7. coding question about filter method
 
 8. expect output from below code:

@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "starts": "set HTTPS=true&&set SSL_CRT_FILE=./localhost.pem&&set SSL_KEY_FILE=./localhost-key.pem&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:debug": "react-scripts --inspect test --runInBand --no-cache",
