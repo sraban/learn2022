@@ -16,7 +16,7 @@
 
 #01-09-2022
 -------------------------------------
-- Read HTML5 updates
+- Read HTML5 updates studied
 - Introduction with manager @Girish Kumar
 - 
 
@@ -50,7 +50,6 @@
 - Udemy devops training video
 
 
-
 #07-09-2022
 -------------------------------------
 - Azure cloud devops clarification
@@ -61,10 +60,6 @@
 - Azure Cloud must have the tools [Kubernate, Terafounds] creates images(OS)
 - Build Package Path [ config, sqlfiles, codes(UI+backend) ] when release happens
 - 
-
-
-
-
 
 
 #08-09-2022
@@ -108,7 +103,7 @@ Q.
 -------------------------------------
 - preparing interview for screening of trainy engg.
 - learned the test cases for react in dummy project
-- wrting test cases in React studied
+- writing test cases in React studied - progress
 
 
 #14-09-2022
@@ -119,22 +114,30 @@ Q.
 
 #15-09-2022
 -------------------------------------
-- took screening test 3 trainee engineer
-- Unit test cases for using mock API
+- took screening test 4 trainee engineer
+- Unit test cases RCA for using mock API
 
 
 #16-09-2022
 -------------------------------------
-
-
+- took screening test 4 trainee engineer
+- jest learning to implement in Swagger
+- azure fundamentals study
 
 
 #19-09-2022
 -------------------------------------
+- took screening test 4 trainee engineer
+- Jest learning to implement in Swagger
+- azure doubts study
 
 
 #20-09-2022
 -------------------------------------
+- 
+- 
+- 
+
 
 
 #21-09-2022

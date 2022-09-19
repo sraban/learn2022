@@ -41,32 +41,51 @@ npm test -- --coverage --watchAll --collectCoverageFrom='src/compomets/**/*.{ts,
 --collectCoverageFrom='!src/compomets/**/*.{spec,stories, constants, test, spec}.{ts,tsx}'
 
 
+npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/**/*.{ts,tsx,js}'
+npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/report/*.{ts,tsx,js}'
+npm test -- --coverage --watchAll --collectCoverageFrom='src/pages/report/report.js'
+--------------------------------------------
+https://pragmaticpineapple.com/7-ways-to-debug-jest-tests-in-terminal/
+chrome.exe --disable-gpu-vsync
+chrome.exe --js-flags="--help"
+chrome.exe --js-flags="--trace-opt --trace-deopt --trace-bailout"
+chrome://flags
+chrome://version
+chrome://flags/#ignore-gpu-blocklist
+
+--------------------------------------------
+node --inspect
+127.0.0.1:9229
+debugger
+node --inspect-brk node_modules/.bin/jest --runInBand
+
+
+--------------------------------------------
+node --inspect $(npm bin)/jest --watch --no-cache --runInBand
+node --inspect $(npm bin)/jest --runTestsByPath src/index.test.ts --runInBand
+
+--------------------------------------------
+"test:debug": "react-scripts --inspect test --runInBand --no-cache"
+
 --------------------------------------------
 
 
 --------------------------------------------
-
-
---------------------------------------------
-
+https://stackoverflow.com/questions/71351319/unable-to-mock-axios-call-in-jest
+https://www.codementor.io/@rajjeet/get-started-with-react-testing-jest-enzyme-4-easy-steps-1dn5180mzr
 
 --------------------------------------------
 
 
 --------------------------------------------
+Search in google: react jest unit testing with api testing
+
+https://www.youtube.com/watch?v=m4StBAl2egg
 
 
 --------------------------------------------
-
-
---------------------------------------------
-
-
---------------------------------------------
-
-
---------------------------------------------
-
+@Tips:
+https://medium.com/@manojvgl/tips-to-debug-and-increase-code-coverage-react-unit-test-with-jest-and-react-testing-library-or-7d837f14073
 
 --------------------------------------------
 
