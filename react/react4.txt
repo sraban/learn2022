@@ -164,19 +164,54 @@ https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
 https://github.com/safak/youtube2022/tree/react-testing
 
 --------------------------------------------
+@jest Tutorial
+https://www.softwaretestinghelp.com/jest-testing-tutorial/
 
+--------------------------------------------
+@Tips & Tricks
+1. npm install --save-dev jest-html-reporter
+   - npm test
+"jest": {
+   "reporters": [
+     "default",
+     [
+       "./node_modules/jest-html-reporter",
+       {
+         "pageTitle": "Test Report"
+       }
+     ]
+   ]
+ }
 
+2. Coverage
+
+ "jest": {
+     "collectCoverage":true
+   }
+
+3. Chrome Debugger Jest
+https://www.softwaretestinghelp.com/jest-configuration-and-debugging/
+
+4. Coverage
+https://www.valentinog.com/blog/jest-coverage/
+
+5. Callbacks and Promises
+https://flaviocopes.com/jest/
 --------------------------------------------
 
 
 --------------------------------------------
-
-
---------------------------------------------
-
+@React Data Table
+https://github.com/ashvin27/react-datatable 
 
 --------------------------------------------
+console.log(process.env.PUBLIC_URL);
+PUBLIC_URL=http://localhost:3000 npm run start
+https://www.tutorialswebsite.com/how-to-import-or-use-images-in-reactjs/
+https://craftsmenltd.com/blog/2022/06/23/migrating-your-create-react-app-project-to-vite/
 
+@Azure Devops
+https://www.rahulpnath.com/blog/create-react-app-devops/
 
 --------------------------------------------
 
