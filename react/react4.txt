@@ -151,7 +151,7 @@ https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-u
 --------------------------------------------
 @Mock Jquery:
 https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
-
+https://stackoverflow.com/questions/64514287/mocking-jquery-and-functions-in-jest
 
 --------------------------------------------
 
@@ -170,7 +170,6 @@ https://github.com/safak/youtube2022/tree/react-testing
 @jest Tutorial
 https://www.softwaretestinghelp.com/jest-testing-tutorial/
 
-<<<<<<< HEAD
 
 --------------------------------------------
 @Tips:
@@ -180,7 +179,7 @@ https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
 
 
 
-=======
+
 --------------------------------------------
 @Tips & Tricks
 1. npm install --save-dev jest-html-reporter
@@ -216,7 +215,6 @@ https://flaviocopes.com/jest/
 
 
 --------------------------------------------
-<<<<<<< HEAD
 
 
 --------------------------------------------
@@ -239,12 +237,29 @@ https://www.rahulpnath.com/blog/create-react-app-devops/
 @VS debugger;
 https://www.basefactor.com/using-visual-studio-code-to-debug-jest-based-unit-tests
 
+
+
+--------------------------------------------
+https://www.xenonstack.com/insights/reactjs-project-structure
+
+
 --------------------------------------------
 
 
 --------------------------------------------
+JEST
+@Ignore files
+- https://codewithhugo.com/jest-exclude-coverage/
+/* istanbul ignore next */
+/* istanbul ignore else */
+/* istanbul ignore file */
+
+it('will be ignored', () => {
+	throw new Error('Blow up');
+});
 
 
---------------------------------------------
-
+----------------------------------------------
+process.env.DEBUG
+process.env.PUBLIC_URL
 
