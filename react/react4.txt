@@ -87,7 +87,8 @@ https://www.youtube.com/watch?v=m4StBAl2egg
 --------------------------------------------
 @Tips:
 https://medium.com/@manojvgl/tips-to-debug-and-increase-code-coverage-react-unit-test-with-jest-and-react-testing-library-or-7d837f14073
-=======
+
+
 --------------------------------------------
 https://devhints.io/jest
 https://til.secretgeek.net/jest/tips_and_tricks.html
@@ -131,7 +132,7 @@ npm install --save-dev @testing-library/react@latest
 npm install --save-dev @testing-library/jest-dom@latest
 npm install --save-dev @testing-library/user-event@latest
 --------------------------------------------
-# Axios in jest with component and utility:
+@Mock Axios in jest with component and utility:
 
 
 1. https://vhudyma-blog.eu/3-ways-to-mock-axios-in-jest/
@@ -158,6 +159,8 @@ https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
 --------------------------------------------
 
 
+
+
 --------------------------------------------
 
 # code spliting
@@ -167,6 +170,11 @@ https://github.com/safak/youtube2022/tree/react-testing
 
 
 --------------------------------------------
+@Tips:
+https://stackoverflow.com/questions/44571207/mocking-jquery-ajax-with-jest
+
+
+
 
 
 --------------------------------------------
