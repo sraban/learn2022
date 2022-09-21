@@ -6,3 +6,9 @@ NG - 7
 HTTPS=true SSL_CRT_FILE=cert.crt SSL_KEY_FILE=cert.key npm start
 
 https://medium.com/swlh/how-to-make-react-js-use-https-in-development-4ead560eff10
+---------------------
+
+
+
+
+

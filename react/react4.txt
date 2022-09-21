@@ -263,3 +263,50 @@ it('will be ignored', () => {
 process.env.DEBUG
 process.env.PUBLIC_URL
 
+
+
+
+------------------------------------------
+@Crypto issue in react table
+https://stackoverflow.com/questions/70565266/module-not-found-error-cant-resolve-crypto-react
+
+npm install && npm run watch
+
+ "browser": {
+        "crypto": false,
+        "stream": false
+    }
+
+
+@pagination with sort
+https://codesandbox.io/embed/react-table-pagination-and-sort-xgyl0
+
+
+
+
+--------------------------------
+useCallback
+useMemo
+useRef
+useContext
+useTable
+---------------------------------
+@React Table Dummy
+- https://codesandbox.io/embed/react-table-pagination-and-sort-xgyl0
+- 
+
+----------------------------------
+@ React Optimisation Performance
+npm install --save-dev envify terser uglifyify
+
+
+
+
+
+
+
+
+
+
+
+
