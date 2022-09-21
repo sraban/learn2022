@@ -134,9 +134,9 @@ Q.
 
 #20-09-2022
 -------------------------------------
-- 
-- 
-- 
+- took screening test 4 trainee engineer
+- react-table learning to implement in Swagger
+- azure doubts study
 
 
 
