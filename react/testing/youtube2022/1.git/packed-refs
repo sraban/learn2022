@@ -1,0 +1,16 @@
+# pack-refs with: peeled fully-peeled sorted 
+6bdca217b7dd1256c3c6f6703db05ffb56b100b9 refs/remotes/origin/fullstack-youtube-clone
+abb31c5fc7951d54809ce44f1505c3e8bf798a16 refs/remotes/origin/main
+ad4d242eedc9f22ae882361ff1da0d4382c722ee refs/remotes/origin/mern-booking
+b9226c6de61075bdf238df1282a6f2519b3a40a5 refs/remotes/origin/react-admin
+612e629af1913651901a4f078e293138c64f11f8 refs/remotes/origin/react-booking-ui
+96a9b2ebc892816926fd247e3bba59a10dd4c17f refs/remotes/origin/react-chat
+e8e9e6ae1ba292d1178e32d426d62478b45de8e0 refs/remotes/origin/react-firebase
+ac86a0990ab5121a91befc951441db42d1ef4ebc refs/remotes/origin/react-mini
+52ec6880d0130ea40e3180e4745c0cf330a95bc0 refs/remotes/origin/react-mui
+2ad7596360fa086f0e4dfaa67b3efdd4f1b1a11a refs/remotes/origin/react-testing
+200389b31a59b6fe647c015bd58a057d456d8bac refs/remotes/origin/react-video-ui
+9de05701ceba6a276d17710171e1cdb7f10a15cf refs/remotes/origin/tailwind-portfolio
+aa6ec9185af94c11bc2e2165d105594babd829d2 refs/remotes/origin/useMemo
+f3462afb7963654c8e5f22341e6478c8cdd0917b refs/remotes/origin/useReducer
+fe590c7e8f26b94082779c12feacf9516c50e1da refs/remotes/origin/useeffect
