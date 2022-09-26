@@ -1,0 +1,26 @@
+# npx ---> download latest version + execute it + delete the packge
+example:
+  npx create-react-app sraban-project
+-------------------------------
+npm ls --depth=0
+npm ls -g --depth=0
+
+npm ls -g react-table
+npm ls react-table
+-------------------------------
+# ndv ???
+ndv install node
+
+-------------------------------
+npm build
+npm test -- --coverage --watchAll
+
+-------------------------------
+pipeline n github before push 
+react app
+
+-------------------------------
+
+
+
+  
