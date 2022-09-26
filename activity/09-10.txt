@@ -1,13 +1,17 @@
 #26-09-2022
 -------------------------------------
-
-
-
-
+- React Deep Concepts on React-Redux-Saga / HOC concepts / Discussing with Venkant
+- Gitlab Pipeline integrations with Jenkins
+- React toolkit for redux management
+- Sonar Cube Test checking....
+- React test coverrage testing in github or gitlab
+- 
 
 #27-09-2022
 -------------------------------------
-
+- 
+- 
+- 
 
 
 

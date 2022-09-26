@@ -250,6 +250,7 @@ https://www.xenonstack.com/insights/reactjs-project-structure
 JEST
 @Ignore files
 - https://codewithhugo.com/jest-exclude-coverage/
+import 'regenerator-runtime/runtime'; ---- in text file
 /* istanbul ignore next */
 /* istanbul ignore else */
 /* istanbul ignore file */

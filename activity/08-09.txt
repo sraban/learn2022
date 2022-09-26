@@ -11,7 +11,7 @@
 - New Laptop Recevied
 - Induction - 3 hr
 - Quiz on QMS/ISMS - 3hr
-- 
+
 
 
 #01-09-2022
@@ -23,24 +23,22 @@
 
 #02-09-2022
 -------------------------------------
-- Introduction awith @Subash Kand.. and Project Discussion Micro service
+- Introduction a with @Subash Kand.. and Project Discussion on Micro service
 - Started / Learned React JS
 - Meeting with Insurance and Banking 2hr
-- Basic SOftwares are installed through remote access
-- 
+- Basic Softwares are installed through remote access
 
 
 
 #05-09-2022
 -------------------------------------
-- @asked - the documnet for the project, working on a table view - don't have the access to the doc
-- Woked from office on swagger - contact merger API - 8hr 
+- Woked from office on ContactMerger - contact merger API
 - @Studied - React function based componet 
 - @Studied - React form handling using functional component
 - @studied - debugging
 - @studied - observing the state changes variable
-- @ - event comunnication
-- generate functional componet
+- @studied - event comunnication
+- @studied - generate functional componet
 
 #06-09-2022
 -------------------------------------
@@ -55,7 +53,6 @@
 - Azure cloud devops clarification
 - Udemy devops training video
 - Build and Release Pipline for react
-
 - Udemy devops training
 - Azure Cloud must have the tools [Kubernate, Terafounds] creates images(OS)
 - Build Package Path [ config, sqlfiles, codes(UI+backend) ] when release happens
@@ -121,43 +118,46 @@ Q.
 #16-09-2022
 -------------------------------------
 - took screening test 4 trainee engineer
-- jest learning to implement in Swagger
+- jest learning to implement in ContactMerger
 - azure fundamentals study
 
 
 #19-09-2022
 -------------------------------------
 - took screening test 4 trainee engineer
-- Jest learning to implement in Swagger
+- Jest learning to implement in ContactMerger
 - azure doubts study
 
 
 #20-09-2022
 -------------------------------------
 - took screening test 4 trainee engineer
-- react-table learning to implement in Swagger
+- react-table learning to implement in ContactMerger
 - azure doubts study
-
-
 
 #21-09-2022
 -------------------------------------
-
+- react-table learning to implement in ContactMerger
+- azure doubts study
 
 #22-09-2022
 -------------------------------------
-
+- react-table learning to implement in ContactMerger
+- API integration support to Mahentesh
+- Meeeting with Yuj CSR pvt Ltd
 
 #23-09-2022
 -------------------------------------
-
+- Support to Mahentesh for Code Coverage - Contact Merger
+- Yuj CSR pvt Ltd website Estimation
+- Story creation in Azure Devops - For Contact Merger
 
 #24-09-2022
 -------------------------------------
-
+Saturday
 
 
 #25-09-2022
 -------------------------------------
-
+Sunday
 
