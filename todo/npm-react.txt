@@ -20,7 +20,3 @@ pipeline n github before push
 react app
 
 -------------------------------
-
-
-
-  

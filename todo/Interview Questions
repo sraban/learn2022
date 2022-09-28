@@ -26,7 +26,7 @@ var num = 1;
 function X(obj, n) {
     obj.a = obj.a + 1;
     obj.b = 2;
-	n=n+1;
+	n = n+1;
 }
 
 X(objInst, num);
@@ -40,3 +40,118 @@ console.log(objInst, num)
 
 
 ******************************************** ********************************************
+GE Health Care 
+
+
+1. How to create a global registration page (have access to all country users) and fields association with it.
+   -- must be provided a country/region selection to get the form/options accordingly on change/check the form based on the selection 
+
+
+2. How language translators work, like if a user is from French how he can access website in French language. 
+   -- Geo Location API will give the latitude and longitude - to get the region and language
+
+
+
+3. How events works in React and what does Prevent.default does? 
+	-- Event name must be camelcased + Anonymous return of a callback from the event
+	  onClick = { () => onclick() }
+	  e.preventDefault()  stops the default action of native HTML element
+
+
+	Let say in an hospital, a patient is registered and he is having unique ID as Patient ID. How different modules (Ex. Patient In, Patient Out, Lab Reports etc.) are connected to a Patient ID. 
+
+	Ans - Patient might referer to one antoher patient.
+	[Patient-ID] is root node/table
+	[Receptionist] 
+	[Help-Desk] 
+
+4. Mention some security measures? 
+   Ans: 
+    - From UI
+      Storages : must not store the sensitive info like user id, any primary key
+      Cookie: Must be Secure / httpOnly /  Samesite
+      CSP -  Must be enabled for various sources not to execute/evaluate the javascript expressions
+      XSS - DOM XSS, Refected XSS, Stored XSS must be validated while writing the script
+    
+    - FromBackend
+
+
+4. state and props
+	-- props: attribute of all component which is passed from parent
+	-- state is the variables inside of the compoents
+
+
+
+5. React Hooks – Use State with example – code 
+	 useState( initialState, callBack ) - relies on call order which is asynchronous
+	 const [state, setState] = useState( initialState = {}, callBack() )
+	 setState(1) ---> after re-render there is too a post action can be hooked.
+
+
+6. Use Effect with example – code
+	Ex. give an examples
+	useEffect(callback, [])
+	useEffect(callback, dependencyArray)
+	https://github.com/danburzo/react-recipes/blob/main/recipes/use-state.md
+	https://codepen.io/pen/?editors=0011
+
+
+7. Use Reducer with example – code
+	Ex. give an example not only syntax
+	const [state, dispatch] = useReducer( callback(state, action), initialState = {} )
+
+
+
+8. use of useSelector()
+	const [] = useSelector();
+
+
+https://dev.to/fromaline/deep-dive-into-react-codebase-ep3-reverse-engineer-the-most-famous-react-snippet-njj
+
+8. where to write useCallback 
+	useCallback()
+	useMemo()
+
+
+
+
+9. Using Higher components, Add two variable as show that output. 
+	- HOC example
+
+
+
+
+10. How a count increment function works with toggle active class (Coding task). 
+	- 
+	- 
+	- 
+	- 
+	
+
+
+11. What is the use of design principles? 
+	- Design patterns are nothing but to follow a pattern to excecute certain kind of operations
+	- 
+	- 
+	- 
+
+
+
+12. Difference between Visibility hidden and Display hidden. 
+	- 
+	- 
+	- 
+
+13. useRef()
+    - it gives the direct ref to the dom element/instance of component
+    Ex. const header = useRef();
+    	<div ref={header}></div>
+
+
+13. Various Tools
+	- sonar cube
+	- gitlab ci cd integration
+	- azure devops
+	- 
+
+

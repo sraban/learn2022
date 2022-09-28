@@ -80,100 +80,12 @@ git config --global --unset https.proxy
 
 
 
-# 09/09/2022 - Friday
-
-
-
-
-
-# 10/09/2022 - Saturday
-
-
-
-
-
-# 11/09/2022 - Sunday
-
-
-
-
-
-# 12/09/2022 - Monday
-
-
-
-
-# 13/09/2022 - Tuesday
-
-
-
-
-# 14/09/2022 - Wednesday
-
-
-
-
-# 15/09/2022 - Thursday
-
-
-
-
-# 16/09/2022 - Friday
-
-
-
-
-# 17/09/2022 - Saturday
-
-
-
-
-# 18/09/2022 - Sunday
-
-
-
-
-# 19/09/2022 - Monday
-
-
-
-
-# 20/09/2022 - Tuesday
-
-
-
-
-# 21/09/2022 - Wednesday
-
-
-
-
-# 22/09/2022 - Thursday
-
-
-
-
-# 23/09/2022 - Friday
-
-
-
-
-# 24/09/2022 - Saturday
-
-
-
-
-# 25/09/2022 - Sunday
-
-
-
-
-# 26/09/2022 - Monday
-
-
-
-
-# 27/09/2022 - Tuesday
-
-
-
+======================== File renaming in Folder Windows =========================
+
+forfiles /S /M *.doc /C "cmd /c rename @file @fname.txt"
+forfiles /S /M *.docx /C "cmd /c rename @file @fname.js"
+forfiles /S /M *.csv /C "cmd /c rename @file @fname.jsx"
+forfiles /S /M *.xls /C "cmd /c rename @file @fname.json"
+forfiles /S /M *.xlsx /C "cmd /c rename @file @fname.sample"
+
+===================================================================================

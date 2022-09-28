@@ -9,7 +9,9 @@
 
 #27-09-2022
 -------------------------------------
-- 
+- Devops crash course, Support to Mahentesh in client machine - API integration issues
+- Reverse Engineering of React hooks - Behind the scenes
+- Devops setup for UI today - Contact Merger
 - 
 - 
 
@@ -19,7 +21,17 @@
 
 #28-09-2022
 -------------------------------------
+- Studing the react hooks in deep
+- Taking the help from Prakash for interview
+- Preparing react Questions for GE
 
+- is it something to tell not to work on devops tool
+- does they are expecing me to take some kind of resposnibility
+- Do I need ask about the project
+- Cannot we enter directly to a Team
+- are u feeling something outside of Team
+- Have to add some kind of fire then to start work
+- is it required to Speak ....
 
 
 
