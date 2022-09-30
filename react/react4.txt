@@ -290,13 +290,13 @@ https://codesandbox.io/embed/react-table-pagination-and-sort-xgyl0
 
 
 
---------------------------------
+------------------------------------------------------------------------
 useCallback
 useMemo
 useRef
 useContext
 useTable
----------------------------------
+------------------------------------------------------------------------
 @React Table Dummy
 - https://codesandbox.io/embed/react-table-pagination-and-sort-xgyl0
 - 

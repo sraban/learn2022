@@ -87,12 +87,12 @@ https://docs.microsoft.com/en-us/azure/devops/report/dashboards/overview?view=az
 
 
 
-------------------------------------------------------------
+-----------------------------------------------------------------------
 Git Lab
 - https://docs.gitlab.com/ee/ci/quick_start/#cicd-process-overview
 - 
 
--------------------------------------------------------------
+------------------------------------------------------------------------
 1. Multiple App services - From azure portal like [Dev Link], [QA Link], [ Staging Link], [Production Link]
 2. Multiple Repo
 3. Multiple Pipleine
@@ -100,22 +100,48 @@ Git Lab
 5. 
 
 
+-------------------------------------------------------------------------
+# Name for each artificat must change
+
+Each Artificat
+displayName: "Publish Artifact: drop"
+ArtifactName: 'dropUAT'
+ArtifactName: 'dropQA'
+ArtifactName: 'dropProd'
+--------------------------------------------------------------------------
+
+1. Unit Test Report URL if the build is failed
+2. E2E Report - Cypress
+3. 
+
+--------------------------------------------------------------------------
+test, deploy and publish tasks.
+build and release
+
+
 -------------------------------------------------------------
+==============================================================================================
+1. Create a Build Pipeline For Every Branch
+   [Master/Dev/UAT/QA]
 
+2. Modify the artifact path for every branch in pipeline.yaml
+   ex. ArtifactName: ['dropUAT', 'dropQA', 'dropProd', 'dropDev']
+
+3. In release pipeline
+     - Add all artificats from Build pipeline
+     - Create all the envirnments [dev,QA,UAT,PROD]
+     - To every envirment assign the respective/relate artifact:latest
+     - Link every release env to a [Web serice host - Deploy App slot]
+
+4. Deploy every envirnment from release pipeline on approval or automatic on code merge
+==============================================================================================
 
 
 -------------------------------------------------------------
-
-
-
--------------------------------------------------------------
-
-
-
--------------------------------------------------------------
-
-
-
+Q. How to add static code analysis tools like SonarQube in the build pipeline
+Q. How Pipeline Build is Validated of Pull Requests.
+Q. How to increase the Build pipeline performance since it takes time
+Q. How a service hooks interact with other CI/CD tool like Jenkin to azure repo
 ------------------------------------------------------------
 
 

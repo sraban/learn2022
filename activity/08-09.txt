@@ -88,8 +88,8 @@
 
 #12-09-2022
 -------------------------------------
-- CI & CD set up for react
-- 
+- Azure set up for react
+- cypress learning
 Q. What are the tools available in azure for static checks
 Q. Jenkins and its plugins from starting client integrated
 Q. cypress issue in the system was blocking the chrome and mozilla to execute

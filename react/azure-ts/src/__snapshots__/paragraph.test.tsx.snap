@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph should render passed in string in a paragraph 1`] = `
+<div
+  className="container"
+>
+  <p>
+    Azure DevOps and SonarQube Rocks!
+  </p>
+</div>
+`;

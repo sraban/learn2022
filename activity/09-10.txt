@@ -7,16 +7,14 @@
 - React test coverrage testing in github or gitlab
 - 
 
+
 #27-09-2022
 -------------------------------------
 - Devops crash course, Support to Mahentesh in client machine - API integration issues
-- Reverse Engineering of React hooks - Behind the scenes
+- *Reverse Engineering of React hooks - Behind the scenes
 - Devops setup for UI today - Contact Merger
 - 
 - 
-
-
-
 
 
 #28-09-2022
@@ -35,23 +33,58 @@
 
 
 
-
 #29-09-2022
 -------------------------------------
-
+- Devops azure for contact merger@Mittiol wood
+- Devops Multistage pipeline setup in azure
+- 
+- 
+- 
+- 
 
 
 
 #30-09-2022
 -------------------------------------
+- Devops static check sonar lint of codes
+- 
+- 
+- 
+- 
+- 
 
 
+@TimeSheet
+@Studied - Redux management in react
+- React test coverrage with Mahentesh
+- Devops Multistage pipeline setup in azure
 
 
 #03-10-2022
 -------------------------------------
 
 
+@Study
+- url: https://blog.mayanks.page/2020/04/integrating-react-with-sonarqube-using.html
+- Sonar Cube server report videos for static code analysis
+- Cypress testing e2e
+- Sonar Cube With Azure
+- Jenkin Server report for static code analysis
+
+https://www.one-tab.com/page/9-1uXo-lTySC_w6xCvi20Q
+
+0. Please share a documents or set up kind of notes of 3rd party tool integration ex. Sonar Qube
+1. Jest mocking tool analysis for code coverage
+2. How emailing works from Azure dashboards and backlogs 
+3. How Assignee, Reviewer, AssignTo in Devops
+4. If any changes happens do the change to that envirnment not to all envirnment(dev,qa,uat,prod)
+5. 
+6. 
+7. 
+
+
+Q1. How sprints are created based on date
+Q2. 
 
 #04-10-2022
 -------------------------------------

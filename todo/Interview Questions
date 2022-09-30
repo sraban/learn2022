@@ -38,8 +38,10 @@ console.log(objInst, num)
 
 10. About positions in css
 
-
 ******************************************** ********************************************
+******************************************** ********************************************
+******************************************** ********************************************
+
 GE Health Care 
 
 
@@ -153,5 +155,23 @@ https://dev.to/fromaline/deep-dive-into-react-codebase-ep3-reverse-engineer-the-
 	- gitlab ci cd integration
 	- azure devops
 	- 
+******************************************** ********************************************
+******************************************** ********************************************
+******************************************** ********************************************
+
+@Azure Multiple Environment - from variables
+
+- Single Environment set up is DONE --- I have not tried it for Multiple branches
+- Multiple Environment set up is not done for various branches
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
 
+Please share devops ideas
+if you have find any set up configuration for multiple branches
