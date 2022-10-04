@@ -87,5 +87,12 @@ forfiles /S /M *.docx /C "cmd /c rename @file @fname.js"
 forfiles /S /M *.csv /C "cmd /c rename @file @fname.jsx"
 forfiles /S /M *.xls /C "cmd /c rename @file @fname.json"
 forfiles /S /M *.xlsx /C "cmd /c rename @file @fname.sample"
+----------------
+forfiles /S /M *.txt /C "cmd /c rename @file @fname.doc"
+forfiles /S /M *.js /C "cmd /c rename @file @fname.docx"
+forfiles /S /M *.jsx /C "cmd /c rename @file @fname.csv"
+forfiles /S /M *.json /C "cmd /c rename @file @fname.xls"
+forfiles /S /M *.sample /C "cmd /c rename @file @fname.xlsx"
+
 
 ===================================================================================

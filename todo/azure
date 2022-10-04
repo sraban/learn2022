@@ -155,8 +155,44 @@ Q. How a service hooks interact with other CI/CD tool like Jenkin to azure repo
 
 
 ------------------------------------------------------------
-
-
+https://www.dotnetcurry.com/devops/1539/azure-pipelines
+- An ordered set of actions to be executed
+- The source of the code - git, tfvc
+- Agent to be used to run this build
+- The artifact (sharable output) that will be created
+- Variables to be used
+- The solution from where the NuGet configuration will be available
+- Variables to be used
+- Automated Triggers – These triggers include
+   - Continuous Integration (CI) – Every time code repository is updated by way of git push or check-in; this build is triggered
+   - Scheduled
+   - Gated Check-in(TFVC)
+   - Pull Request Related(GIT)
+- Options like – whether to create a work item if build fails.
+- Retention policy to define how long the build output will be retained 
+- 
+- Agent is a software on an identified computer that can run the workflow of build pipeline
+   - 1. Hosted Agents – Provided by Microsoft for use only during the run of the pipeline
+        VMs or containers hosted by Microsoft in Azure
+   - 2. On-Premises Agents (Default) – These are the agents 
+            that are installed on our computers in our own network - like JetBrain Resharper or SonarQube as part of the build workflow
+   - 3. 
+- 
+- Source
+- Activity / Step / Task
+- like get source, compile, unit test, copy files, run code analysis, create artifact etc
+- tasks created by third-party software vendors like SonarCloud (In cloud SaaS version of SonarQube), Whitesource, Jenkins, Terraforms etc. are available from Visual Studio Marketplace
+- 
+- 
+- 
+- Pipeline (Release)
+- Artifact(s) to be deployed with their version
+- Release trigger – This may be manual or automated (Continuous Deployment) trigger.
+- Deployment triggers for each stage – Each stage may have a manual or automated trigger.
+- Pre-deployment approvers list for each stage – This ensures that after the deployment is triggered, actual deployment starts only after an approval from a defined competent authority is given.
+- Post-deployment approvers list for each stage – This is to ensure that quality of built artifact is satisfactory and it can be deployed to next stage.
+- Release level variables and stage level variables with their values – Variables allow us to reuse some values in different stages. For example, while doing deployment to a VM, we may need Admin User Name and Admin Password to be used by the task. 
+- Automated gates for approvals – a mechanism to automate the check and approval as part of the post-deployment scenario. Such gates can be:
 
 ------------------------------------------------------------
 
