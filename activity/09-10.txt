@@ -62,7 +62,9 @@
 
 #03-10-2022
 -------------------------------------
-
+- Save and Review for MW Contact merger
+- Redux used changes for data
+- 
 
 @Study
 - url: https://blog.mayanks.page/2020/04/integrating-react-with-sonarqube-using.html
@@ -88,8 +90,12 @@ Q2.
 
 #04-10-2022
 -------------------------------------
-
-
+- Save and Review for MW Contact merger
+- Redux used changes for data
+- Delete Dummy Repo
+- Create a new Pipeline in azure devops
+- 
+- 
 
 #05-10-2022
 -------------------------------------
