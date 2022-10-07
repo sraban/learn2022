@@ -81,14 +81,18 @@ https://www.one-tab.com/page/9-1uXo-lTySC_w6xCvi20Q
 3. How Assignee, Reviewer, AssignTo in Devops
 4. If any changes happens do the change to that envirnment not to all envirnment(dev,qa,uat,prod)
 5. 
-6. 
-7. 
 
 
 Q1. How sprints are created based on date
 Q2. 
 
+
 #04-10-2022 (Tue)
+---
+. Going through the sonar cube integration
+. 
+
+#04-10-2022
 -------------------------------------
 - Save and Review for MW Contact merger
 - Redux used changes for data

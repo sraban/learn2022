@@ -175,3 +175,27 @@ https://dev.to/fromaline/deep-dive-into-react-codebase-ep3-reverse-engineer-the-
 
 Please share devops ideas
 if you have find any set up configuration for multiple branches
+
+
+********************************************************************************************
+
+########### GE Health Care ##########
+
+Q. Soap and Rest is stateless
+
+
+Q. Example of callback, create one aysnc callback and promise of ur own ?
+
+function devide(num1, num2) {
+	let output = num1 / num2;
+	setTimeout( () => {
+		console.log(output);
+	}, 1000);
+}
+
+async function calc(num1, num2, callback ) {
+	return await callback(num1, num2);
+}
+calc(1, 0, devide);
+
+

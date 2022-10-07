@@ -300,7 +300,6 @@ useTable
 @React Table Dummy
 - https://codesandbox.io/embed/react-table-pagination-and-sort-xgyl0
 - 
-
 ----------------------------------
 @ React Optimisation Performance
 npm install --save-dev envify terser uglifyify
