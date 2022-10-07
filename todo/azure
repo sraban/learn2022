@@ -196,14 +196,51 @@ https://www.dotnetcurry.com/devops/1539/azure-pipelines
 
 ------------------------------------------------------------
 
+   async function asyncc() {
+      return await function() {
+         var y="notdone";
+         setTimeout(function () {
+               y="done";
+          }, 1000);
+          return y;
+      }();
+   }
+
+   asyncc().then(function( out ) {
+      console.log(out);
+   });
 
 
 ------------------------------------------------------------
 
+function x () {
+   return new Promise((resolve, reject) => {
+      setTimeout(function () {
+           resolve('done');
+       }, 1000);
+   });
+}
 
+x().then(function(out) {
+   console.log(out);
+});
 
 ------------------------------------------------------------
+## Sonarcube + Sonarscanner
+1. Download sonarcube - community edittion - unzip it
+2. Download sonar scanner for windows - extract it
+3. change the port number in /conf for both the folder
+4. run localhost:9000
+5. change the password from admin
+6. generate a token
+7. 
 
+http://localhost:3000/
+
+react: 108b370cc33f888027b440fca4821fd3c115dc45
+
+# run the below command in project directory --- sonar.sources=project_path
+sonar-scanner.bat -D"sonar.projectKey=localhost_3000" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=108b370cc33f888027b440fca4821fd3c115dc45"
 
 
 ------------------------------------------------------------

@@ -60,7 +60,7 @@
 - Devops Multistage pipeline setup in azure
 
 
-#03-10-2022
+#03-10-2022 (Mon)
 -------------------------------------
 - Save and Review for MW Contact merger
 - Redux used changes for data
@@ -88,7 +88,7 @@ https://www.one-tab.com/page/9-1uXo-lTySC_w6xCvi20Q
 Q1. How sprints are created based on date
 Q2. 
 
-#04-10-2022
+#04-10-2022 (Tue)
 -------------------------------------
 - Save and Review for MW Contact merger
 - Redux used changes for data
@@ -97,20 +97,21 @@ Q2.
 - 
 - 
 
-#05-10-2022
+#06-10-2022 (Thur)
 -------------------------------------
+- Save API contact merger - Mittloi Wood
+  - contact info redux data
+  - taxation and protection redux data
+  - Address Info
+  - 
 
 
-
-#06-10-2022
+#07-10-2022 (Fri)
 -------------------------------------
-
-
-
-
-#07-10-2022
--------------------------------------
-
+- Remaining API - adddress, communication from redux to save API in Mittoli wood
+- Nginx, staic serve API
+- Pipeline - https://www.youtube.com/watch?v=HLhlKIIfaZs
+- 
 
 
 
