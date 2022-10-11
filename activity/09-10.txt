@@ -121,13 +121,16 @@ Q2.
 
 #10-10-2022
 -------------------------------------
-
+- Summary and Review for client info
+- 
 
 
 
 #11-10-2022
 -------------------------------------
-
+- Support
+- Unit Test cases for Mittoli-Wood - JEST
+- https://github.com/alayor/React-TDD 
 
 
 
