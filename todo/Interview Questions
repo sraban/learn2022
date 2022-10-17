@@ -73,12 +73,7 @@ GE Health Care
       Storages : must not store the sensitive info like user id, any primary key
       Cookie: Must be Secure / httpOnly /  Samesite
       CSP -  Must be enabled for various sources not to execute/evaluate the javascript expressions
-      XSS - must be validated while writing the script
-          - inject JavaScript into your code is clear
-          - DOM XSS - 
-          - Reflected XSS - 
-          - Stored XSS - 
-      CSRF - Cross Site Request Forgery
+      XSS - DOM XSS, Refected XSS, Stored XSS must be validated while writing the script
     
     - FromBackend
 
@@ -186,10 +181,7 @@ if you have find any set up configuration for multiple branches
 
 ########### GE Health Care ##########
 
-Q. Soap and Rest is stateless why/how ?
-
-
-Q. About Project - How travel portal works ?
+Q. Soap and Rest is stateless
 
 
 Q. Example of callback, create one aysnc callback and promise of ur own ?
@@ -201,11 +193,9 @@ function devide(num1, num2) {
 	}, 1000);
 }
 
-Q.
 async function calc(num1, num2, callback ) {
 	return await callback(num1, num2);
 }
 calc(1, 0, devide);
 
 
-Q. CSS Specificity ?
