@@ -1,0 +1,52 @@
+References
+It follows the BDD (Behavior Driven Development) style of writing test cases. 
+
+• https://medium.com/swlh/angular-unit-testing-jasmine-karma-step-by-step-e3376d110ab4
+• https://medium.com/swlh/angular-unit-testing-jasmine-karma-step-by-step-e3376d110ab4
+• https://codecraft.tv/courses/angular/unit-testing/jasmine-and-karma/
+• https://jasmine.github.io/2.0/introduction.html
+• 
+• 
+• 
+• 
+
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+beforeEach(() => {
+	TestBed.configureTestingModule({
+		declarations: [LoginComponent],
+		providers: [AuthService]
+	});
+});
+
+it('should create the app', () => {
+	const fixture = TestBed.createComponent(AppComponent);
+	const app = fixture.debugElement.componentInstance;
+	expect(app).toBeTruthy(); 
+});
+
+
+el = fixture.debugElement.query(By.css('#btn1')).nativeElement;
+el.click();
+expect(component.getAllProducts().length).toEqual(4);
+
+----
+
+it('login button hidden when the user is authenticated', () => {
+expect(el.nativeElement.textContent.trim()).toBe('');
+fixture.detectChanges();
+expect(el.nativeElement.textContent.trim()).toBe('Login');
+});
+
+-----------------
+
+it(`Delete must remove from productslist`, () => {
+fixture.detectChanges();
+el = fixture.debugElement.query(By.css('#btn1')).nativeElement;
+el.click();
+expect(component.getAllProducts().length).toEqual(4);
+}); 
+
+----------------
+
