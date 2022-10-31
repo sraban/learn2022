@@ -1,22 +1,45 @@
 #26-10-2022
--------------------------------------
+------------------------------------------------------
+- Test coverages for Contact Merger in Contact Merger
+- Development for Contact Mergers
+Seach codebox react testing mock
+https://codesandbox.io/s/n4p6z5o270?file=/src/App.test.js
+
 
 
 
 
 #27-10-2022
--------------------------------------
+-------------------------------------------------------
+- Test Coverages for Contact Merger in Contact Merger
+- 
+
+$npm test -- --coverage
+- pending request
+- completed request
+- Address
+- Tabs
+
+
 
 
 
 
 #28-10-2022
 -------------------------------------
+- Sonarlint fixes for cognitive complexity in Contact Merger
+- 
+- https://community.sonarsource.com/t/effort-estimation-is-largely-underestimated-for-cognitive-complexity-issues/62114
+
+
+
 
 
 #31-10-2022
 -------------------------------------
-
+- 
+- 
+- 
 
 
 

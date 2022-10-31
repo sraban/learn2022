@@ -38,18 +38,12 @@
 - Devops azure for contact merger@Mittiol wood
 - Devops Multistage pipeline setup in azure
 - 
-- 
-- 
-- 
 
 
 
 #30-09-2022
 -------------------------------------
 - Devops static check sonar lint of codes
-- 
-- 
-- 
 - 
 - 
 
@@ -99,15 +93,13 @@ Q2.
 - Delete Dummy Repo
 - Create a new Pipeline in azure devops
 - 
-- 
 
 #06-10-2022 (Thur)
 -------------------------------------
 - Save API contact merger - Mittloi Wood
-  - contact info redux data
-  - taxation and protection redux data
-  - Address Info
-  - 
+- contact info redux data
+- taxation and protection redux data
+- Address Info
 
 
 #07-10-2022 (Fri)
@@ -118,11 +110,9 @@ Q2.
 - 
 
 
-
 #10-10-2022
 -------------------------------------
-- Summary and Review for client info
-- 
+- Summary and Review for client info pending Task completed
 
 
 
@@ -137,46 +127,48 @@ Q2.
 #12-10-2022
 -------------------------------------
 - Preparing for interview from WFH
-- 
-- 
-
+- Vue JS interview Preparation
 
 
 #13-10-2022
 -------------------------------------
-- Interview taken for 5 people
+- Interview taken for 5 trinee engineer
 - 
 
 
 
 #14-10-2022
 -------------------------------------
+- Unit Test cases
+- 
 
+https://godrejpropertiesltd.s3.ap-south-1.amazonaws.com/Godrej_Ananda_Interior_Interactive_3BHK/index.htm
 
 
 
 #17-10-2022
 -------------------------------------
-
+- Writing unit test cases for contact Merger
 
 
 
 #18-10-2022
 -------------------------------------
-
-
+- VueJS preparation for Vue
+- Interview Preparation with QualFun
 
 
 #19-10-2022
 -------------------------------------
-
+- Unit Test Cases for Contact Merger
+- Imporved Test coverage to 60%
 
 
 
 #20-10-2022
 -------------------------------------
-
-
+- Unit Test Cases for Contact Merger
+- Imporved Test coverage to 80%
 
 
 #21-10-2022
