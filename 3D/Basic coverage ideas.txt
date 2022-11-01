@@ -9,6 +9,8 @@ Q. Udemy Courses on 3D/WebGL
 Q. count like bids with Headings and little detail --- no repeation of lines while reading from tutorials point
 Q. Stackoverflow clips
 	https://stackoverflow.com/questions/28059155/babylon-js-custom-scene-doesnt-load
+    https://stackoverflow.com/questions/26917012/load-a-obj-and-stl-in-babylon-js
+
 
 Q. Projects
     https://discuss.appstudio.dev/t/getting-babylon-js-in-project/1420/8
@@ -21,12 +23,30 @@ Q. Medium
 
 Q. Issues in github, stackoverflow
 	https://github.com/BabylonJS/Babylon.js/issues/4207
+    https://playground.babylonjs.com/#PSR2ZX#10
+    https://www.babylonjs-playground.com/frame.html#PSR2ZX#10
 
 Q. GLTF model, obj, ----> blender 
 
 Q. Projects
    1. https://www.babylonjs-playground.com/frame.html#PSR2ZX#10
    2. https://github.com/BabylonJS/Website
+
+
+   https://playground.babylonjs.com/scenes/skull.babylon
+   https://models.babylonjs.com/ufo.glb
+
+Q. Learn Chinese Website
+    http://www.babylonjs.com.cn/how_to/load_from_any_file_type.html
+    http://www.babylonjs.com.cn/examples/index.html
+    http://www.babylonjs.com.cn/babylon101/index.html
+
+    BUttons
+    https://playground.babylonjs.com/#BCU1XR#0
+
+Q. Video
+    https://www.youtube.com/watch?v=LY92h9-2TAg
+
 -----------------------------------
 David Catuhe, a Principal Program Manager for the Window & Devices Group at Microsoft
 
@@ -84,3 +104,30 @@ contact@ippbonline.in
 FBX
 VFX
 skyBoX
+
+
+Upload 3D file in GLTF, GLB, STL, OBJ+MTL or BABYLON format.
+.gltf
+.obj
+.babylon
+.hdr
+
+Dummy Projects
+1. https://doc.babylonjs.com/features/introductionToFeatures/chap2/app2
+2.Home - https://www.babylonjs.com/demos/flat2009/
+
+
+Chair.obj
+cloth_meshV1.glb
+substanceShaderBall.gltf
+oculusQuest/right.babylon
+
+
+
+
+Comments
+==========================
+1. it is the rendering engine, not a modeling tool
+2. if you use UV textures you’ll need extra tool anyway
+3. So you are saying that using an external object like Blender is a best practice in creating Room kind of scene
+4. use textures with pre baked lighting informatio. Very suitable for static scenes.
