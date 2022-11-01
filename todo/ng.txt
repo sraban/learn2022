@@ -10,8 +10,8 @@ It follows the BDD (Behavior Driven Development) style of writing test cases.
 • 
 • 
 
----------------------------------------------------------------
----------------------------------------------------------------
+-----------------
+-----------------
 
 beforeEach(() => {
 	TestBed.configureTestingModule({
@@ -31,21 +31,21 @@ el = fixture.debugElement.query(By.css('#btn1')).nativeElement;
 el.click();
 expect(component.getAllProducts().length).toEqual(4);
 
-----
+-----------------
 
 it('login button hidden when the user is authenticated', () => {
-expect(el.nativeElement.textContent.trim()).toBe('');
-fixture.detectChanges();
-expect(el.nativeElement.textContent.trim()).toBe('Login');
+	expect(el.nativeElement.textContent.trim()).toBe('');
+	fixture.detectChanges();
+	expect(el.nativeElement.textContent.trim()).toBe('Login');
 });
 
 -----------------
 
 it(`Delete must remove from productslist`, () => {
-fixture.detectChanges();
-el = fixture.debugElement.query(By.css('#btn1')).nativeElement;
-el.click();
-expect(component.getAllProducts().length).toEqual(4);
+	fixture.detectChanges();
+	el = fixture.debugElement.query(By.css('#btn1')).nativeElement;
+	el.click();
+	expect(component.getAllProducts().length).toEqual(4);
 }); 
 
 ----------------
