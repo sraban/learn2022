@@ -50,3 +50,4 @@ expect(component.getAllProducts().length).toEqual(4);
 
 ----------------
 
+ng test --no-watch --code-coverage

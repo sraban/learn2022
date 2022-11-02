@@ -28,7 +28,7 @@ $npm test -- --coverage
 #28-10-2022
 -------------------------------------
 - Sonarlint fixes for cognitive complexity in Contact Merger
-- 
+- Communication, Contact, ....
 - https://community.sonarsource.com/t/effort-estimation-is-largely-underestimated-for-cognitive-complexity-issues/62114
 
 
@@ -37,7 +37,7 @@ $npm test -- --coverage
 
 #31-10-2022
 -------------------------------------
-- 
+- Learning Angular Test Coverages
 - 
 - 
 
