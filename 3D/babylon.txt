@@ -1,0 +1,191 @@
+Q. Download a fbx file online - host in github
+Q. Download Others like .obj , .fltp, babylon
+Q. VS Code Extension for WebGL/ Canvas
+Q. WebGL - graphics 2/3D
+Q. Quiz on Babylon and ThreeD and WebGL, canvas
+Q. FUndamentals of canvas and Quiz
+Q. Youtube Videos about webgl, canvas, babylonjs, threedjs
+Q. Udemy Courses on 3D/WebGL
+Q. count like bids with Headings and little detail --- no repeation of lines while reading from tutorials point
+Q. Stackoverflow clips
+	https://stackoverflow.com/questions/28059155/babylon-js-custom-scene-doesnt-load
+  https://stackoverflow.com/questions/26917012/load-a-obj-and-stl-in-babylon-js
+
+
+Q. Projects
+    https://discuss.appstudio.dev/t/getting-babylon-js-in-project/1420/8
+
+Q. React Babylonjs - project download to local
+    https://www.npmjs.com/package/react-babylonjs
+
+Q. Medium
+    https://babylonjs.medium.com/understanding-asynchronous-code-in-babylon-js-cb534634beb
+
+Q. Issues in github, stackoverflow
+	  https://github.com/BabylonJS/Babylon.js/issues/4207
+    https://playground.babylonjs.com/#PSR2ZX#10
+    https://www.babylonjs-playground.com/frame.html#PSR2ZX#10
+
+Q. GLTF model, obj, ----> blender 
+
+Q. Projects
+   1. https://www.babylonjs-playground.com/frame.html#PSR2ZX#10
+   2. https://github.com/BabylonJS/Website
+
+
+   https://playground.babylonjs.com/scenes/skull.babylon
+   https://models.babylonjs.com/ufo.glb
+
+Q. Learn Chinese Website
+    http://www.babylonjs.com.cn/how_to/load_from_any_file_type.html
+    http://www.babylonjs.com.cn/examples/index.html
+    http://www.babylonjs.com.cn/babylon101/index.html
+
+    Buttons
+    https://playground.babylonjs.com/#BCU1XR#0
+
+Q. Video
+    https://www.youtube.com/watch?v=LY92h9-2TAg
+
+-----------------------------------
+David Catuhe, a Principal Program Manager for the Window & Devices Group at Microsoft
+
+
+-----------------------------------
+Questions for Interview
+- Much dedicated for Teams Success/Within the timeline to deliver the Requirement
+- Cannot be a manger/reposible to handle the people in the Team
+- May I know the feedback and What is the Project Requirement
+- Need Excercises on twisting the senteces to Speak(required to Leave the JOB)
+- 
+
+
+
+===========================
+1. https://learn.microsoft.com/en-us/windows/mixed-reality/develop/javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02
+
+2. https://www.tutorialspoint.com/babylonjs/babylonjs_playing_sounds_and_music.htm
+
+3. https://github.com/BabylonJS/Babylon.js/issues/4207
+
+4. Theory Mozilla
+    https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory
+
+5. Game Devlopment web
+    https://github.com/end3r/MDN-Games-3D
+    http://end3r.github.io/MDN-Games-3D/
+      - Three.js(.gltb, .fbx) - used to display the graphics, 3D and 2D objects
+      - GLSL Shaders
+      - PlayCanvas
+      - Babylon.js (.gltf, .obj, .babylon, .hdr) - Microsoft
+      - A-Frame
+
+
+==============Pavan Sir==============
+Q. Who is having depth knowledge on 3d animations
+Q. Need the Proper library and its tutorial, since the library is huge
+Q. Babylons examples not found for event handling
+Q. three.js is also another kind of library for WebGL rendering
+Q. Someone who can mange the client / people. Since I donot have knowledege to speak
+Q.
+
+
+=============================
+1. How to click on a dynamic texture - html5 canvas //Draw on canvas
+2. 
+
+
+
+
+==============================
+
+spector.js is the webgl debugger
+External: 
+http://clipart-library.com/free/3d-cube-png.html
+
+
+
+contact@ippbonline.in
+
+FBX
+VFX
+skyBoX
+
+
+Upload 3D file in GLTF, GLB, STL, OBJ+MTL or BABYLON format.
+.gltf
+.obj
+.babylon
+.hdr
+
+Dummy Projects
+1. https://doc.babylonjs.com/features/introductionToFeatures/chap2/app2
+2. Home - https://www.babylonjs.com/demos/flat2009/
+
+
+Chair.obj
+cloth_meshV1.glb
+substanceShaderBall.gltf
+oculusQuest/right.babylon
+
+
+
+
+Comments
+==========================
+1. it is the rendering engine, not a modeling tool
+2. if you use UV textures you’ll need extra tool anyway
+3. So you are saying that using an external object like Blender is a best practice in creating Room kind of scene
+4. use textures with pre baked lighting informatio. Very suitable for static scenes.
+
+
+
+# Babyloan Loaders
+
+var spriteManagerPlayer = new BABYLON.SpriteManager("playerManager", "textures/player.png", 2, 64, scene);
+https://playground.babylonjs.com/#9RUHH#5
+
+
+BABYLON.SceneLoader.ImportMeshAsync(
+https://playground.babylonjs.com/#U2KKMK#1
+
+
+========================================================================
+Using 
+1. Javascript GUI can be appended to a canvas internally not to 3D Model 
+2. 
+
+
+
+# 3D buttons Button
+https://codepen.io/siouxcitizen/pen/aQVrjX
+https://codepen.io/siouxcitizen/pen/NEwVMj
+https://www.babylonjs-playground.com/debug.html#JUKXQD#344
+https://doc.babylonjs.com/typedoc/classes/BABYLON.GUI.Button
+
+
+https://sketchfab.com/3d-models/anatomy-of-the-human-brain-2019-4870387fd52b4706a87b1f3337356579
+https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-webpage-using-html-and-css/
+
+
+# Dynamically Load Multiple Models
+https://www.babylonjs-playground.com/#10FF4M#1
+https://www.babylonjs-playground.com/#31GM2Y
+https://www.babylonjs-playground.com/#Z152E2
+https://playground.babylonjs.com/#1I3CTP
+
+
+
+https://forum.babylonjs.com/t/error-in-onsuccess-callback/1725
+https://codesandbox.io/s/24w7922m70?file=/src/components/Tower.vue
+https://vue-babylonjs.com/#/home
+
+https://www.babylonjs-playground.com/#10FF4M#1
+
+
+
+_________________________________________________
+https://sandbox.babylonjs.com/
+https://learn.microsoft.com/en-us/windows/mixed-reality/develop/javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02
+
+https://github.com/brianzinn/react-babylonjs/issues/136

@@ -1,0 +1,11 @@
+https://threejs.org/examples/#webgl_loader_draco
+
+https://discourse.threejs.org/t/obj-and-fbx-3d-looks-black-when-use-rgbeloader/18175
+
+https://www.vectary.com/login/?next=%2Fp%2F3rOfT0069nkbXrPZBj5z6T
+fab
+
+
+=================================================
+
+https://babylonjs.medium.com/exporting-3d-content-for-babylon-js-76cb71a2df01#:~:text=Supported%203D%20File%20Formats,js%20file%20format.
