@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Babylon.js demo - Mesh Builder</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/5.30.0/babylon.js"></script>
+      <style>
+         html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
+      </style>
+   </head>
+
+   <body>
+      <canvas id = "renderCanvas"></canvas>
+      <script type = "text/javascript">
+         var canvas = document.getElementById("renderCanvas");
+         var engine = new BABYLON.Engine(canvas, true);
+         var createScene  = function() {
+            var scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
+            
+            var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 6, 1.3, 40, new BABYLON.Vector3(0, -3, 0), scene);
+            
+            var light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
+
+            var mat = new BABYLON.StandardMaterial("mat", scene);
+            mat.diffuseColor = new BABYLON.Color3(0.1, .5, 0);
+            mat.specularColor = new BABYLON.Color3(0, 0, 0);
+            mat.wireframe = true;
+
+            var meshcylinder = BABYLON.MeshBuilder.CreateCylinder("meshcylinder", {
+               height: 3,
+               diameter: 35,
+               tessellation: 52
+            }, scene);
+
+            meshcylinder.material = mat;
+            meshcylinder.position = new BABYLON.Vector3(0, 0, 0);
+
+            scene.activeCamera.attachControl(canvas);
+            return scene;
+         };
+         
+         var scene = createScene();
+         engine.runRenderLoop(function() {
+            scene.render();
+         });
+      </script>
+   </body>
+</html>

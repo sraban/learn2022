@@ -35,11 +35,13 @@ $npm test -- --coverage
 
 
 
+
 #31-10-2022
 -------------------------------------
 - Learning Angular Test Coverages
 - 
 - 
+# Babylon Examples for a tldf, gld
 
 
 

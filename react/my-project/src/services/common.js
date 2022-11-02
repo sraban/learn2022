@@ -11,7 +11,6 @@ axios.create({
    baseURL: `http://jsonplaceholder.typicode.com/`
 });
 
-
 // Add a request interceptor and pass the token here to header
 axios.interceptors.request.use( (config) => {
     // config.method get or post
