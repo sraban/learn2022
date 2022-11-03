@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>BabylonJs - Basic Element-Creating Scene</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/5.30.0/babylon.js"></script>
+      <style>
+         canvas {width: 100%; height: 100%;}
+      </style>
+   </head>
+
+   <body>
+      <canvas id = "renderCanvas"></canvas>
+      <script type = "text/javascript">
+         var canvas = document.getElementById("renderCanvas");
+         var engine = new BABYLON.Engine(canvas, true);
+         
+         var createScene  = function() {
+            var scene = new BABYLON.Scene(engine);
+            scene.clearColor = new BABYLON.Color3(1, 1, 1);
+            
+            var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1, 0.8, 20, new BABYLON.Vector3(0, 0, 0), scene);
+            camera.attachControl(canvas, true);
+
+            var matcone = new BABYLON.StandardMaterial("mat1", scene);
+            matcone.alpha = 1.0;
+            matcone.diffuseColor = new BABYLON.Color3(0, 0, 0);
+            matcone.wireframe = true;
+
+            var cone = BABYLON.MeshBuilder.CreateCylinder("cone", {height : 10, diameterTop: 10,diameterBottom:10, tessellation: 5}, scene);
+            cone.position= new BABYLON.Vector3(12,1,0);
+            cone.material = matcone;	
+
+            var balloon1 = BABYLON.Mesh.CreateSphere("balloon1",5, 1.0, scene);
+            var balloon2 = BABYLON.Mesh.CreateSphere("balloon2", 5, 1.0, scene);
+            var balloon3 = BABYLON.Mesh.CreateSphere("balloon3", 5, 1.0, scene);
+            
+            balloon1.material = new BABYLON.StandardMaterial("matBallon", scene);
+            balloon2.material = new BABYLON.StandardMaterial("matBallon", scene);
+            balloon3.material = new BABYLON.StandardMaterial("matBallon", scene);
+
+            balloon1.position = new BABYLON.Vector3(4, 2, 0);
+            balloon2.position = new BABYLON.Vector3(5, 1, 0);
+            balloon3.position = new BABYLON.Vector3(7, 0, 0);
+
+            var pointToIntersect = new BABYLON.Vector3(10, 0, 0);
+            var a = 0.01;
+            
+            scene.registerBeforeRender(function () {
+               if (balloon1.intersectsMesh(cone, false)) {
+                  balloon1.material.emissiveColor = new BABYLON.Color3(1, 0, 0);
+               } else {
+                  balloon1.material.emissiveColor = new BABYLON.Color3(0, 1, 0);
+               }
+
+               if (balloon2.intersectsMesh(cone, false)) {
+                  balloon2.material.emissiveColor = new BABYLON.Color3(1, 0, 0);
+               } else {
+                  balloon2.material.emissiveColor = new BABYLON.Color3(0, 1, 0);
+               }
+
+               if (balloon3.intersectsMesh(cone, false)) {
+                  balloon3.material.emissiveColor = new BABYLON.Color3(1, 0, 0);
+               } else {
+                  balloon3.material.emissiveColor = new BABYLON.Color3(0, 1, 0);
+               }
+
+               if (balloon3.intersectsPoint(pointToIntersect)) {
+                  balloon3.material.emissiveColor = new BABYLON.Color3(0, 0, 0);
+               }
+
+               a += 0.01;
+               balloon1.position.x += Math.cos(a) / 10;
+               balloon2.position.x += Math.cos(a) / 10;
+               balloon3.position.x += Math.cos(a) / 10;
+            });
+            return scene;
+         };
+         var scene = createScene();
+         engine.runRenderLoop(function() {
+            scene.render();
+         });
+      </script>
+   </body>
+</html>

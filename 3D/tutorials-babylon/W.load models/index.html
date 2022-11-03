@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Babylon.js sample code</title>
+
+    <!-- Babylon.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://preview.babylonjs.com/ammo.js"></script>
+    <script src="https://preview.babylonjs.com/cannon.js"></script>
+    <script src="https://preview.babylonjs.com/Oimo.js"></script>
+    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
+        .left {
+            width: 75%;
+            float: left;
+        }
+
+        .right {
+            float: 25%;
+            float: left;
+        }
+
+        .innerRight {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <canvas id="renderCanvas"></canvas>
+        <select onchange="changeScene(this.value)">
+                <option value="0">FIrst</option>
+                <option value="1">Second</option>
+            </select>
+    </div>
+    <div class="right">
+        <div class="innerRight">
+            
+        </div>
+    </div>
+
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var currentScene;
+        var createDefaultEngine = function () {
+            return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false });
+        };
+        var createScene = function () {
+
+            var scene1 = new BABYLON.Scene(engine);
+            var scene2 = new BABYLON.Scene(engine);
+
+            scenes = [];
+            scenes.push(scene1);
+            scenes.push(scene2);
+
+            currentScene = scene1;
+
+            var camera1 = new BABYLON.ArcRotateCamera("camera1", 0, 0, 0, new BABYLON.Vector3(0, 0, -0), scene1);
+            var camera2 = new BABYLON.ArcRotateCamera("camera2", 0, 0, 0, new BABYLON.Vector3(0, 0, -0), scene2);
+
+            BABYLON.SceneLoader.Append("scenes/", "house1.babylon", scene1, function (scene1) {
+                scene1.createDefaultCameraOrLight(true, true, true);
+                scene1.clearColor = new BABYLON.Color3(255, 255, 255);
+
+                scene1.activeCamera.lowerBetaLimit = 1;
+                scene1.activeCamera.upperBetaLimit = 1.5;
+
+                var light = new BABYLON.DirectionalLight("light1", new BABYLON.Vector3(-2, -6, -2), scene1);
+                light.position = new BABYLON.Vector3(20, 60, 20);
+                light.shadowMinZ = 30;
+                light.shadowMaxZ = 180;
+                light.intensity = 1;
+
+                var generator = new BABYLON.ShadowGenerator(512, light);
+                generator.useContactHardeningShadow = true;
+                generator.bias = 0.01;
+                generator.normalBias = 0.05;
+                generator.contactHardeningLightSizeUVRatio = 0.08;
+
+                for (var i = 0; i < scene1.meshes.length; i++) {
+                    generator.addShadowCaster(scene1.meshes[i]);
+                    scene1.meshes[i].receiveShadows = true;
+                    if (scene1.meshes[i].material && scene1.meshes[i].material.bumpTexture) {
+                        scene1.meshes[i].material.bumpTexture.level = 2;
+                    }
+                }
+
+                camera1 = scene1.activeCamera;
+            });
+
+            BABYLON.SceneLoader.Append("scenes/", "house2.babylon", scene2, function (scene2) {
+                scene2.createDefaultCameraOrLight(true, true, true);
+                scene2.clearColor = new BABYLON.Color3(1, 1, 1);
+
+                scene2.activeCamera.lowerBetaLimit = 1;
+                scene2.activeCamera.upperBetaLimit = 1.5;
+
+                var light = new BABYLON.DirectionalLight("light1", new BABYLON.Vector3(-2, -6, -2), scene2);
+                light.position = new BABYLON.Vector3(20, 60, 20);
+                light.shadowMinZ = 30;
+                light.shadowMaxZ = 180;
+                light.intensity = 5;
+
+                var generator = new BABYLON.ShadowGenerator(512, light);
+                generator.useContactHardeningShadow = true;
+                generator.bias = 0.01;
+                generator.normalBias = 0.05;
+                generator.contactHardeningLightSizeUVRatio = 0.08;
+
+                for (var i = 0; i < scene1.meshes.length; i++) {
+                    generator.addShadowCaster(scene2.meshes[i]);
+                    scene2.meshes[i].receiveShadows = true;
+                    if (scene2.meshes[i].material && scene2.meshes[i].material.bumpTexture) {
+                        scene2.meshes[i].material.bumpTexture.level = 2;
+                    }
+                }
+
+                var helper = scene2.createDefaultEnvironment({
+                    skyboxSize: 1500,
+                    groundShadowLevel: 0.5,
+                });
+
+                helper.setMainColor(BABYLON.Color3.White());
+                scene.environmentTexture.lodGenerationScale = 0.6;
+                camera2 = scene2.activeCamera;
+            });
+
+            return scene1;
+        };
+
+        function changeScene(ver) {
+            currentScene = scenes[ver];
+            engine.stopRenderLoop();
+            engine.runRenderLoop(function () {
+                currentScene.render();
+            });
+        };
+        window.initFunction = async function () {
+
+
+            var asyncEngineCreation = async function () {
+                try {
+                    return createDefaultEngine();
+                } catch (e) {
+                    console.log("the available createEngine function failed. Creating the default engine instead");
+                    return createDefaultEngine();
+                }
+            }
+
+            window.engine = await asyncEngineCreation();
+            if (!engine) throw 'engine should not be null.';
+            startRenderLoop(engine, canvas);
+            window.scene = createScene();
+        };
+        initFunction().then(() => {
+            sceneToRender = scene
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- 
+createDefaultEngine(); --- using canvas ID
+engine.runRenderLoop()
+createScene()
+BABYLON.SceneLoader.Append()
+
+
+ -->

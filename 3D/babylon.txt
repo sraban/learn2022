@@ -80,8 +80,11 @@ Questions for Interview
       - Babylon.js (.gltf, .obj, .babylon, .hdr) - Microsoft
       - A-Frame
 
-
-==============Pavan Sir==============
+6. Scenes Switching Loading Multiple
+    https://playground.babylonjs.com/#JA1ND3#48
+    https://www.babylonjs-playground.com/#10FF4M#1
+    https://www.babylonjs-playground.com/#Z152E2
+============================
 Q. Who is having depth knowledge on 3d animations
 Q. Need the Proper library and its tutorial, since the library is huge
 Q. Babylons examples not found for event handling
@@ -171,8 +174,15 @@ https://www.section.io/engineering-education/how-to-insert-3d-objects-into-a-web
 # Dynamically Load Multiple Models
 https://www.babylonjs-playground.com/#10FF4M#1
 https://www.babylonjs-playground.com/#31GM2Y
-https://www.babylonjs-playground.com/#Z152E2
+
+
+# BABYLON.GUI
 https://playground.babylonjs.com/#1I3CTP
+
+
+# ALL GLTF
+https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/2.0/
+
 
 
 
@@ -180,7 +190,7 @@ https://forum.babylonjs.com/t/error-in-onsuccess-callback/1725
 https://codesandbox.io/s/24w7922m70?file=/src/components/Tower.vue
 https://vue-babylonjs.com/#/home
 
-https://www.babylonjs-playground.com/#10FF4M#1
+
 
 
 
@@ -189,3 +199,10 @@ https://sandbox.babylonjs.com/
 https://learn.microsoft.com/en-us/windows/mixed-reality/develop/javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02
 
 https://github.com/brianzinn/react-babylonjs/issues/136
+
+
+
+
+===================================================
+https://replit.com/community/all?q=babylon
+https://replit.com/talk/learn/3D-Games-with-BabylonJS-A-Starter-Guide/15957
