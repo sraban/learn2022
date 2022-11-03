@@ -9,7 +9,7 @@ Q. Udemy Courses on 3D/WebGL
 Q. count like bids with Headings and little detail --- no repeation of lines while reading from tutorials point
 Q. Stackoverflow clips
 	https://stackoverflow.com/questions/28059155/babylon-js-custom-scene-doesnt-load
-  https://stackoverflow.com/questions/26917012/load-a-obj-and-stl-in-babylon-js
+    https://stackoverflow.com/questions/26917012/load-a-obj-and-stl-in-babylon-js
 
 
 Q. Projects
@@ -43,6 +43,17 @@ Q. Learn Chinese Website
 
     Buttons
     https://playground.babylonjs.com/#BCU1XR#0
+
+Q. Deep Dive Babylon
+   https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer
+
+Q. VueJS
+    https://codesandbox.io/s/duyyw?file=/src/App.vue
+    https://codepen.io/ebrewe/pen/NvRZEy/
+
+Q. React
+   https://github.com/brianzinn/create-react-app-babylonjs-pwa
+
 
 Q. Video
     https://www.youtube.com/watch?v=LY92h9-2TAg
@@ -84,6 +95,13 @@ Questions for Interview
     https://playground.babylonjs.com/#JA1ND3#48
     https://www.babylonjs-playground.com/#10FF4M#1
     https://www.babylonjs-playground.com/#Z152E2
+
+7. Async Loading of Texture
+    https://www.babylonjs-playground.com/#XKSKJN
+
+8. Dynamic Texture with Ground
+    https://www.babylonjs-playground.com/#5ZCGRM#3
+
 ============================
 Q. Who is having depth knowledge on 3d animations
 Q. Need the Proper library and its tutorial, since the library is huge
@@ -95,7 +113,7 @@ Q.
 
 =============================
 1. How to click on a dynamic texture - html5 canvas //Draw on canvas
-2. 
+2. shader, texture, properties, UVMaps for atlassing, etc
 
 
 
