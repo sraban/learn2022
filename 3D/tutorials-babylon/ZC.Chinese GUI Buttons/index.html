@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+
+
+
+  <title>CodePen - Babylon.js  v3.3.0 Practice#15 Button And Label Test</title>
+  
+  
+  
+  
+<style>
+html, body {
+    overflow: hidden;
+    width   : 100%;
+    height  : 100%;
+    margin  : 0;
+    padding : 0;
+}
+
+#renderCanvas {
+    width   : 100%;
+    height  : 100%;
+    touch-action: none;
+}
+</style>
+
+
+</head>
+
+<body translate="no" >
+  <!-- babylon.min.js v3.3.0 -->
+<script src="https://cdn.jsdelivr.net/npm/babylonjs@3.3.0/babylon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/babylonjs-gui@3.3.0/babylon.gui.min.js"></script>
+
+<canvas id="renderCanvas"></canvas>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+//Babylon.js Version 3.3.0 のライブラリを使用してみました
+//
+//Babylon.jsのサンプルがある「Babylon.js Playground」からのコードを参考にして
+//GUI機能のラベルとボタンの表示をいろいろ試してみました
+//
+//
+//以下のサイト・コードを参考にしました
+//
+//Babylon.js v3.3.0 でGUI機能テスト
+//http://jsdo.it/siouxcitizen2/08qP
+//
+//Animation blending
+//http://www.babylonjs-playground.com/#BCU1XR#0
+//
+//How to align GUI.Button horizontally
+//http://www.html5gamedevs.com/topic/31729-how-to-align-guibutton-horizontally/
+//https://www.babylonjs-playground.com/#4P8PJY#2
+//
+
+var canvas = document.getElementById("renderCanvas");
+
+var createScene = function () {
+
+  var scene = new BABYLON.Scene(engine);
+  
+  var camera = new BABYLON.ArcRotateCamera("camera1", Math.PI / 2, Math.PI / 4, 3, new BABYLON.Vector3(0, 1, 0), scene);
+  camera.attachControl(canvas, true);
+
+  camera.lowerRadiusLimit = 2;
+  camera.upperRadiusLimit = 10;
+  camera.wheelDeltaPercentage = 0.01;
+
+  var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+  light.intensity = 0.6;
+  light.specular = BABYLON.Color3.Black();
+
+  var light2 = new BABYLON.DirectionalLight("dir01", new BABYLON.Vector3(0, -0.5, -1.0), scene);
+  light2.position = new BABYLON.Vector3(0, 5, 5);
+
+  // UI
+  var advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+
+  //上段　表示用ラベル　ラベル部分設定　直接advancedTextureに追加
+  var label1 = new BABYLON.GUI.Rectangle("label for ");
+  label1.background = "black";
+  label1.height = "60px";
+  label1.alpha = 0.5;
+  label1.width = "200px";
+  label1.cornerRadius = 20;
+  label1.thickness = 1;
+  label1.linkOffsetY = 30;
+  label1.top = "-40%";
+  label1.left = "-20%";
+  advancedTexture.addControl(label1);
+  //上段　表示用ラベル　テキスト部分設定　ラベルに追加
+  var text1 = new BABYLON.GUI.TextBlock();
+  text1.text = "てすと";
+  text1.color = "white";
+  label1.addControl(text1);
+
+
+  //上段　ボタンまとめ用パネル　ここにボタンをまとめてからadvancedTextureに追加    
+  var UiPanel1 = new BABYLON.GUI.StackPanel();
+  UiPanel1.top = "-30%";
+  UiPanel1.width = "220px";
+  UiPanel1.fontSize = "14px";
+  UiPanel1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+  UiPanel1.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+  advancedTexture.addControl(UiPanel1);
+
+  //上段　ボタンその１
+  var button1 = BABYLON.GUI.Button.CreateSimpleButton("but1", "ぼたん壱");
+  button1.paddingTop = "10px";
+  button1.width = "100px";
+  button1.height = "50px";
+  button1.color = "white";
+  button1.background = "green";
+  button1.onPointerDownObservable.add(() => {
+    text1.text = "ぼたん壱 \nが押されました";
+  });
+  UiPanel1.addControl(button1);
+
+  //上段　ボタンその２
+  var button2 = BABYLON.GUI.Button.CreateSimpleButton("but2", "ぼたん弐");
+  button2.paddingTop = "10px";
+  button2.width = "100px";
+  button2.height = "50px";
+  button2.color = "white";
+  button2.background = "green";
+  button2.onPointerDownObservable.add(() => {
+    text1.text = "ぼたん弐 \nが押されました";
+  });
+  UiPanel1.addControl(button2);
+
+
+
+
+  //下段表示用ラベルまとめ用パネル　ここにラベルをまとめてからadvancedTextureに追加    
+  var UiPanel2 = new BABYLON.GUI.StackPanel();
+  UiPanel2.isVertical = false;
+  UiPanel2.top = "5%";
+  UiPanel2.width = "440px";
+  UiPanel2.height = "220px";
+  UiPanel2.fontSize = "14px";
+  UiPanel2.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_LEFT;
+  UiPanel2.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+  advancedTexture.addControl(UiPanel2);
+
+  //下段　表示用ラベル　ラベル部分設定　直接advancedTextureに追加
+  var label2 = new BABYLON.GUI.Rectangle("label for ");
+  label2.background = "#00ffff";
+  label2.height = "60px";
+  label2.alpha = 1;
+  label2.width = "200px";
+  label2.cornerRadius = 25;
+  label2.thickness = 1;
+  //label2.linkOffsetY = 30;
+  label2.top = "10%";
+  label2.paddingLeft = "10px";
+  //advancedTexture.addControl(label2); 
+  //下段　表示用ラベル　テキスト部分設定　ラベルに追加
+  var text2 = new BABYLON.GUI.TextBlock();
+  text2.text = "てすと";
+  text2.color = "green";
+  text2.fontSize = "20px";
+  label2.addControl(text2);
+  UiPanel2.addControl(label2);
+
+  //下段　表示用ラベル　ラベル部分設定　直接advancedTextureに追加
+  var label3 = new BABYLON.GUI.Rectangle("label for ");
+  label3.background = "#ffff00";
+  label3.height = "60px";
+  label3.alpha = 1;
+  label3.width = "200px";
+  label3.cornerRadius = 5;
+  label3.thickness = 1;
+  //label3.linkOffsetY = 30;
+  label3.top = "10%";
+  label3.paddingLeft = "10px";
+  //advancedTexture.addControl(label3); 
+  //下段　表示用ラベル　テキスト部分設定　ラベルに追加
+  var text3 = new BABYLON.GUI.TextBlock();
+  text3.text = "てすと";
+  text3.color = "#ff0000";
+  text3.fontSize = "20px";
+  label3.addControl(text3);
+  UiPanel2.addControl(label3);
+
+
+
+
+  //下段ボタンまとめ用パネル　ここにボタンをまとめてからadvancedTextureに追加    
+  var UiPanel3 = new BABYLON.GUI.StackPanel("horizontal");
+  UiPanel3.isVertical = false;
+  UiPanel3.top = "30%";
+  UiPanel3.width = "220px";
+  UiPanel3.fontSize = "14px";
+  UiPanel3.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+  UiPanel3.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+  advancedTexture.addControl(UiPanel3);
+
+  //下段　ボタンその１
+  var button3 = BABYLON.GUI.Button.CreateSimpleButton("but1", "ぼたんさん");
+  button3.paddingLeft = "10px";
+  button3.width = "100px";
+  button3.height = "50px";
+  button3.cornerRadius = 5;
+  button3.color = "white";
+  button3.background = "black";
+  button3.onPointerDownObservable.add(() => {
+    text2.text = "ぼたんサン \nが押されました";
+    text3.text = "ぼたんサン \nが押されました";
+  });
+  UiPanel3.addControl(button3);
+
+  //下段　ボタンその２
+  var button4 = BABYLON.GUI.Button.CreateSimpleButton("but2", "ぼたんよん");
+  button4.paddingLeft = "10px";
+  button4.width = "100px";
+  button4.height = "50px";
+  button4.cornerRadius = 15;
+  button4.color = "#ffffff";
+  button4.background = "#0000ff";
+  button4.onPointerDownObservable.add(() => {
+    text2.text = "ぼたんヨン \nが押されました";
+    text3.text = "ぼたんヨン \nが押されました";
+  });
+  UiPanel3.addControl(button4);
+
+
+  return scene;
+};
+
+var engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true });
+var scene = createScene();
+
+engine.runRenderLoop(function () {
+  if (scene) {
+    scene.render();
+  }
+});
+
+// Resize
+window.addEventListener("resize", function () {
+  engine.resize();
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>

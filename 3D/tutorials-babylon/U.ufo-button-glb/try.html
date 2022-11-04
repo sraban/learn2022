@@ -134,6 +134,23 @@
         
         		scene.activeCamera.lowerRadiusLimit = 1.0;
         		scene.activeCamera.upperRadiusLimit = 10.0;
+
+                scene.meshes.slice().forEach(function (mesh) {
+                    console.log("mesh=====>", mesh.id);
+                });
+
+                scene.lights.slice().forEach(function (light) {
+                  console.log("light=====>", light.id);
+                });
+
+                scene.skeletons.slice().forEach(function (skeleton) {
+                  console.log("skeleton=====>", skeleton.id);
+                });
+
+                  scene.animationGroups.slice().forEach(function (animationGroup) {
+                    console.log("animationGroup=====>", animationGroup.id, animationGroup.name);
+                  });
+              
         
         		var light2 = new BABYLON.DirectionalLight("dir01", new BABYLON.Vector3(0, -0.5, -1.0), scene);
         		light2.position = new BABYLON.Vector3(0, 6, 6);
@@ -155,6 +172,8 @@
         
                 helper.setMainColor(new BABYLON.Color3(0.5, 0.2, 0.2));
         		
+
+
         		// Enable animation blending for all animations
                 scene.animationPropertiesOverride = new BABYLON.AnimationPropertiesOverride();
                 scene.animationPropertiesOverride.enableBlending = true;

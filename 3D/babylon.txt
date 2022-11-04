@@ -1,3 +1,21 @@
+Q. Google
+    - dynamically change the texture using the babylon gui button
+    - create a clickable button inside a scene
+    - Update the texture dynamically based on user selection
+    - pointer down on a specific position in scene
+    
+    - Replace a texture to scene
+    - Add a texture to scene
+
+Q. API Ref C Program
+    - https://falcor.docsforge.com/master/api/Falcor/Scene/getMaterialByName/
+    - https://doc.babylonjs.com/features/featuresDeepDive/materials/using/materials_introduction#diffuse-color-example
+    - https://pub.dev/documentation/babylon_dart/latest/babylon/Scene-class.html
+
+Q. Tricks
+    
+    copy(Object.getOwnPropertyNames(scene.__proto__))
+
 Q. Download a fbx file online - host in github
 Q. Download Others like .obj , .fltp, babylon
 Q. VS Code Extension for WebGL/ Canvas
@@ -46,6 +64,7 @@ Q. Learn Chinese Website
 
 Q. Deep Dive Babylon
    https://doc.babylonjs.com/features/featuresDeepDive/babylonViewer
+   Button:  https://doc.babylonjs.com/typedoc/classes/BABYLON.GUI.Button#name
 
 Q. VueJS
     https://codesandbox.io/s/duyyw?file=/src/App.vue
@@ -58,8 +77,14 @@ Q. React
 Q. Video
     https://www.youtube.com/watch?v=LY92h9-2TAg
 
+Q. Codepen practises in chinese - babylon
+    https://codepen.io/siouxcitizen
+    https://codepen.io/siouxcitizen/pen/aQVrjX
+
 -----------------------------------
 David Catuhe, a Principal Program Manager for the Window & Devices Group at Microsoft
+
+
 
 
 -----------------------------------
@@ -224,3 +249,25 @@ https://github.com/brianzinn/react-babylonjs/issues/136
 ===================================================
 https://replit.com/community/all?q=babylon
 https://replit.com/talk/learn/3D-Games-with-BabylonJS-A-Starter-Guide/15957
+
+
+
+
+
+
+====================================================
+https://joepavitt.medium.com/optimizing-a-large-scale-babylon-js-scene-9466bb715e15
+https://forum.babylonjs.com/t/different-animations-from-glb-without-looping/11197
+
+function debugger(scene) {
+      scene.meshes.slice().forEach(function (mesh) {
+         // mesh.dispose(false, true);
+      });
+      scene.lights.slice().forEach(function (light) {
+         // light.dispose();
+      });
+      scene.skeletons.slice().forEach(function (skeleton) {
+        //  skeleton.dispose();
+      });
+      debugger;
+  }
