@@ -70,6 +70,49 @@ $npm test -- --coverage
 #04-11-2022
 -------------------------------------
 
+https://babylonjsguide.github.io/
+https://github.com/Symbitic/awesome-babylonjs
+http://grideasy.github.io/tutorials/How_to_use_Actions
+https://learn.microsoft.com/en-us/windows/mixed-reality/develop/javascript/tutorials/babylonjs-webxr-helloworld/interact-03
+
+
+- Camera Positions setting
+	https://playground.babylonjs.com/#PKQP7N#10
+	https://playground.babylonjs.com/#EBPQH9#43
+	https://playground.babylonjs.com/#S0KJUA#24
+
+
+- Button Trigger: 
+	https://playground.babylonjs.com/#V181I2#34
+
+
+-- Change The Objects
+	https://www.babylonjs-playground.com/#Z152E2#2
+	https://www.babylonjs-playground.com/#0EL6Y9#3
+	https://forum.babylonjs.com/t/how-to-render-a-dynamictexture-in-a-multimaterial/6678/16
+
+- Keyboard events: https://stackoverflow.com/questions/64570097/checkcollision-using-javascript-in-babylon-js
+
+Actions
+	https://stackoverflow.com/questions/37857551/how-to-stop-action-manager-trigger
+
+
+Snippets
+	BABYLON.MeshBuilder.CreateGround(), BABYLON.MeshBuilder.CreateSphere(), BABYLON.MeshBuilder.CreateBox()
+	ground.actionManager.registerAction()
+	BABYLON.ActionManager.OnPickTrigger
+
+MOdel Viewer/Editor
+https://modelviewer.dev/editor/
+https://gltf-viewer.donmccurdy.com/
+
+
+Youtube Series - BabylonJS
+https://www.youtube.com/c/gamefromscratch/playlists
+
+
+https://doc.babylonjs.com/toolsAndResources/inspector/textureInspector
+
 
 
 #07-11-2022
