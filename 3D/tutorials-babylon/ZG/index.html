@@ -42,7 +42,11 @@
 
 <body>
     <canvas id="renderCanvas"></canvas>
-
+    <select onchange="changeAnimation(this.value)" style="position: absolute;z-index: 11;top:0;right:10px;">
+    	<option value="0">Animation State 1</option>
+    	<option value="1">Animation State 2</option>
+    	<option value="2">Animation State 3</option>
+    </select>
     <script>
         var canvas = document.getElementById("renderCanvas");
 
@@ -126,9 +130,10 @@
 			        	  }
 
 			        	  this.changeAnimation = function( index ) {
-			        	  	let group = scene.animationGroups[index];
-			        	  	group.stop(true);
-			        	  	group.start(true);
+				        	  	let group = scene.animationGroups[index];
+				        	  	group.stop(true);
+				        	  	group.start(true);
+				        	  	
 			        	  };
 
                     }

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://preview.babylonjs.com/ammo.js"></script>
+        <script src="https://preview.babylonjs.com/cannon.js"></script>
+        <script src="https://preview.babylonjs.com/Oimo.js"></script>
+        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+        const setTopBottomRatio = (camera) => {
+            const ratio = canvas.height / canvas.width;
+            camera.orthoTop = camera.orthoRight * ratio;
+            camera.orthoBottom = camera.orthoLeft * ratio;
+        };
+        let zoomTarget = null;
+        const zoom2DView = async (camera, delta) => {
+            const zoomingOut = delta < 0;
+        
+            if (zoomTarget) {
+                const totalX = Math.abs(camera.orthoLeft - camera.orthoRight);
+                const totalY = Math.abs(camera.orthoTop - camera.orthoBottom);
+        
+                const aspectRatio = totalY / totalX;
+        
+                {
+                    const fromCoord = camera.orthoLeft - zoomTarget.x;
+                    const ratio = fromCoord / totalX;
+                    camera.orthoLeft -= ratio * delta;
+                }
+                
+                {
+                    const fromCoord = camera.orthoRight - zoomTarget.x;
+                    const ratio = fromCoord / totalX;
+                    camera.orthoRight -= ratio * delta;
+                }
+        
+                {
+                    const fromCoord = camera.orthoTop - zoomTarget.y;
+                    const ratio = fromCoord / totalY;
+                    camera.orthoTop -= ratio * delta * aspectRatio;
+                }
+        
+                {
+                    const fromCoord = camera.orthoBottom - zoomTarget.y;
+                    const ratio = fromCoord / totalY;
+                    camera.orthoBottom -= ratio * delta * aspectRatio;
+                }
+        
+                // decrease pan sensitivity the closer the zoom level.
+                camera.panningSensibility = 6250 / Math.abs(totalX / 2);
+            }
+        };
+        
+        const resetCameraZoom = (camera) => {
+            camera.setPosition(new BABYLON.Vector3(0, 0, -100));
+            camera.target = new BABYLON.Vector3(0, 0, 0);
+            camera.orthoLeft = -1;
+            camera.orthoRight = 1;
+            setTopBottomRatio(camera);
+        };
+        
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+            var camera = new BABYLON.ArcRotateCamera('Camera', 0, 0, -1, new BABYLON.Vector3(1, 2, -3), scene);
+            resetCameraZoom(camera);
+            window.camera = camera;
+        
+            let totalZoom = 0;
+        
+            scene.onPointerObservable.add(({ event }) => {
+                const delta = (Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail || event.deltaY)))) * 0.2;
+                if (delta > 0 && totalZoom < 14 || delta < 0) {
+                    totalZoom += delta;
+                    zoom2DView(camera, delta);
+                }
+            }, BABYLON.PointerEventTypes.POINTERWHEEL);
+        
+            scene.onPointerObservable.add(() => {
+                zoomTarget = BABYLON.Vector3.Unproject(
+                    new BABYLON.Vector3(scene.pointerX, scene.pointerY, 0),
+                    engine.getRenderWidth(),
+                    engine.getRenderHeight(),
+                    camera.getWorldMatrix(),
+                    camera.getViewMatrix(),
+                    camera.getProjectionMatrix()
+                );
+            }, BABYLON.PointerEventTypes.POINTERMOVE);
+            
+        
+            // lock the camera's placement, zooming is done manually in orthographic mode.
+            // Locking this fixes strange issues with Hemispheric Light
+            camera.lowerRadiusLimit = camera.radius;
+            camera.upperRadiusLimit = camera.radius;
+        
+            // This attaches the camera to the canvas
+            camera.attachControl(canvas, true, false, 0);
+            camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+            camera.panningInertia = 0;
+            camera.panningSensibility = 500;
+        
+            // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
+            var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = 0.7;
+        
+            BABYLON.SceneLoader.Append("https://models.babylonjs.com/", "alien.glb", scene, function (newMeshes) {
+                scene.createDefaultCameraOrLight(true);
+                scene.activeCamera.attachControl(canvas, false);
+                scene.activeCamera.alpha += Math.PI; // camera +180°
+        
+        
+              var oldX = 0; //old mouse pointer x value
+              var oldY = 0; //old mouse pointer y value
+              let panning = false;
+        
+              scene.onPointerObservable.add((pointerInfo) => {
+                switch (pointerInfo.type) {
+                  case BABYLON.PointerEventTypes.POINTERDOWN:
+                    
+                    oldX = pointerInfo.event.pageX;
+                    oldY = pointerInfo.event.pageY;
+        
+                    if (pointerInfo.event.button == 1) {
+                        // //enable custom panning 
+                        panning = true;
+                        camera.detachControl(canvas);
+                    } 
+                    
+                    break;
+        
+                  case BABYLON.PointerEventTypes.POINTERUP:
+                    if (pointerInfo.event.button == 1) {
+                        panning = false;
+                        camera.attachControl(canvas, true);
+                    }
+                    break;
+        
+                  case BABYLON.PointerEventTypes.POINTERMOVE:
+        
+        			if(panning) {				
+                        var diffX = 0;
+                        var diffY = 0;
+        
+                        const scaleWidth = (camera.orthoRight - camera.orthoLeft) / canvas.width;
+                        const scaleHeight = (camera.orthoBottom - camera.orthoTop) / canvas.height;
+                        const scale = Math.max(scaleWidth, scaleHeight);
+        
+                        if (oldX > 0 || oldY > 0) {
+                            diffX = pointerInfo.event.pageX - oldX;
+                            diffY = pointerInfo.event.pageY - oldY;
+                        }
+                        if (pointerInfo.event.pageX < oldX) {
+                            // pointer traversing left 
+                            camera.targetScreenOffset.x = camera.targetScreenOffset.x + (diffX * scale);
+                        }	
+                        if(pointerInfo.event.pageY < oldY) {
+                            // pointer traversing up 
+                            camera.targetScreenOffset.y = camera.targetScreenOffset.y - (diffY * scale);
+                        }
+                        if (pointerInfo.event.pageX > oldX) {
+                            // pointer traversing right
+                            camera.targetScreenOffset.x = camera.targetScreenOffset.x + (diffX * scale);
+                        }
+                        if (pointerInfo.event.pageY > oldY) {
+                            // pointer traversing down
+                            camera.targetScreenOffset.y = camera.targetScreenOffset.y - (diffY * scale);
+                        }
+        
+                        oldX = pointerInfo.event.pageX;
+                        oldY = pointerInfo.event.pageY;
+                        		
+        			}
+        
+                    break;
+                }
+              });
+            });
+            
+            return scene;
+        
+        };
+                window.initFunction = async function() {
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
