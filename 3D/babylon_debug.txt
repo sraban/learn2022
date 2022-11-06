@@ -38,7 +38,8 @@ https://doc.babylonjs.com/playground?type=code&q=%20showExplorer
 Performance & Optimisation:
 	https://joepavitt.medium.com/optimizing-a-large-scale-babylon-js-scene-9466bb715e15
 
-Vue & Babylon
+Vue & Babylon:
+	https://vue-babylonjs.com/#/entity
 	https://forum.babylonjs.com/t/very-low-fps-with-vue/21095
 	https://devpost.com/software/3d-graphic-with-vue-babylongjs
 	Ex.	https://codesandbox.io/s/r9z6v?file=/src/App.vue:183-246
@@ -46,6 +47,8 @@ Vue & Babylon
 React & Babylon
 	https://github.com/brianzinn/create-react-app-babylonjs
 	ex. https://codesandbox.io/s/ox19768vl9?file=/package.json
+	https://codesandbox.io/s/epic-darwin-tohk0
+	https://snyk.io/advisor/npm-package/react-babylonjs/example
 
 
 FrameWOrk Errors
@@ -114,6 +117,12 @@ Zoom In and Out
 
 
 -----------------------------------------------------------------------------------
+Baby Button:
+  https://playground.babylonjs.com/#2YZFA0#52
+
+City:
+  https://playground.babylonjs.com/#9Z476P#135
+
 
 -----------------------------------------------------------------------------------
 
@@ -122,7 +131,8 @@ Zoom In and Out
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
-
+https://vue-babylonjs.com/#/shader
+https://www.tutorialspoint.com/babylonjs/babylonjs_mesh.htm
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
