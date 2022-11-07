@@ -1,0 +1,109 @@
+# React Interview Questions
+----------------------------------
+Passing common data to every child component using <MyContext.Provider>
+
+1. https://stackoverflow.com/questions/70409299/how-to-pass-particular-property-to-all-child-components-in-react
+
+----------------------------------
+communication between decoupled or independent components. ---- PubSub.js or Redux
+Communicate data between Independednt componets -- EventBus()
+
+https://www.pluralsight.com/guides/how-to-communicate-between-independent-components-in-reactjs
+https://stackoverflow.com/questions/53329773/event-bus-in-react
+
+----------------------------------
+# redux-saga
+
+https://www.blog.duomly.com/implement-redux-saga-with-reactjs-and-redux/
+
+Youtube  - Watched till before async call --Hindhi
+https://www.youtube.com/watch?v=MQVcgb2ImV0&list=PL8p2I9GklV44lOq17oCf9_f40oXPWvwyS&index=11
+
+1. static Data: https://github.com/anil-sidhu/react-redux-saga/blob/redux-toolkit/src/components/Header.js
+2. Asyn Data: 
+----------------------------------
+# Settting up Envirnment Variables
+  https://create-react-app.dev/docs/adding-custom-environment-variables
+
+
+----------------------------------
+# FormLink, Form.Group, Form.Control
+
+
+----------------------------------
+# Routing Middleware
+1. Route Level Guard middleware
+2. Function level Guard authenitcation
+----------------------------------
+
+# Code Spliting - Loading routes based on demand
+https://create-react-app.dev/docs/code-splitting/
+
+----------------------------------
+
+----------------------------------
+npm test my-component.test --coverage --collectCoverageFrom=src/components/my-component/my-component.tsx
+
+--collectCoverageFrom='["packages/**/index.js"]' --coverage
+----------------------------------
+https://www.digitalocean.com/community/tutorials/how-to-test-a-react-app-with-jest-and-react-testing-library
+https://jestjs.io/docs/mock-function-api
+
+import {rest} from "msw"
+import { setupServer } from "msw/node"
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
+
+----------------------------------
+
+----------------------------------
+# SSL integration on React using node  --- mkcert
+1. SSL integration
+2. install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; 
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; 
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+3. choco install mkcert
+4. mkcert -install
+5. mkcert -CAROOT
+6. mkcert localhost
+
+7. 
+"scripts": {
+  "start":
+    "set HTTPS=true&&set SSL_CRT_FILE={CERT-PATH}&&set SSL_KEY_FILE={KEY-PATH}&&react-scripts start"
+}
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
