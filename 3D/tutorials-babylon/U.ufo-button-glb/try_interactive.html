@@ -209,10 +209,10 @@
 
 
         /* -----------Mesh Interactive Button---------- */
-        const box = BABYLON.MeshBuilder.CreateBox('box', { size: 0.5 }, scene);
+        const box = BABYLON.MeshBuilder.CreateBox('box', { size: 0.1 }, scene);
         box.position.x = 0.5;
         box.position.y = 1;
-        box.visibility = 0;
+        //box.visibility = 0;
 
         // const boxMaterial = new BABYLON.StandardMaterial('material', scene);
         // boxMaterial.diffuseColor = BABYLON.Color3.Random();
@@ -238,7 +238,7 @@
             }
           )
         );
-        scene.debugLayer.show();
+       // scene.debugLayer.show();
         /* --------------------- */
 
 

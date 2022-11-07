@@ -45,6 +45,7 @@ Vue & Babylon:
 	Ex.	https://codesandbox.io/s/r9z6v?file=/src/App.vue:183-246
 
 React & Babylon
+	https://brianzinn.github.io/react-babylonjs/?path=/story/vr--simple-vr
 	https://github.com/brianzinn/create-react-app-babylonjs
 	ex. https://codesandbox.io/s/ox19768vl9?file=/package.json
 	https://codesandbox.io/s/epic-darwin-tohk0
@@ -142,8 +143,12 @@ https://www.tutorialspoint.com/babylonjs/babylonjs_mesh.htm
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
-
+Camera Position Changes
+https://www.babylonjs-playground.com/#21HAJZ#1
 -----------------------------------------------------------------------------------
+
+https://brianzinn.github.io/react-babylonjs/?path=/story/babylon-basic--animations
+https://github.com/brianzinn/react-babylonjs/tree/master/packages/storybook/stories/babylonjs
 
 -----------------------------------------------------------------------------------
 
