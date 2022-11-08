@@ -6,7 +6,7 @@ import "../../style.css";
 
 
 
-const GizmoBox = ({ position, color } = props) => (
+const GizmoBox = ( { position, color } ) => (
   <box size={2} position={position}>
     <standardMaterial diffuseColor={color} specularColor={Color3.Black()} />
     <positionGizmo />

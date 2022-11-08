@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://preview.babylonjs.com/ammo.js"></script>
+        <script src="https://preview.babylonjs.com/cannon.js"></script>
+        <script src="https://preview.babylonjs.com/Oimo.js"></script>
+        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+        var createScene = function () {
+        
+            // This creates a basic Babylon Scene object (non-mesh)
+            var scene = new BABYLON.Scene(engine);
+        
+        
+            scene.createDefaultCameraOrLight(true, true, true);
+            // https://www.dropbox.com/s/fpa1937fmfmus8i/Terrace_Screen_Curved_Rounded%20%281%29.glb?dl=0
+            //
+            // console.log("hey",);
+            var camera = new BABYLON.ArcRotateCamera("camera",1.59,1.54,13.077,new BABYLON.Vector3(0,1,0), scene);
+            camera.attachControl(canvas, true);
+            scene.addCamera(camera);
+            scene.setActiveCameraByName("camera");
+            var layer = new BABYLON.Layer('FSLayer',null, scene, true);
+        
+            BABYLON.SceneLoader.ImportMesh("", "https://dl.dropbox.com/s/fpa1937fmfmus8i/", "Terrace_Screen_Curved_Rounded%20%281%29.glb", scene, function(){
+                let mesh = this.scene.getMeshByID("MediaTextureSwap");
+                let meshFSADT = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("FullScreenGUI", false);
+        
+                const mat = new BABYLON.StandardMaterial('mat', scene);
+                const videoTexture = new BABYLON.VideoTexture("vidtex", "textures/babylonjs.mp4", scene, false, false)
+                videoTexture.vScale = -1
+                const videoTextureLayer = new BABYLON.VideoTexture("vidtex", "textures/babylonjs.mp4", scene, false, false)
+                mat.backFaceCulling = false;
+                mat.diffuseTexture = videoTexture;
+                mat.emissiveColor = new BABYLON.Color3.White();
+        
+                mesh.material = mat;
+        
+                  var button = BABYLON.GUI.Button.CreateImageButton("but", "Escape", "textures/grass.png");
+                    button.width = 0.2;
+                    button.height = "40px";
+                    button.color = "white";
+                    button.background = "green";
+                    button.onPointerDownObservable.clear();
+                    button.onPointerDownObservable.add(function (evt) {
+                        removeFullscreen();
+                    });
+                
+                //add a trigger fullscreen
+                mesh.actionManager = new BABYLON.ActionManager(scene);
+                mesh.actionManager.registerAction(
+                    new BABYLON.ExecuteCodeAction( BABYLON.ActionManager.OnDoublePickTrigger, (evt)=>{
+                        goToFullScreen();
+                    })
+                )
+                
+                function goToFullScreen() {
+                    meshFSADT.addControl(button);   
+                    meshFSADT.isForeground = !meshFSADT.isForeground;
+                    layer.texture = videoTextureLayer;
+                }
+        
+                function removeFullscreen() {
+                    layer.texture = null;
+                    meshFSADT.removeControl(button);
+                }
+        
+            });
+            //var layer = new BABYLON.Layer('','https://i.imgur.com/mBBxGJH.jpg', scene, true);
+        
+            return scene;
+        
+        };
+        
+        
+                window.initFunction = async function() {
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>

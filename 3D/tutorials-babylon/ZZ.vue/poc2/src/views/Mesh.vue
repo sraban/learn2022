@@ -1,9 +1,14 @@
 <template>
   <div class="about">
+    <button @click="changePosition()">Change Position of Sphere</button>
+    <br/>
+    <div>{{ pos }}</div>
+
+
         <Scene>
           <Camera type="arcRotate" :beta="Math.PI / 4" :radius="20"></Camera>
           <HemisphericLight></HemisphericLight>
-          <Sphere :position="[-8,0,3]" :scaling="[2,1,5]"></Sphere>
+          <Sphere :position="pos" :scaling="[2,1,5]"></Sphere>
           <Sphere :position="[-5,0,3]" :scaling="[2,2,3]"></Sphere>
           <Sphere :position="[-1,0,3]" :scaling="[4,5,1]"></Sphere>
           <Sphere :position="[6,0,3]" :scaling="[8,5,3]"></Sphere>
@@ -48,7 +53,17 @@
 export default {
   name: 'About',
   data() {
-    return { myBox: {} };
+    return { 
+    myBox: {}, 
+    pos:[] };
   },
+  methods: {
+    changePosition() {
+      let x = Math.random()*10;
+      let y = Math.random()*10;
+      let z = Math.random()*10;
+      this.pos = [x,y,z];
+    }
+  }
 }
 </script>

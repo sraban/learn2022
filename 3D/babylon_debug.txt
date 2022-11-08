@@ -39,6 +39,7 @@ Performance & Optimisation:
 	https://joepavitt.medium.com/optimizing-a-large-scale-babylon-js-scene-9466bb715e15
 
 Vue & Babylon:
+	https://embed.plnkr.co/N5qs1ACkQaMOsgFlv7Qn/
 	https://vue-babylonjs.com/#/entity
 	https://forum.babylonjs.com/t/very-low-fps-with-vue/21095
 	https://devpost.com/software/3d-graphic-with-vue-babylongjs

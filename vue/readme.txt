@@ -1,0 +1,1 @@
+https://www.tutorialsplane.com/vue-js-generate-random-number-2/

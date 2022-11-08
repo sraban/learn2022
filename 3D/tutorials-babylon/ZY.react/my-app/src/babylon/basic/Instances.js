@@ -4,13 +4,11 @@ import React, { useCallback, useState } from "react";
 import { Engine, Scene } from "react-babylonjs";
 import "../../style.css";
 
-export default { title: "Babylon Basic" };
-
 const GRID_WIDTH = 60;
 const GRID_HEIGHT = 40;
 const HOVER_COLOR = new Color4(0.8, 0.8, 0.8, 1);
 
-const Instances = () => {
+const Instancez = () => {
   const [_, setState] = useState(false);
   const createUpdate = () => {
     setState((state) => !state);
@@ -100,4 +98,4 @@ const Instances = () => {
   );
 };
 
-export const Instances;
+export default Instancez;
