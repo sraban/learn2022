@@ -1,0 +1,49 @@
+
+
+# Movable Camera
+
+Player : https://www.babylonjs-playground.com/#LYCSQ#256
+FreeCam: https://www.babylonjs-playground.com/#14G2RL#7
+		 https://www.babylonjs-playground.com/#6PA720
+
+https://github.com/ssatguru/BabylonJS-CharacterController
+https://ssatguru.github.io/BabylonJS-CharacterController-Samples/demo/tst/testCommandControl.html
+
+# usages of Lerp - BABYLON.Vector3.Lerp
+
+camera.target = BABYLON.Vector3.Lerp(camera.target, player.position.add(player.speed.scale(15.0)), 0.05);
+camera.radius = camera.radius * 0.95 + (25.0 + player.speed.length() * 25.0) * 0.05;
+
+
+# torch(not camera) position changes while moving...
+	this.camera.getScene().onPointerObservable.
+
+
+# what is viewport
+   
+       camera.viewport = new BABYLON.Viewport(0, 0.5, 1.0, 0.5);
+       viewCamera.viewport = new BABYLON.Viewport(0, 0, 1.0, 0.5);  
+       _this.camera.cameraRotation
+
+
+# Math
+  Math.sin(), Math.cos(), Math.random(), Math.abs()
+
+
+
+
+# Concepts
+
+https://docs.zap.works/universal-ar/babylonjs/tracking/instant-world-tracking/
+https://www.sitepoint.com/testing-limits-webgl-babylon-js-train-demo/
+
+
+
+# Chinese Trainig
+https://zenn.dev/chomado/books/babylonjs-tutorial-ja/viewer/3-07
+
+
+============================================================
+https://stackoverflow.com/questions/58555694/on-mesh-click-arcrotatecamera-focus-on
+
+https://playground.babylonjs.com/#A1210C#51
