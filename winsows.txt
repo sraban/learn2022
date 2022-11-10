@@ -3,8 +3,13 @@ net.exe stop sysmain
 
 chkdsk.exe /f /r
 ------------------------------------------------------
+## Find the String within a File from a folder
 
+
+#> FINDSTR /L /S /I /N /C:"TheString" *.html
 ------------------------------------------------------
+
+
 
 ------------------------------------------------------
 
