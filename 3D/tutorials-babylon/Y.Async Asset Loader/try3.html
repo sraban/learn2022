@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Babylon.js sample code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Babylon.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://preview.babylonjs.com/ammo.js"></script>
+    <script src="https://preview.babylonjs.com/cannon.js"></script>
+    <script src="https://preview.babylonjs.com/Oimo.js"></script>
+    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+
+
+    <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
+        .left {
+            width: 80%;
+            float: left;
+            position: relative;
+        }
+        .right {
+            float: 25%;
+            float: left;
+        }
+        .innerRight {
+            padding: 10px;
+        }
+
+
+        .menu-btn {
+            background-color: #fff;
+            height: 60px;
+            width: 64px;
+            font-size: 20px;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            border: 1px solid #cccccc;
+            bottom: 100px;
+            z-index: 100;
+        }
+
+        .dropdown-menu {
+            position: absiolute;
+            display: inline-block;
+            height: 150px;
+            right: 0px;
+        }
+
+        .menu-content {
+            display: none;
+            position: absolute;
+            right: 0px;
+            bottom: 160px;
+            background-color: #fff;
+            border:1px solid #ccc;
+            min-width: 60px;
+            z-index: 200;
+            width: 62px;
+        }
+
+        .links {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            //border-bottom: 1px solid black;
+        }
+
+        .dropdown-menu:hover .menu-content {
+            display: block;
+        }
+        #babylonVRiconbtn {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="renderCanvas"></canvas>
+
+
+<div class="dropdown-menu">
+    <button class="menu-btn"><i class="fa fa-gear"></i></button>
+    <div class="menu-content">
+        <a class="links" href="#"><button onclick="zoom('+')"><i class="fa fa-plus"></i></button></a>
+        <a class="links" href="#"><button onclick="zoom('-')"><i class="fa fa-minus"></i></button></a>
+        <a class="links" href="#"><button id="models1"><i class="fa fa-camera"></i></button></a>
+        <a class="links" href="#"><button id="models2"><i class="fa fa-camera-retro"></i></button></a>
+    </div>
+</div>
+
+
+
+
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
+        var loadPromise = async (root, file, scene) => {
+            return new Promise((res, rej) => {
+                BABYLON.SceneLoader.LoadAssetContainer(root, file, scene, function (container) {
+                    res(container)
+                });
+            })
+        }
+
+        var main = async (scene, helper) => {
+            // Different objects to cycle through
+            var scenes = [
+                {
+                    root: "./scene/",
+                    file: "bl12_cameras.glb"
+                },
+                {
+                    root: "./scene/",
+                    file: "1213.gltf"
+                }
+            ]
+
+            // Load all scenes one by one and display the first one
+            var assetContainers = []
+            var currentSceneIndex = 0
+            for (var i = 0; i < scenes.length; i++) {
+                var assets = await loadPromise(scenes[i].root, scenes[i].file, scene)
+                // Add a light if none exists
+                if (assets.lights.length == 0) {
+                    var light = new BABYLON.HemisphericLight("", new BABYLON.Vector3(0, 1, 0), scene)
+                    scene.removeLight(light)
+                    assets.lights.push(light)
+                }
+                // Add camera if none exists
+                if (assets.cameras.length == 0) {
+                    //var camera = new BABYLON.FreeCamera("", new BABYLON.Vector3(0, 0, -50), scene);
+                    var camera = new BABYLON.ArcRotateCamera("cameara1", Math.PI / 2, Math.PI / 4, 3, new BABYLON.Vector3(0, 1, 0), scene);
+                    
+                    scene.removeCamera(camera)
+                    assets.cameras.push(camera)
+                }
+                assetContainers.push(assets);
+            }
+            assetContainers[currentSceneIndex].addAllToScene()
+
+            let cams = assetContainers[currentSceneIndex].cameras[0];
+
+            // scene.activeCameras[0].detachControl(canvas);
+           //  scene.activeCameras[0].attachControl(canvas, true);
+
+            // for (var i=0;i < scene.activeCameras.length;i++) {
+            //     scene.activeCameras[i].detachControl(canvas);
+            //     scene.activeCameras[i].attachControl(canvas, true);
+            // }
+            
+            window.activeCamera = scene.activeCamera;
+            //scene.debugLayer.show();
+            // Switch to next scene when z is pressed
+            document.getElementById("models1").onclick = (e) => { 
+                cam( 0 ) ;
+            };
+            document.getElementById("models2").onclick = (e) => { 
+                cam( 1 ) ;
+            };
+
+            function cam( type = 0 ) {
+                assetContainers[currentSceneIndex].removeAllFromScene()
+                // currentSceneIndex = (++currentSceneIndex) % assetContainers.length
+                currentSceneIndex = +type;
+
+                // Move active camera to where the scene has a camera
+                if (assetContainers[currentSceneIndex].cameras[0]) {
+                    scene.activeCamera.position.copyFrom(assetContainers[currentSceneIndex].cameras[0].position)
+                    
+                    // window.activeCamera.detachControl(canvas);
+                    // scene.activeCamera.attachControl(canvas, true);
+                    window.activeCamera = scene.activeCamera;
+                    
+
+                    let cam = scene.activeCamera;
+                    cam.lowerRadiusLimit = 55555; 
+                    cam.upperRadiusLimit = 999999;
+                    cam.radius = 55555;
+
+                    
+                    //cam.inputs.clear();
+                    //cam.inputs.addMouse();
+                    // cam.keysUp    = [90]; // Z
+                    //cam.keysDown  = [83]; // S
+                    //cam.keysLeft  = [81]; // Q
+                    //cam.keysRight = [68]; // D
+
+                    // This code is based off of the following: https://stackoverflow.com/questions/15505272/javascript-while-mousedown
+                    
+                    // SRABAN
+                }
+                assetContainers[currentSceneIndex].addAllToScene()
+            }
+
+
+
+            
+
+            scene.onPointerDown = function(evt, pickInfo) {
+               // console.log( evt, pickInfo );
+
+                //canvas.dispatchEvent(new Event('focus'));
+                //let event = new KeyboardEvent('keydown', {'keyCode':'38', cancelable: true});
+                //canvas.dispatchEvent(event);
+                
+                if(pickInfo.hit) {
+                    // if(camera.focusOn) camera.focusOn([pickInfo.pickedMesh], true);
+                }
+            }
+
+            // scene.onBeforeRenderObservable.add(() => {
+            //     console.log('===========')
+            //     canvas.dispatchEvent(new KeyboardEvent('keydown',{'key':'38'}));
+            //     // this._updateFromKeyboard();
+            // });
+
+        }
+
+        function zoom( type = '+') {
+
+            if(type == '-') {
+                
+                var backwardDirection = window.activeCamera.getDirection(BABYLON.Vector3.Backward());
+                window.activeCamera.position.x += backwardDirection.x * 100;
+                window.activeCamera.position.y += backwardDirection.y * 100;
+                window.activeCamera.position.z += backwardDirection.z * 100;
+                window.activeCamera.position.addInPlace( backwardDirection );
+                //window.activeCamera.radius -= 55555;
+                
+            } else {
+                var forwardDirection = window.activeCamera.getForwardRay(3).direction;
+                window.activeCamera.position.x += forwardDirection.x * 100;
+                window.activeCamera.position.y += forwardDirection.y * 100;
+                window.activeCamera.position.z += forwardDirection.z * 100;
+                window.activeCamera.position.addInPlace(forwardDirection);
+                //window.activeCamera.radius += 55555;
+            }
+            window.activeCamera.lowerRadiusLimit = 55555; 
+            window.activeCamera.upperRadiusLimit = 999999;
+        }
+
+
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+            var helper = scene.createDefaultVRExperience();
+            main(scene, helper);
+
+            scene.activeCamera.lowerRadiusLimit = 5555; 
+            scene.activeCamera.upperRadiusLimit = 99999;
+
+            return scene;
+        }
+        window.initFunction = async function () {
+
+
+            var asyncEngineCreation = async function () {
+                try {
+                    return createDefaultEngine();
+                } catch (e) {
+                    console.log("the available createEngine function failed. Creating the default engine instead");
+                    return createDefaultEngine();
+                }
+            }
+
+            window.engine = await asyncEngineCreation();
+            if (!engine) throw 'engine should not be null.';
+            startRenderLoop(engine, canvas);
+            window.scene = createScene();
+        };
+        initFunction().then(() => {
+            sceneToRender = scene
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+
+       
+    </script>
+</body>
+
+</html>
