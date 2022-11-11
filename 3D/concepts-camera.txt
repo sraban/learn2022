@@ -33,90 +33,12 @@ camera.radius = camera.radius * 0.95 + (25.0 + player.speed.length() * 25.0) * 0
 
 
 # Concepts
+
 https://docs.zap.works/universal-ar/babylonjs/tracking/instant-world-tracking/
 https://www.sitepoint.com/testing-limits-webgl-babylon-js-train-demo/
+https://www.codeproject.com/Articles/1009157/What-s-new-in-babylon-js-v-Using-WebGL-and-D-in-th
 
 
 
 # Chinese Trainig
 https://zenn.dev/chomado/books/babylonjs-tutorial-ja/viewer/3-07
-https://gamedevacademy.org/using-a-camera-in-a-3d-webgl-world-babylonjs-series-part-5/
-
-*# Virtual Words
-https://github.com/deimos411/virtualworlds
-
-============================================================
-https://stackoverflow.com/questions/58555694/on-mesh-click-arcrotatecamera-focus-on
-https://playground.babylonjs.com/#A1210C#51
-
-
-https://burtonsmediagroup.com/blog/changing-the-skybox-and-ground-settings-in-babylon-js/
-==================================================================
-Walking:
-
-
-==================================================================
-Aframe Example
-https://github.com/agrawalvivek2017/aframe
-
-
-
-==================================================================
-
-
-
-==================================================================
-
-
-
-==================================================================
-
-Camera Inputs
-https://babylonjs.medium.com/looking-at-custom-camera-inputs-becb492f09fc
-
-
-
-var event = new Event('keypress', { keyCode: 38 });
-document.getElementById('myForm').dispatchEvent(event);
-
-
-
-===================================================================
-
-Camera Moveable Cliclk
-https://forum.babylonjs.com/t/move-forward-in-universal-camera-with-right-click/4377/2
-https://www.babylonjs-playground.com/#BX6P85
-
-
-
-
-
-
-
-====================================================================
-
-
-1. based on the position loading the 3D model
-2. Display 3D models on that position where it is clicked
-3. When {camera - target position} maintains the distance, which model to start
-4. change the camera position to clicked postion or original position
-5. Multiple meshes to load but mapping must be available to display the next mesh
-6. 
-
-internal_mesh1 -> internal_mesh2 -> internal_mesh3 -> internal_mesh4 ( on mouse wheel up and down)
-external_mesh1 -> external_mesh2 -> external_mesh3 -> external_mesh4 ( on mouse wheel up and down)
-
-
-
-
-graphicConfig.json
-modelMetaData.json
-
-
-https://tatashowroomfe.metadome.ai/Tata-Showroom-Frontend/main/environments/abandoned_hall_tata.en
-https://tatashowroomfe.metadome.ai/Tata-Showroom-Frontend/main/environments/env_12.env
-https://tatashowroomfe.metadome.ai/Tata-Showroom-Frontend/main/environments/environmentSpecular.env
-https://tatashowroomfe.metadome.ai/Tata-Showroom-Frontend/main/glbs/dome_v9.glb
-=========================
- - Multiple 3D model to load
- - click at any point
