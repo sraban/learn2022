@@ -101,9 +101,11 @@
                if (hit.pickedMesh) {
                   hit.pickedMesh.scaling.y  += 0.01;
                }
-            });		
+            });
+            scene.debugLayer.show();		
             return scene;
          };
+
          var scene = createScene();
          engine.runRenderLoop(function() {
             scene.render();

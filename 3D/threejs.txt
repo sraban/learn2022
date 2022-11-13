@@ -9,3 +9,50 @@ fab
 =================================================
 
 https://babylonjs.medium.com/exporting-3d-content-for-babylon-js-76cb71a2df01#:~:text=Supported%203D%20File%20Formats,js%20file%20format.
+
+
+
+=======================================
+# Switch between cameras
+https://www.babylonjs-playground.com/#1FYQKN#23
+https://www.babylonjs-playground.com/#21HAJZ
+
+BABYLON.Vector3
+BABYLON.Color3
+BABYLON.ArcRotateCamera
+BABYLON.MeshBuilder.ExtrudeShapeCustom()
+
+
+# Calculus
+BABYLON.Vector3.distance(p1,p2)
+BABYLON.Vector3(p1).add(p2)
+BABYLON.Vector3(p1).subtract(p2)
+BABYLON.Vector3.Dot()
+uppertargetCamVec.normalize();
+myMesh[id].material.diffuseColor
+BABYLON.Vector3.Minimize()
+alpha = BABYLON.Tools.ToRadians(90)
+beta = BABYLON.Tools.ToRadians(65)
+BABYLON.SceneLoader.LoadAssetContainer
+
+# Axis Caluclation
+x = 2 * Math.PI * Math.random()
+y = -100 * Math.random() + 50
+z = 
+
+
+===============================================
+Q. How Math.cos(psi), r*Math.sin(psi), Math.acos(), Math.atan2(diffX,diffY) is used in Geometry
+Q. 
+
+1. Multi camera - free+arch rotate
+2. Sigle Model with both cam
+3. Multi Model with both cam
+4. Single Model with clicks to change to other model
+5. Multi Models, cam, Clicks
+
+=================================================
+
+scene.onDispose = function(){
+    scene.onPrePointerObservable.removeCallback(onPointerDown);
+};

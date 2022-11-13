@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>Babylon.js sample code</title>
+
+        <!-- Babylon.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+        <script src="https://preview.babylonjs.com/ammo.js"></script>
+        <script src="https://preview.babylonjs.com/cannon.js"></script>
+        <script src="https://preview.babylonjs.com/Oimo.js"></script>
+        <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+    </head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+
+        var startRenderLoop = function (engine, canvas) {
+            engine.runRenderLoop(function () {
+                if (sceneToRender && sceneToRender.activeCamera) {
+                    sceneToRender.render();
+                }
+            });
+        }
+
+        var engine = null;
+        var scene = null;
+        var sceneToRender = null;
+        var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
+        //Global Variables
+        //=========================================================
+        var cameraFree;
+        var cameraArc;
+        var activeCamera;
+        var scene;
+        var myMesh = [];
+        var ground;
+        //=========================================================
+        
+        
+        //Camera Functions
+        //=========================================================
+        var initCameras = function(scene) {
+            //Create Free camera
+            cameraFree = new BABYLON.FreeCamera("FreeCamera", new BABYLON.Vector3(30, 0, 30), scene);
+            //Creat Arc Camera
+            cameraArc = new BABYLON.ArcRotateCamera("ArcRotateCamera", 0, 0, 0, BABYLON.Vector3.Zero(), scene);
+            cameraArc.setPosition(new BABYLON.Vector3(50, 4, 0));
+            cameraArc.minZ = 0.1; 
+            //Set Arc as Defualt camera
+        	activeCamera = "arcCamera";
+            scene.activeCamera = cameraArc;
+            cameraArc.attachControl(canvas, false);  
+        }
+        
+        //User wants to have the free Camera
+        var useFreeCamera = function () {
+        	for (var i = 0; i < myMesh.length; i++) {
+        		myMesh[i].material.diffuseColor = new BABYLON.Color3(1, 1, 1);
+        		myMesh[i].active = false;
+        	};
+        	activeCamera = "freeCamera";
+            cameraArc.detachControl(canvas);
+            cameraFree.position = cameraArc.position.clone();
+            cameraFree.setTarget(cameraArc.target);
+        	scene.activeCamera = cameraFree;
+            cameraFree.attachControl(canvas, false);
+        }
+        
+        //User wants to move around with the Arc Rotate Camera
+        var useArcCamera = function (targetVec) {
+        	if (activeCamera == "freeCamera") {
+        		FreeAnimation(targetVec, function () {
+        			activeCamera = "arcCamera";
+        			cameraFree.detachControl(canvas);
+        			
+        			//Calculate positions
+        			var camPos = cameraFree.position.clone();
+                	var newRadius = BABYLON.Vector3.Distance(camPos, targetVec); 
+        			
+        			var xVec = new BABYLON.Vector3(1, 0, 0);
+        			var targetCamVec = camPos.subtract(targetVec);
+        			targetCamVec.normalize();
+        			var uppertargetCamVec = new BABYLON.Vector3(targetCamVec.x, 0, targetCamVec.z);
+        			uppertargetCamVec.normalize();
+        			
+        			//Calc Alpha
+        			var newAlpha = Math.acos(BABYLON.Vector3.Dot(xVec, uppertargetCamVec));
+        			if (targetCamVec.z < 0)
+        				newAlpha = 2 * Math.PI - newAlpha;
+        	
+        			//Calc Beta
+        			var newBeta = Math.acos(BABYLON.Vector3.Dot(targetCamVec, uppertargetCamVec));
+        			if (targetCamVec.y >= 0) {
+        				newBeta = Math.PI/2 - newBeta;
+        			}
+        			else {
+        				newBeta = Math.PI/2 + newBeta;
+        			}
+        
+        			cameraArc.radius = newRadius;
+        			cameraArc.alpha = newAlpha;
+        			cameraArc.beta = newBeta;
+        			cameraArc.setTarget(targetVec);
+        			scene.activeCamera = cameraArc;
+        			cameraArc.attachControl(canvas, false);
+        		});
+        	}
+        	else {
+        		var camPos = cameraArc.position.clone();
+                var newRadius = BABYLON.Vector3.Distance(camPos, targetVec); 
+        		
+        		var xVec = new BABYLON.Vector3(1, 0, 0);
+        		var targetCamVec = camPos.subtract(targetVec);
+        		targetCamVec.normalize();
+        		var uppertargetCamVec = new BABYLON.Vector3(targetCamVec.x, 0, targetCamVec.z);
+        		uppertargetCamVec.normalize();
+        		
+        		//Calc Alpha
+        		var newAlpha = Math.acos(BABYLON.Vector3.Dot(xVec, uppertargetCamVec));
+        		if (targetCamVec.z < 0)
+        			newAlpha = 2 * Math.PI - newAlpha;
+        
+        		//Calc Beta
+        		var newBeta = Math.acos(BABYLON.Vector3.Dot(targetCamVec, uppertargetCamVec));
+        		if (targetCamVec.y >= 0) {
+        			newBeta = Math.PI/2 - newBeta;
+        		}
+        		else {
+        			newBeta = Math.PI/2 + newBeta;
+        		}
+        		
+        		//Set Free Camera as active during the animation
+        	    cameraArc.detachControl(canvas);
+        	    cameraFree.position = cameraArc.position.clone();
+        	    cameraFree.setTarget(cameraArc.target.clone());
+        		scene.activeCamera = cameraFree;
+        
+        		FreeAnimation(targetVec, function () {
+        			
+        		    cameraArc.setPosition(cameraFree.position.clone());
+        		
+        			cameraArc.radius = newRadius;
+        			cameraArc.alpha = newAlpha;
+        			cameraArc.beta = newBeta;
+        			cameraArc.setTarget(targetVec);
+        			
+        		    scene.activeCamera = cameraArc; 
+        			cameraArc.attachControl(canvas, false);
+        		});
+        
+        
+        	}
+        
+        }
+        //=========================================================
+        
+        
+        //Creating all Mesh in the scene
+        //=========================================================
+        var createMesh = function(){
+        	//Create Ground & some objects
+        	ground = BABYLON.Mesh.CreateGround("ground", 500, 500, 2, scene);
+        	ground.position.y = -50;
+            myMesh[0] = BABYLON.Mesh.CreateBox("box1", 3, scene);
+        	myMesh[1] = BABYLON.Mesh.CreateBox("box2", 3, scene);
+        	myMesh[2] = BABYLON.Mesh.CreateBox("box3", 3, scene);
+        	myMesh[3] = BABYLON.Mesh.CreateBox("box4", 3, scene);
+        	myMesh[4] = BABYLON.Mesh.CreateBox("box5", 3, scene);
+        	myMesh[0].position = new BABYLON.Vector3(12, 45, 20);
+        	myMesh[1].position = new BABYLON.Vector3(24, 0, 4);
+        	myMesh[2].position = new BABYLON.Vector3(-23, 10, 20);
+        	myMesh[3].position = new BABYLON.Vector3(10, 4, -20);
+        	myMesh[4].position = new BABYLON.Vector3(-9, 33, -13);
+            myMesh[0].material = new BABYLON.StandardMaterial("mat1", scene);
+            myMesh[1].material = new BABYLON.StandardMaterial("mat2", scene);
+        	myMesh[2].material = new BABYLON.StandardMaterial("mat3", scene);
+        	myMesh[3].material = new BABYLON.StandardMaterial("mat4", scene);
+        	myMesh[4].material = new BABYLON.StandardMaterial("mat5", scene);
+        	myMesh[0].active = false;
+        	myMesh[1].active = false;
+        	myMesh[2].active = false;
+        	myMesh[3].active = false;
+        	myMesh[4].active = false;
+        
+        }
+        //=========================================================
+        
+        //Pick mesh when user click on mesh and releases mouse on the same mesh (Is there some something like that integrated to babylon js already?)
+        //=========================================================
+        var initPicking = function () {
+        	var activeIdx = -1;
+        	scene.onPointerDown = function (evt, pickResult) {    
+        		activeIdx = -1; 
+        		if (pickResult.pickedMesh != null && !pickResult.pickedMesh.active) {
+        			for (var i = 0; i < myMesh.length; i++) {
+        				if (pickResult.pickedMesh.id == myMesh[i].id) {
+        					activeIdx = myMesh[i].id;
+        				}
+        			};
+        		}
+        	}
+        	scene.onPointerUp = function(evt, pickResult) {
+        		if (activeIdx != -1 && pickResult.pickedMesh != null) {
+        			for (var i = 0; i < myMesh.length; i++) {
+        				if (pickResult.pickedMesh.id == activeIdx) {
+        					for (var x = 0; x < myMesh.length; x++) {
+        						myMesh[x].material.diffuseColor = new BABYLON.Color3(1, 1, 1);
+        						myMesh[x].active = false;
+        					};
+        					pickResult.pickedMesh.material.diffuseColor = new BABYLON.Color3(0.3, 0.9, 0.3);
+        					pickResult.pickedMesh.active = true;
+        					useArcCamera(pickResult.pickedMesh.position);
+        					break;
+        				}
+        			};
+        		}
+        	};
+        }
+        //=========================================================
+        
+        
+        //Key Events
+        //=========================================================
+        function keyDownTextField(e) {
+        	var keyCode = e.keyCode;
+        	if (keyCode == 67) {
+        		console.log("clicked c with current camera being: " + activeCamera);
+        		if (activeCamera == "arcCamera")
+        			useFreeCamera();
+        		else {
+        			//Get closest Mesh and set as Target
+        			var distance = -1;
+        			var id = -1;
+        			for (var i = 0; i < myMesh.length; i++){
+        				var tmpDist = BABYLON.Vector3.Distance(myMesh[i].position, cameraFree.position);
+        				if (i == 0 || distance > tmpDist) {
+        					distance = tmpDist;
+        					id = i;
+        				}
+        			}
+        	
+        			if (id != -1) {
+        				useArcCamera(myMesh[id].position);
+        				myMesh[id].material.diffuseColor = new BABYLON.Color3(0.3, 0.9, 0.3);
+        			}
+        				
+        		}	
+        	}
+        }
+        document.addEventListener("keydown", keyDownTextField, false);
+        //=========================================================
+        
+        //Animation for Cameras
+        //=========================================================
+        var FreeAnimation = function (toTarget, callback) {
+        	
+            var viewMatrix = BABYLON.Matrix.Zero();
+        	BABYLON.Matrix.LookAtLHToRef(cameraFree.position, toTarget, cameraFree.upVector.normalize(), viewMatrix);
+            viewMatrix.invert();
+        	
+        	var toRotation = new BABYLON.Vector3(0, 0, 0);
+            toRotation.x = Math.atan(viewMatrix.m[6] / viewMatrix.m[10]);
+        
+            var vDir = toTarget.subtract(cameraFree.position);
+        
+            if (vDir.x >= 0.0) {
+                toRotation.y = (-Math.atan(vDir.z / vDir.x) + Math.PI / 2.0);
+            } else {
+                toRotation.y = (-Math.atan(vDir.z / vDir.x) - Math.PI / 2.0);
+            }
+        
+            toRotation.z = -Math.acos(BABYLON.Vector3.Dot(new BABYLON.Vector3(0, 1.0, 0), cameraFree.upVector));
+        
+            if (isNaN(toRotation.x)) {
+                toRotation.x = 0;
+            }
+        
+            if (isNaN(toRotation.y)) {
+                toRotation.y = 0;
+            }
+        
+            if (isNaN(toRotation.z)) {
+                toRotation.z = 0;
+            }
+        	
+            var animCamRotationX = new BABYLON.Animation("animCam", "rotation.x", 30,
+        		BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+        		BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+        		
+            var keysRotationX = [];
+            keysRotationX.push({
+                frame: 0,
+                value: cameraFree.rotation.x
+            });
+            keysRotationX.push({
+                frame: 20,
+                value: toRotation.x
+            });
+        	
+            var animCamRotationY = new BABYLON.Animation("animCam", "rotation.y", 30,
+        	BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+        	BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+        		
+            var keysRotationY = [];
+            keysRotationY.push({
+                frame: 0,
+                value: cameraFree.rotation.y
+            });
+            keysRotationY.push({
+                frame: 20,
+                value: toRotation.y
+            });
+        	
+            var animCamRotationZ = new BABYLON.Animation("animCam", "rotation.z", 30,
+        	BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+        	BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+        		
+            var keysRotationZ = [];
+            keysRotationZ.push({
+                frame: 0,
+                value: cameraFree.rotation.z
+            });
+            keysRotationZ.push({
+                frame: 20,
+                value: toRotation.z
+            });
+        	
+        	animCamRotationX.setKeys(keysRotationX);
+        	cameraFree.animations.push(animCamRotationX);
+        	animCamRotationY.setKeys(keysRotationY);
+        	cameraFree.animations.push(animCamRotationY);
+        	animCamRotationZ.setKeys(keysRotationZ);
+        	cameraFree.animations.push(animCamRotationZ);
+            scene.beginAnimation(cameraFree, 0, 20, false, 1, function () {
+        		callback();
+        	});
+        	
+        }
+        //=======================================================
+        
+        var createScene = function () {
+            scene = new BABYLON.Scene(engine);
+            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = 0.7;
+        
+            initCameras(scene);
+        	
+        	createMesh();
+        	
+        	initPicking();
+        	
+            scene.registerBeforeRender(function () {
+        		
+        	});
+        
+        	scene.onDispose = function () {
+        		document.removeEventListener("keydown", keyDownTextField);
+        	}
+        	
+            return scene;
+        
+        };
+                window.initFunction = async function() {
+                    
+                    
+                    var asyncEngineCreation = async function() {
+                        try {
+                        return createDefaultEngine();
+                        } catch(e) {
+                        console.log("the available createEngine function failed. Creating the default engine instead");
+                        return createDefaultEngine();
+                        }
+                    }
+
+                    window.engine = await asyncEngineCreation();
+        if (!engine) throw 'engine should not be null.';
+        startRenderLoop(engine, canvas);
+        window.scene = createScene();};
+        initFunction().then(() => {sceneToRender = scene                    
+        });
+
+        // Resize
+        window.addEventListener("resize", function () {
+            engine.resize();
+        });
+    </script>
+</body>
+</html>
