@@ -7,7 +7,7 @@ import "../../style.css";
 
 const ThemeContext = React.createContext({
   color: Color3.Red(),
-  posigion: Vector3.Zero(),
+  position: Vector3.Zero(),
   name: "default context",
 });
 

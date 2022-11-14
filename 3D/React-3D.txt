@@ -1,0 +1,52 @@
+nme - nodematerialeditor
+https://nme.babylonjs.com/
+
+
+playground - 
+https://playground.babylonjs.com/
+
+sandbox
+https://sandbox.babylonjs.com/
+
+BridgedContext.js
+
+================== POC React 3D Rendering ============================
+0. vs-code plugin babylonjs snippet
+1. npx create-react-app poc-3d
+2. cd poc-3d
+3. npm run test -- --coverage --watchAll
+4. npm audit
+5. install other packages + continue [3,4]
+6. npm i react-babylonjs @babylonjs/core @babylonjs/gui @babylonjs/loaders
+7. npm i @babylonjs/inspector --save-dev
+8. npm i react-router-dom
+9. npm i --save-dev canvas pixi.js
+9. https://www.devasking.com/issue/jest-test-fails-with-unexpected-token-expected
+https://stackoverflow.com/questions/59878153/how-to-use-jest-config-js-with-create-react-app
+"transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!(@babylonjs|react-babylonjs))"
+    ]
+----------JEST-------------------
+  • clearMocks
+  • collectCoverageFrom
+  • coveragePathIgnorePatterns
+  • coverageReporters
+  • coverageThreshold
+  • displayName
+  • extraGlobals
+  • globalSetup
+  • globalTeardown
+  • moduleNameMapper
+  • resetMocks
+  • resetModules
+  • restoreMocks
+  • snapshotSerializers
+  • testMatch
+  • transform
+  • transformIgnorePatterns
+  • watchPathIgnorePatterns.
+
+-----------------------
+https://unpkg.com/browse/react-babylonjs@2.0.1/README.md
+https://yonatankra.com/how-to-test-html5-canvas-with-jest/
+https://medium.com/@santiroca/how-to-automate-a-webgl-based-application-64d2cd5b7845

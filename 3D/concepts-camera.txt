@@ -62,4 +62,84 @@ https://zenn.dev/chomado/books/babylonjs-tutorial-ja/viewer/3-07
 # ArcRotate
 	-
 	https://playground.babylonjs.com/#V4JSVM#2
-	
+
+
+
+=======================================================================
+Camera Usages
+=======================================================================
+
+
+//Positions the camera overwriting alpha, beta, radius
+camera.setPosition(new BABYLON.Vector3(10, 20, 10));
+// This targets the camera to scene origin
+//camera.setTarget = new BABYLON.Vector3.Zero(0,0,0);
+
+// Sets the sensitivity of the camera to movement and rotation
+camera.angularSensibility = 4000;
+camera.moveSensibility = 1000;   
+camera.alpha.sensitivity = 40000;
+camera.beta.sensitivity = 40000;
+camera.radius.sensitivity = 400000;
+scene.activeCamera.panningSensibility = 80;
+camera.maxCameraSpeed = 60;
+camera.wheelPrecision = 10;
+
+//Attach camera to canvas
+camera.attachControl(canvas, true);
+
+//You can set a new target anytime even after attaching the camera
+camera.setTarget(box);
+camera.detachControl(canvas);
+
+********************* ---------- **************************
+var forwardDirection = scene.activeCamera.getForwardRay(3).direction;
+console.log('moving forward', forwardDirection)
+camera.position.addInPlace(forwardDirection)
+
+********************* ---------- **************************
+scene.activeCamera.radius += 1000;
+
+
+********************* ---------- **************************
+camera.minZ = 0;
+camera.checkCollisions = true;
+camera.ellipsoid = new BABYLON.Vector3(0.5,0.5,0.5);
+camera.speed = 0.01;
+camera.rotation.speed = 0.01;
+camera.applyGravity = false;
+camera.angularSpeed = 0.05;
+camera.angle = Math.PI / 2;
+camera.rotation.y += Math.PI;
+camera.direction = new BABYLON.Vector3(Math.cos(camera.angle),0,Math.sin(camera.angle));
+
+********************* ---------- **************************
+camera.useBouncingBehavior = true;
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
+********************* ---------- **************************
+
+
