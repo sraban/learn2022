@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:coverage": "vue-cli-service test:unit --coverage"
   },
   "dependencies": {
     "@babylonjs/core": "^5.31.0",
