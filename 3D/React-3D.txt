@@ -50,3 +50,14 @@ https://stackoverflow.com/questions/59878153/how-to-use-jest-config-js-with-crea
 https://unpkg.com/browse/react-babylonjs@2.0.1/README.md
 https://yonatankra.com/how-to-test-html5-canvas-with-jest/
 https://medium.com/@santiroca/how-to-automate-a-webgl-based-application-64d2cd5b7845
+
+
+
+
+https://stackoverflow.com/questions/62993824/jest-tests-crash-when-due-to-babylon-core-es6-syntax
+https://blogs.windows.com/windowsdeveloper/2018/05/01/announcing-babylon-js-v3-2/
+https://www.youtube.com/watch?v=_BwV4BBtIEU
+
+
+Vue
+npx nyc vue-cli-service test:unit

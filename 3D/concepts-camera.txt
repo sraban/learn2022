@@ -42,7 +42,7 @@ https://www.codeproject.com/Articles/1009157/What-s-new-in-babylon-js-v-Using-We
 
 # Chinese Trainig
 https://zenn.dev/chomado/books/babylonjs-tutorial-ja/viewer/3-07
-
+https://doc.babylonjs.com/features/introductionToFeatures/chap1/first_scene
 
 
 
