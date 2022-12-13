@@ -146,66 +146,60 @@ https://javascript.plainenglish.io/how-to-create-a-floating-action-button-with-p
 
 #11-11-2022
 -------------------------------------
-
+# 3D Animation - BabylonJS POX
 
 
 #14-11-2022
 -------------------------------------
-
+# 3D Animation - BabylonJS
 
 
 
 #15-11-2022
 -------------------------------------
-
+# 3D Animation - BabylonJS
 
 
 
 #16-11-2022
 -------------------------------------
-
+# 3D Animation - BabylonJS
 
 
 
 #17-11-2022
 -------------------------------------
-
+# 3D Animation - BabylonJS
 
 
 
 #18-11-2022
 -------------------------------------
-
+# Contact Merger Support - Communication Developement on new changes
 
 
 
 #21-11-2022
 -------------------------------------
-
+# Contact Merger Support - Protection and Taxaction Development with previously saved API
 
 
 #22-11-2022
 -------------------------------------
-
+# Contact Merger Support - Unit Testing... and Sonar Lint
 
 
 #23-11-2022
 -------------------------------------
-
+# Contact Merger Support - Communication-Protection
 
 
 #24-11-2022
 -------------------------------------
-
+# Contact Merger Support - Unit Testing...
 
 
 
 #25-11-2022
 -------------------------------------
-
-
-
-28,29,30
-
-
-
+# Contact Merger - Test cases
