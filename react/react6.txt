@@ -1,19 +1,19 @@
 #Q. React Optimization Technique
 
 #A.
-1. Using Immutable Data Structures
+1. Using Immutable Data Structures()
 2. Function/Stateless Components and React.PureComponent
-3. Multiple Chunk Files
+3. Multiple Chunk Files -> use of webpackspliting
 4. Using Production Mode Flag in Webpack
 5. Dependency optimization
-6. Use React.Fragments to Avoid Additional HTML Element Wrappers
-7. Avoid Inline Function Definition in the Render Function
-8. Throttling and Debouncing Event Action in JavaScript
-9. Avoid using Index as Key for map
-10. Avoiding Props in Initial States
-11. Spreading props on DOM elements
+6*. Use React.Fragments<> to Avoid Additional HTML Element Wrappers
+7. Avoid Inline Function Definition in the Render Function -- not write the function defination inside the tmpl callback 
+8*. Throttling and Debouncing Event Action in JavaScript --- setting timeout call instead of frequent call
+9. Avoid using Index as Key for map ----- key must be a random value not index
+10. Avoiding Props in Initial States ----
+11. Spreading props on DOM elements  --- unnecessary attr on spearing object
 12. Use Reselect in Redux to Avoid Frequent Re-render
-13. Avoid Async Initialization in componentWillMount()
+13. Avoid Async Initialization in componentWillMount() ---- 
 14. Memoize React Components
 15. CSS Animations Instead of JS Animations
 16. Using a CDN

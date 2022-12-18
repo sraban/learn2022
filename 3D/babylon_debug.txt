@@ -146,6 +146,7 @@ https://www.tutorialspoint.com/babylonjs/babylonjs_mesh.htm
 -----------------------------------------------------------------------------------
 Camera Position Changes
 https://www.babylonjs-playground.com/#21HAJZ#1
+https://playground.babylonjs.com/#6DBTYT#0
 -----------------------------------------------------------------------------------
 
 https://brianzinn.github.io/react-babylonjs/?path=/story/babylon-basic--animations

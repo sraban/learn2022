@@ -1,0 +1,49 @@
+1) What is javascript?
+
+2) What are the data types of javascript and explain?
+
+3)What are pure functions?
+
+4) What are higher order function?
+
+5) what are callback function?
+
+6)what is side effect in React and How You Handle That?
+
+7) What Hooks Are in React?
+
+8) what is useEffect Hook And How you perform life cycle method with That?
+
+9) How can you Convert arry to string and string to array?
+
+10) I want to Delete Empty space in input field which array method we can use?
+
+11) I want to add one item in 5th index of the array which method you approch?
+
+12) What are the Object methods in javascript?
+
+13) What is deep copy and shallow copy?
+
+14) Why Destructuring used in array and objects?
+
+15) How You Pass Data from parent to child and child to parent?
+
+16) Why Key Attribute Used While looping items in React ?
+
+17) How Vertual-Dom Differes From DOM ?
+
+18) How can you Remove the first item from Array ?
+
+19) how can you  remove the last item from an array?
+
+20) Is React Libray or Framework ? and Why?
+
+21) What are the different stages of promise?
+
+22) What is Find Method?
+
+23) what Is Map Method?
+
+24) How Async Javascript?
+
+25) What JWT and why we Use That?
