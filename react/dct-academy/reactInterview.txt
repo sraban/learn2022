@@ -1,49 +1,116 @@
 1) What is javascript?
+    - Client Side Programming Laguage + Nodejs is the backend
 
 2) What are the data types of javascript and explain?
-
-3)What are pure functions?
+    - Primitive(Integer, Float, Double, Char, String, Boolean,...    ) 
+    - Non-primitive(Complex Number, Date(), Object(Array, Function, Null)   )
+	
+3) What are pure functions?
+    - Functions not have the side effects, which only doesnot modify the global/reffered data
+    - 
 
 4) What are higher order function?
+    --- .map(), .filter(), .find(), .reduce(), .some(), .every(), .forEach(), for(in/of)
 
 5) what are callback function?
+    --- function is called after async operation is complete
 
-6)what is side effect in React and How You Handle That?
+6) what is Side effect in React and How You Handle That?
+    --- not to use document, window when interacting with browser
+    --- not to use unpredictable timing fun - setTimeout(), setInterval()
+    --- useEffect(cb) --> called in every re-render,  useEffect(cb,[]) --> callled once
+    --- infanite(circular calling of function due to re-render) calling of useEffect()
+    --- interdepenedent state change in circular way
+    --- use of Return inside state function for destroying the clean up
+    --- 
+
 
 7) What Hooks Are in React?
+- 
 
 8) what is useEffect Hook And How you perform life cycle method with That?
 
-9) How can you Convert arry to string and string to array?
+
+9) How can you Convert arry to String and String to array?
+
 
 10) I want to Delete Empty space in input field which array method we can use?
 
+
 11) I want to add one item in 5th index of the array which method you approch?
+
 
 12) What are the Object methods in javascript?
 
+
 13) What is deep copy and shallow copy?
+
 
 14) Why Destructuring used in array and objects?
 
+
 15) How You Pass Data from parent to child and child to parent?
+
 
 16) Why Key Attribute Used While looping items in React ?
 
+
 17) How Vertual-Dom Differes From DOM ?
+
 
 18) How can you Remove the first item from Array ?
 
+
 19) how can you  remove the last item from an array?
+
 
 20) Is React Libray or Framework ? and Why?
 
+
 21) What are the different stages of promise?
+
 
 22) What is Find Method?
 
+
 23) what Is Map Method?
+	
 
 24) How Async Javascript?
 
+
 25) What JWT and why we Use That?
+
+
+26) What is Flux?
+
+
+27) what are bundles in react?
+
+
+28) What is JSX?
+
+
+29) What is Flux architecture not MVC ?
+
+
+30) Dynamically setting the keys and values using State
+      Ans: this.setState({[e.target.id]: e.target.value })
+      setEmployee({...employee, [getKey()]: employee.salary + 100});
+
+
+31) How to change the values dynamically?
+    let d => () = e ? f : g;
+    let a = b ? c : d();
+    
+
+32) How to write inline style in React Template
+    style={{}}
+
+
+33) What is Virtual DOM, Real DOM, Shadowdom
+
+======================================================
+https://www.knowledgehut.com/interview-questions/reactjs
+https://github.com/sudheerj/reactjs-interview-questions
+https://hackr.io/blog/react-interview-questions
