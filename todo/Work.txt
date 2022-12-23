@@ -1,0 +1,137 @@
+Interviews
+-------------------------
+1. 
+2. 
+3. 
+
+All Dashboard(Admin/Manager/Employee/Senior)
+- AdminDashboard
+- EmpDashboard
+- EmployeeScreen
+- EmployeeManagement
+- 
+- ScoreComp
+- AdminActivity
+- 
+
+===========================
+Admin
+EmpID
+===========================
+
+.main-table-div {
+      overflow-y: auto !important;
+      height: 50vh !important;
+    }
+    .main-table-div thead th {
+      position: sticky !important;
+      top: 0 !important;
+    }
+    table {
+      border-collapse: collapse;        
+      width: 100% !important;
+    }
+    th {
+      background: #051c51 !important;
+      padding:5px 0px;
+    }
+    td {
+      padding:5px 0px;
+    }
+    th {
+      background: #ABDD93;
+    }
+
+
+
+-----------------
+{ data.length > 0 ?  '' : <tr><td>No Data Found...</td></tr> }
+
+
+          setGetAllResouces([])
+          setPassFilterData([]) // eslint-disable-next-line
+          setPrimarySkillsData([]);
+          setSecondarySkillsData([]);
+
+
+import { toast } from 'react-toastify'
+
+=====================================
+ADD Empoyee Pop UP - center
+
+
+
+
+.modal-dialog {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100vh !important;
+    justify-content: space-around !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    margin-top: initial !important;
+}
+
+
+=====================================
+https://marmelab.com/react-admin-demo
+
+
+pushstate-server build ---- localhost:9000
+top -> webpack:// -> . -> src.
+serve build   ------ localhost:xxxx
+
+=======================================
+import { useContext } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+
+
+
+
+
+---------------------------------------
+
+() => (
+	<DataTable
+		title="Google Sheets-esque"
+		columns={columns}
+		data={data}
+		customStyles={customStyles}
+		highlightOnHover
+		pointerOnHover
+	/>
+)
+
+Alt + Shift + O
+==========================
+
+
+
+# Countdown Software
+https://pixabay.com/videos/counter-countdown-clock-timer-10350/
+https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/
+https://www.tickcounter.com/ticker
+https://www.bigtimer.net/?minutes=10&repeat=false&target=1671772549666
+
+
+
+# Dashboards
+https://dev.to/davidepacilio/30-free-react-dashboard-templates-and-themes-49g4
+https://mui.com/store/collections/free-react-dashboard/
+
+
+
+# Charts
+-------------------
+https://www.educative.io/answers/how-to-use-chartjs-to-create-charts-in-react
+
+
+
+
+# React Concepts
+https://blog.logrocket.com/react-localization-with-i18next/
+
+
+
+
