@@ -29,7 +29,7 @@ Q. React.js Commonly Faced Problems
 	React.Component, not React.component
 	componentDidMount, not ComponentDidMount
 	ReactDOM, not ReactDom
-	
+
 5— Confusing functions with classes
 6 — Passing numbers as strings
 7 — Forgetting that another app instance is still using the same port

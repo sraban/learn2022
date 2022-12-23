@@ -2,7 +2,7 @@
 
 #28-11-2022
 -------------------------------------
-# Learning Test cases
+# Learning Test cases in detail
 
 
 
@@ -76,42 +76,44 @@ https://reactrouter.com/en/main/components/form
 
 #14-12-2022
 -------------------------------------
-# 
+# Studing React Advance Concepts
 
 
 #15-12-2022
 -------------------------------------
-# 
+# Studing React Advance Concepts
 
 
 #16-12-2022
 -------------------------------------
-# 
+# Service catalog support
 
 
 #19-12-2022
 -------------------------------------
-# 
+# Service catalog support
 
 
 #20-12-2022
 -------------------------------------
-# 
+# Service catalog support
 
 
 #21-12-2022
 -------------------------------------
-# 
+# Three Trainee Interviews...
+
 
 
 #22-12-2022
 -------------------------------------
-# 
+# Preparing in React Admins and Packages usages
+
 
 
 #23-12-2022
 -------------------------------------
-# 
+# Stacked Chart.js for creating graph for leadership dashboard
 
 
 #26-12-2022
