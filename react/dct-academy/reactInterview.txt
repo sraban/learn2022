@@ -114,3 +114,12 @@
 https://www.knowledgehut.com/interview-questions/reactjs
 https://github.com/sudheerj/reactjs-interview-questions
 https://hackr.io/blog/react-interview-questions
+
+
+Asif - HTML-2, JS-2, CSS-3
+BalaKrishna - HTML-3, JS-5, CSS-2 (Needs to do a dummy project)
+Supriya - HTML-2, JS-2, CSS-2
+
+
+
+/AdiBLN
