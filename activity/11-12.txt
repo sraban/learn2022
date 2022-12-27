@@ -2,13 +2,13 @@
 
 #28-11-2022
 -------------------------------------
-# Learning Test cases in detail
+# Learning Test cases in React Jest in detail
 
 
 
 #29-11-2022
 -------------------------------------
-# Contact Merger - Test cases
+# Contact Merger - Writing Test cases
 
 
 
@@ -33,7 +33,7 @@
 
 #05-12-2022
 -------------------------------------
-# Next.js Study
+# Next.js & Mearn Study
 
 
 #06-12-2022
@@ -77,7 +77,8 @@ https://reactrouter.com/en/main/components/form
 #14-12-2022
 -------------------------------------
 # Studing React Advance Concepts
-
+Service Catalog Support for Tower validations
+Peromance Improvent React Application
 
 #15-12-2022
 -------------------------------------
@@ -102,7 +103,8 @@ https://reactrouter.com/en/main/components/form
 #21-12-2022
 -------------------------------------
 # Three Trainee Interviews...
-
+	Service catalog support
+	Dummy Dashboards Studied
 
 
 #22-12-2022
@@ -118,26 +120,106 @@ https://reactrouter.com/en/main/components/form
 
 #26-12-2022
 -------------------------------------
-# 
+# MCQ React Learning
+https://www.freetimelearning.com/quiz.php
+
+3D --- Grab card 
+Gc - HoopsViewer
+----------------------
+React and HOOPS Communicator
+https://demo.techsoft3d.com/
+https://github.com/techsoft3d
+https://techsoft3d.github.io/hwp-demo-angular/
+https://techsoft3d.github.io/hwp-demo-react/
+https://www.youtube.com/watch?v=RwmFfOnF1fI
+HWP Demo React
+
+1. Model Stored in .scs file
+2. 
 
 
 #27-12-2022
 -------------------------------------
 # 
+viewer-modal__backdrop
+
+
+        c = o ? Symbol.for("react.element") : 60103,
+        A = o ? Symbol.for("react.portal") : 60106,
+        a = o ? Symbol.for("react.fragment") : 60107,
+        s = o ? Symbol.for("react.strict_mode") : 60108,
+        h = o ? Symbol.for("react.profiler") : 60114,
+        d = o ? Symbol.for("react.provider") : 60109,
+        p = o ? Symbol.for("react.context") : 60110,
+        b = o ? Symbol.for("react.concurrent_mode") : 60111,
+        v = o ? Symbol.for("react.forward_ref") : 60112,
+        y = o ? Symbol.for("react.suspense") : 60113,
+        g = o ? Symbol.for("react.memo") : 60115,
+        k = o ? Symbol.for("react.lazy") : 60116,
+forceUpdate
+process.nextTick(h)
+
+        case "onClick":
+        case "onClickCapture":
+        case "onDoubleClick":
+        case "onDoubleClickCapture":
+        case "onMouseDown":
+        case "onMouseDownCapture":
+        case "onMouseMove":
+        case "onMouseMoveCapture":
+        case "onMouseUp":
+        case "onMouseUpCapture":
+
+        dangerouslySetInnerHTML
+
+
+==========================================================================
+
+# React Class
+https://codesandbox.io/s/my5z7665my
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #28-12-2022
 -------------------------------------
-# 
+# Leave
 
 
 #29-12-2022
 -------------------------------------
-# 
+#  Leave
 
 
 #30-12-2022
 -------------------------------------
-# 
+#  Leave
 
 

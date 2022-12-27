@@ -1,0 +1,93 @@
+React
+1. Class Component
+2. All Hooks
+3. Redux
+4. useReducer
+5. install a dashboard --- watch the working principle
+6. install the 3D page watch in detail
+7. various Form with validation messages
+8. 
+
+Examples 
+useReducer, 
+useState, 
+useEffect
+useCallback
+useMemo
+
+Examples - ReactDom.createPortal()
+ReactDom.render()
+
+
+https://www.youtube.com/watch?v=_-mZCb9LFUw
+https://www.w3.org/WAI/ARIA/apg/patterns/
+
+======================================
+bootstrap@5.0.0-beta1
+chartist@^0.11.4
+chartist-plugin-tooltips-updated@^0.1.4
+moment-timezone@^0.5.31
+react@^16.13.1 
+react-copy-to-clipboard@^5.0.3 
+react-datetime@^3.0.4 
+react-dom@^16.13.1
+react-github-btn@^1.2.0  
+react-live@^2.2.3 
+react-router-dom@^5.2.0 
+react-router-hash-link@^2.3.1
+node-sass@^4.14.1
+react-chartist@^0.14.4
+
+import Chartist from "react-chartist";
+import ChartistTooltip from 'chartist-plugin-tooltips-updated';
+-------------------------------------------
+@fortawesome/free-solid-svg-icons
+import moment from "moment-timezone";
+import {connect} from 'react-redux';
+import Fullscreen from "react-full-screen";
+import windowSize from 'react-window-size';
+
+
+moment().subtract(1, "days").format("DD MMM YYYY"),
+moment().subtract(1, "days").add(1, "month").format("DD MMM YYYY")
+const { defaultKey, data = [], className = "" } = props;
+
+
+###in CSS
+@include border-radius($circle-radius);
+position-relative pe-8 mb-2
+
+
+###in JS
+{`<AccordionComponent>`}
+{`<AccordionComponent>
+${var}
+sadsadsad
+asds
+<a></a>
+`}
+=================================================
+
+
+ADMIN - Dashboard
+https://codedthemes.com/item/datta-able-react-free-admin-template/
+
+
+purposes between hook and context
+=================================================
+-- To Make the team effective, come with puzzles - quizs - something to practise
+-- To involve the mind some kind of brain storming ----- so all can use their brain everyday
+-- 
+
+
+##Testing
+--- All Routing with guards
+--- Component/Directive developement
+- Sonar Lint(Congitive complexity, cyclomatic complexity, ....)
+- EsLInt warnings
+- Test Coverages(80%)
+- 
+
+================================
+hwp-demo-react ---- hoops for https://grabcad.com/library/tag/designing
+
