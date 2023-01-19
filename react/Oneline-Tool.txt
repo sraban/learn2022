@@ -1,0 +1,27 @@
+https://onlinepngtools.com/convert-png-to-base64
+https://pasteboard.co/
+https://www.w3schools.com/bootstrap4/bootstrap_icons.asp
+https://fontawesome.com/v5/icons/redo-alt?s=solid&f=classic
+
+# React Learn
+https://reactjs.org/docs/dom-elements.html
+https://css-tricks.com/approaches-media-queries-sass/
+@###########################################
+d-flex align-items-start w-100
+d-inline-block
+ mx-auto
+h-100 h-50 h-5 h-auto d-inline-block col-2 mx-auto
+vh-100
+
+#############################################
+1. height --- dynamic height based on code
+2. Form Validation Using React
+3. Fontawesome installation
+4. 
+
+
+
+Yesterday
+
+Today
+Singup pages

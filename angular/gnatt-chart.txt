@@ -1,0 +1,42 @@
+- Angular Gantt Chart
+- custom-gantt-flight
+- https://apexcharts.com/
+
+
+# KanbanBoard
+https://github.com/DlhSoftTeam/Angular-Kanban
+
+
+
+https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Timeline/Angular/Light/
+
+https://www.highcharts.com/docs/chart-and-series-types/x-range-series
+
+
+https://www.highcharts.com/demo/gantt
+https://stackblitz.com/edit/angular-ng-gantt?file=src%2Fapp%2Fapp.component.ts
+
+
+Google- angular gantt chart - stackblitz
+Highchart
+https://stackblitz.com/edit/highcharts-angular-gantt?file=src%2Fapp%2Fapp.component.ts
+
+
+echart
+https://echarts.apache.org/examples/en/editor.html?c=custom-gantt-flight
+
+
+gantt-charts
+https://monday.com/blog/project-management/everything-you-want-to-know-about-gantt-charts/
+https://monday.com/blog/remote-work/timeline-chart/
+
+
+
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('hello');
