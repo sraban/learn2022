@@ -6,6 +6,13 @@ https://fontawesome.com/v5/icons/redo-alt?s=solid&f=classic
 # React Learn
 https://reactjs.org/docs/dom-elements.html
 https://css-tricks.com/approaches-media-queries-sass/
+
+# Icons & Router
+https://react-icons.github.io/react-icons/icons?name=fa
+https://www.npmjs.com/package/react-router-dom
+
+Client Form Validation
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
 @###########################################
 d-flex align-items-start w-100
 d-inline-block
