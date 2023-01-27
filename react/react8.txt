@@ -1,5 +1,79 @@
-
+Typescript React
 ------------------------------------------------------------------------------------------
+
+##################
+1. React Libraries and its components - https://www.simform.com/blog/react-libraries/
+2. Angular Libraries and its components
+3. React Data Tables like react-table, ag-grid
+4. React Graphs mostly used
+5. MCQ React Learning
+
+
+$npx eslint src/pages/signup/SignUp.tsx --fix
+$..................................................................
+https://github.com/gopinav?tab=repositories
+https://www.typescriptlang.org/
+https://www.tutorialsteacher.com/typescript
+https://khalilstemmler.com/blogs/camel-case-snake-case-pascal-case/
+
+
+
+
+
+####################### ESLINT ##########################
+// eslint-disable-line global-require
+"no-shadow": "off"
+
+Set UP Images
+https://pasteboard.co/MsD0Y75ga0Te.png
+https://pasteboard.co/DhXMkAVLC2Y0.png
+https://pasteboard.co/La4iAAWoQz9r.png
+https://pasteboard.co/yGo8ZSSHfg8B.png
+https://pasteboard.co/ngpBbXiMCQXd.png
+
+
+
+
+############################################################
+- eslint
+- prettier
+
+What version of eslint are you using?
+What version of prettier are you using?
+
+
+npx eslint folder/file.js --fix
+================================================
+"endOfLine": "auto" ---- .prettierc
+"prettier/prettier": ["error", {"endOfLine": "auto"}],   -------> eslint.json
+
+
+
+
+
+##############################################################
+Plugins
+----Prettier ESLint
+
+camelCase, PascalCase, UPPER_CASE
+##############################################################
+
+"jsx-a11y/label-has-associated-control": [ "error", {
+  "required": {
+    "some": [ "nesting", "id"  ]
+  }
+}],
+"jsx-a11y/label-has-for": [ "error", {
+  "required": {
+    "some": [ "nesting", "id"  ]
+  }
+}]
+
+
+##############################################################
+Command
+npx eslint src/pages/signup/SignUp.tsx --fix
+npx eslint src/pages/ --fix
 
 ------------------------------------------------------------------------------------------
 

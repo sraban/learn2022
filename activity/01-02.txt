@@ -2,11 +2,12 @@
 -------------------------------------
 # MCQ React Learning
 https://www.freetimelearning.com/quiz.php
+Working on Service Catalog Issues - Fix
 
 
 #27-12-2022
 -------------------------------------
-# Working on Service Catalog Issues
+# Working on Service Catalog Issues - Fix
 
 
 #28-12-2022
@@ -27,7 +28,7 @@ https://www.freetimelearning.com/quiz.php
 
 #02-01-2023
 -------------------------------------
-#  Service Catalog Issues
+#  Service Catalog Issues - Fixes
 	
 
 
@@ -94,49 +95,49 @@ https://www.freetimelearning.com/quiz.php
 
 #17-01-2023
 -------------------------------------
-#  
+#  Intranet Designings for Teams
 
 
 
 #18-01-2023
 -------------------------------------
-#  
+#  Service catalog Error Fixing
 
 
 
 #19-01-2023
 -------------------------------------
-#  
+#  Talent Acquisitions Sign up Form
 
 
 
 #20-01-2023
 -------------------------------------
-#  
+#  Talent Acquisitions Sign up Form and Validation
 
 
 
 #23-01-2023
 -------------------------------------
-#  
+#  Intranet COE & New Acquisitions Form and Validation
 
 
 
 #24-01-2023
 -------------------------------------
-#  
+#  New Acquisitions Form and Validation -- Menu
 
 
 
 #25-01-2023
 -------------------------------------
-#  
+#  New Acquistion Top Navigation Bar
 
 
 
 #27-01-2023
 -------------------------------------
-#  
+#  Studing typescript with React and Folder Structure Setup
 
 
 
