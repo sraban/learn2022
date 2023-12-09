@@ -1,0 +1,125 @@
+
+# 26-04-2023
+---------------------------------------
+POC on D3 Charts - @Baker Huges
+
+
+# 27-04-2023
+---------------------------------------
+POC on D3 Charts - @Baker Huges
+
+
+
+# 28-04-2023
+---------------------------------------
+POC on D3 Charts - @Baker Huges
+
+
+
+# 02-05-2023
+---------------------------------------
+POC on D3 Charts - Output formatting on d3 charts - @Baker Huges
+
+
+
+# 03-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 04-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 05-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 08-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 09-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 10-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 11-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 12-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+
+
+
+# 15-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Widgets and dashboard mapping
+
+
+# 16-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Widgets and dashboard mapping
+
+
+# 17-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Converting to Modular Dashboard
+
+
+# 18-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Converting to Modular Dashboard
+
+
+# 19-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Converting to Modular Dashboard
+
+
+# 22-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+Font and Color, Spacing UX changes
+
+
+# 23-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+grid-layout in dashboard
+
+
+# 24-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+grid-layout in dashboard
+
+
+# 25-05-2023
+---------------------------------------
+POC on D3 Charts - API Inetegration - @Baker Huges
+viewContainerRef for Dashboard Widgets
+

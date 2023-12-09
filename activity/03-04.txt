@@ -1,0 +1,77 @@
+# 27-03-2023
+--------------------------------------
+-- Unit Testing with RT done for first page
+
+
+# 28-03-2023
+--------------------------------------
+-- Cloud Computing Training
+
+
+
+# 29-03-2023
+--------------------------------------
+-- Unit Testing in Recuirtment and Cloud Computing Training
+
+
+
+# 30-03-2023
+--------------------------------------
+-- Study on Bakers Huguae Requirement
+
+
+# 31-03-2023
+--------------------------------------
+-- POC on d3 charts - Bar
+
+
+
+
+# 03-04-2023
+--------------------------------------
+-- POC on d3 charts - Stacked Column
+
+
+# 04-04-2023
+--------------------------------------
+-- POC on d3 charts - Radar
+
+
+# 05-04-2023
+--------------------------------------
+-- POC on d3 charts - Area Density
+
+
+# 06-04-2023
+--------------------------------------
+-- POC on d3 charts - Multi-line chart
+
+
+# 18-04-2023
+--------------------------------------
+-- POC on d3 charts - Multi-line chart
+
+
+# 19-04-2023
+--------------------------------------
+-- POC on d3 charts - Multi Progress Bar
+
+
+# 20-04-2023
+--------------------------------------
+-- POC on d3 charts - Multi Progress Arc
+
+
+# 21-04-2023
+--------------------------------------
+-- POC on d3 charts - Speedo Meter chart
+
+
+# 24-04-2023
+--------------------------------------
+-- POC on d3 charts - Vanilla JS to Angular Service For Widgets
+
+
+# 25-04-2023
+--------------------------------------
+-- POC on d3 charts - Tabular Chart -- API integration

@@ -30,6 +30,7 @@ https://pasteboard.co/DhXMkAVLC2Y0.png
 https://pasteboard.co/La4iAAWoQz9r.png
 https://pasteboard.co/yGo8ZSSHfg8B.png
 https://pasteboard.co/ngpBbXiMCQXd.png
+https://pasteboard.co/ImVrd2DQm92i.png
 
 
 
@@ -78,6 +79,7 @@ npx eslint src/pages/ --fix
 ------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------
+npx husky-init && npm
 
 ------------------------------------------------------------------------------------------
 

@@ -1,0 +1,240 @@
+
+
+
+#01-02-2023
+-------------------------------------
+#  Requisition Detail - HEader Component
+
+
+
+#02-02-2023
+-------------------------------------
+# Requisition Detail - HEader Component (Create Candidate)
+
+
+#03-02-2023
+-------------------------------------
+#  Requisition Detail - Filter of candidates Component
+
+
+
+#06-02-2023
+-------------------------------------
+#  Interview PIP Trinee Egineer
+
+
+
+
+#07-02-2023
+-------------------------------------
+#  Interview PIP Trinee Egineer
+
+
+
+
+#08-02-2023
+-------------------------------------
+# Interview PIP Trinee Egineer
+
+
+
+
+#09-02-2023
+-------------------------------------
+#  Requisition Detail - Candidate Card Listings
+
+
+
+
+#10-02-2023
+-------------------------------------
+#  New Requisition - Workflow & Notifications Modification newly added
+
+
+
+
+#13-02-2023
+-------------------------------------
+#  New Requisition - Common Save Button
+
+
+
+
+#14-02-2023
+-------------------------------------
+#  New Requisition - Workflow & Notifications Modification
+
+
+
+
+#15-02-2023
+-------------------------------------
+#  Requisition Detail - Candidate List and Grid View
+
+
+
+
+#16-02-2023
+-------------------------------------
+#  New Requisition - Tabs Modification/ Form Validation
+
+
+
+
+#17-02-2023
+-------------------------------------
+#  New Requisition - Form Validation
+
+
+
+
+
+#20-02-2023
+-------------------------------------
+#  Detail Requisition - Work Flow Edit
+
+
+
+
+#21-02-2023
+-------------------------------------
+#  Dashboard - Calender UI Integrated
+
+
+
+
+#22-02-2023
+-------------------------------------
+#  Report Component Designing - RT React
+
+
+
+
+#23-02-2023
+-------------------------------------
+#  Report Component Designing - RT React
+
+
+
+
+#24-02-2023
+-------------------------------------
+#  JOB CARD Designing Modified - RT React
+
+
+
+#27-02-2023
+-------------------------------------
+#  Requisition Detail Create Page Requisition
+
+
+#28-02-2023
+-------------------------------------
+#  Requisition Detail Edit Page modified
+
+
+#01-03-2023
+-------------------------------------
+#  Responsive Layout Fixing - RT React
+
+
+#02-03-2023
+-------------------------------------
+#  Responsive Layout Fixing - RT React
+
+
+#03-03-2023
+-------------------------------------
+#  Making Useful Compoents Ready - RT React
+Candidate Detail card and Table view grid - designings
+
+
+#06-03-2023
+-------------------------------------
+# Reditecting JOB Detail / Candidate Detail / Candidate Filter Details
+
+
+
+#07-03-2023
+--------------------------------------
+# AG-GRID Implementations for RT
+# AG-GRID for dashbord tables are implemented
+
+
+#08-03-2023
+-------------------------------------
+# RT Changes Modification
+
+
+
+#09-03-2023
+-------------------------------------
+ RT Changes/Modification - AgGRID
+
+
+#10-03-2023
+-------------------------------------
+ RT Changes/Modification - Re-Ordering of Fields in create and Edit Requisiton
+
+
+#13-03-2023
+-------------------------------------
+ RT Changes/Modification - Filtering to cards
+
+
+#14-03-2023
+-------------------------------------
+ RT Changes/Modification - Timeline widget created
+
+
+
+#15-03-2023
+-------------------------------------
+ RT Changes Modification - Timeline widget created
+
+
+
+
+#16-03-2023
+-------------------------------------
+ RT Changes Modification - Search Dynamic
+
+
+
+#17-03-2023
+-------------------------------------
+ RT Changes Modification - Dashboard Board Dynamic
+
+
+
+
+#20-03-2023
+-------------------------------------
+ RT Changes Modification - Workflow Edit in Admin Section + Excel Export
+
+
+
+
+ 
+
+#21-03-2023
+-------------------------------------
+ RT Changes Modification - Workflow Edit in Job Template Section, Top Navigation Menu dropdowns
+
+
+
+# 22-03-2023
+--------------------------------------
+Holiday - Ugadi
+
+
+# 23-03-2023
+--------------------------------------
+-- Learn Language Library in React / Axios
+i18next.changeLanguage(‘en’)
+
+
+# 24-03-2023
+--------------------------------------
+-- Learn Language Library in React / Axios
+i18next.changeLanguage(‘en’)
