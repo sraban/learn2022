@@ -1,0 +1,63 @@
+## Interview #################################
+
+A. use of functions
+	.map()
+	.filter()
+	.reduce()
+	.find()
+	.every()
+	.some()
+
+
+
+B. array functions
+	.forEach()
+	.Object.
+	.join()
+	.split()
+	.pop()
+	.push()
+	.shift()
+	.splice()
+	.unshift()
+    .entries()
+    arr1.concat(arr2);
+
+	Object.keys(fruits);
+	Object.values(fruits);
+	Obs.fromEntries();
+
+
+C. string functions
+    IndexOf() 
+    lastIndexOf()
+    search()
+    slice()
+    splice()
+    substring()
+    substr()
+    replace(x, y)
+    reverse()
+
+
+D. 
+  .call()
+  .bind()
+  .apply()
+
+E.
+  .sort()
+
+E. 
+  Math.sqrt(element)
+  Number.isInteger(x)
+  JSON.stringify()
+  Object.JSON()
+
+F.
+  setTimeout()
+  setInterval()
+
+
+
+==========================================
