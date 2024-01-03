@@ -1,26 +1,35 @@
 #02-01-2024
 -------------------------------------
-# Supporting @Mushtaq Bijapurvala to fix the header of a teams
-	
+# Supporting @Mushtaq Bijapurvala to fix the header of a teams app - wissen intra
+# Teams Video
 
 
 #03-01-2024
 -------------------------------------
 # doselect.email -- angular Assessment - Wissen
+# MS Team 365 - new app upload/configuration
+
 
 
 #04-01-2024
 -------------------------------------
+Find from youtube/udemy
+# MS Team 365 - Create a team/group(like General, OOO notification, PR Notification)
+# MS Team 365 - Schedule a meeting
 
 
 
 #05-01-2024
 -------------------------------------
+Find from youtube/udemy
+# Azure Devops: Library(envirnment/branches), Releases, Repo, Pipeline
 
 
 
 #08-01-2024
 -------------------------------------
+# React Native(spotify)
+	https://www.youtube.com/watch?v=EvSUJ5lUcBw
 
 
 
@@ -29,13 +38,16 @@
 
 
 
+
 #10-01-2024
 -------------------------------------
 
 
 
+
 #11-01-2024
 -------------------------------------
+
 
 
 
