@@ -1,0 +1,23 @@
+QQ.
+1. Global HTTP interceptor using a core module
+2. Share Module[component, directive, services, pipes, constants, model, templates, store]
+3. Core Module[component, directive, services, pipes, constants, model]
+4. CMS Modules[component, directive, services, pipes, mock, constants, store]
+
+
+<ng-container
+<ng-template
+
+@HostBinding()
+ng generate module <module-name> --route <route-name> --module <parent-module>
+
+@@@@Googling.............
+1. Slideshares of Angular[store, router, reactiveform, service inject] and React
+2. online quiz basic/advanced/...
+3. Slide share for typescript fundamentals - TypeScript Basics
+
+
+
+
+@@@@QUIZ
+https://www.w3docs.com/quiz/certificate/42/88/1704368887/AAAA/2bfd5fb7ce6ee09d73739e79311bf08b

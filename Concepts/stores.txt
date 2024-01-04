@@ -1,0 +1,13 @@
+NGRX
+==================
+https://www.rainerhahnekamp.com/en/ngrx-best-practices-series-2-modularity/
+https://hahoangv.wordpress.com/2018/07/04/top-rxjs-operators-for-angular-developers/
+
+
+
+
+https://www.interviewbit.com/angular-interview-questions/
+
+
+Redux
+===================

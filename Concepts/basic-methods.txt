@@ -61,3 +61,8 @@ F.
 
 
 ==========================================
+ngrx [a,r,(c/e)] change the initState screenshots
+various quiz/interview snippets angular
+rxjs methods mostly used in large apps
+
+snapshot collection of ngrx
