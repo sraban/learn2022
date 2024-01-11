@@ -1,3 +1,23 @@
+# doselect.email -- angular Assessment - Wissen
+# MS Team 365 - new app upload/configuration
+
+Find from youtube/udemy
+# MS Team 365 - Create a team/group(like General, OOO notification, PR Notification)
+# MS Team 365 - Schedule a meeting
+
+Find from youtube/udemy
+# Azure Devops: Library(envirnment/branches), Releases, Repo, Pipeline
+
+
+React Native(spotify)
+	https://www.youtube.com/watch?v=EvSUJ5lUcBw
+###############################################################
+::hypnosis scripts pdf free
+https://freehypnosisscripts.info/free-hypnosis-scripts/
+###############################################################
+
+
+
 #02-01-2024
 -------------------------------------
 # Supporting @Mushtaq Bijapurvala to fix the header of a teams app - wissen intra
@@ -7,43 +27,38 @@
 #03-01-2024
 -------------------------------------
 # preparing for interview angular0do select exam
-# doselect.email -- angular Assessment - Wissen
-# MS Team 365 - new app upload/configuration
+
 
 
 
 #04-01-2024
 -------------------------------------
-# preparing for interview angular0do select exam
-Find from youtube/udemy
-# MS Team 365 - Create a team/group(like General, OOO notification, PR Notification)
-# MS Team 365 - Schedule a meeting
+# preparing for interview angular doselect exam
+
 
 
 
 #05-01-2024
 -------------------------------------
-Find from youtube/udemy
-# Azure Devops: Library(envirnment/branches), Releases, Repo, Pipeline
-
+# Preparing Angular for doselect assesment
 
 
 #08-01-2024
 -------------------------------------
-# React Native(spotify)
-	https://www.youtube.com/watch?v=EvSUJ5lUcBw
+# Learning Typescript Fundamentals
 
 
 
 #09-01-2024
 -------------------------------------
+# Learning Typescript Fundamentals
 
 
 
 
 #10-01-2024
 -------------------------------------
-
+# Learning React Opensource Project -- for doselect assessment
 
 
 

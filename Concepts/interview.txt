@@ -21,3 +21,8 @@ ng generate module <module-name> --route <route-name> --module <parent-module>
 
 @@@@QUIZ
 https://www.w3docs.com/quiz/certificate/42/88/1704368887/AAAA/2bfd5fb7ce6ee09d73739e79311bf08b
+
+-------------------------
+eLitimus, Doselect, hackerrank, CoCubes, Wheebox, MeritTrac, and Mettl
+-------------------------
+extension- Always Active Window - Always Visible

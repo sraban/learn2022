@@ -66,3 +66,4 @@ various quiz/interview snippets angular
 rxjs methods mostly used in large apps
 
 snapshot collection of ngrx
+snapshots collection of redux - ProvideStore()

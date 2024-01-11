@@ -1,0 +1,44 @@
+-------------------------------------------------
+@@@Vanilla JS
+customElements.define('top-header', TopHeaderElement);
+connectedCallback(), 
+disconnectedCallback(), 
+attributeChangedCallback()
+observedAttributes()
+this.attachShadow({mode: 'open'})
+this.shadowRoot({})
+-------------------------------------------------
+@@@Stencil Projects like react
+    - create a header and footer, display the links based on the api load
+    - create a search service inside the header
+-------------------------------------------------
+What is javascript generator and its async usages
+
+-------------------------------------------------
+What is intersection observer in html / javascript?
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------
+
+
+-------------------------------------------------

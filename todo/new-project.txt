@@ -1,0 +1,50 @@
+--------------------------------------------------
+React
+1. how to create a professonal react project
+2. include a separate web-component using stencil/vanilla
+3. auto fix the tslint errors
+4. auto fix the scss error
+5. pretify codes scss/ts
+6. check before push(pre-commit) (.husky)
+7. generate snapshot(json) for store management
+8. generate separate Models/Mocks for every input to the component
+9. generate constants/models/enums
+10. include a google analytics/medallia to every page
+11. lazy loading of compoents/modules
+12. include store management(Managing Application State & Data Flow)
+13. The UI Component Library
+14. custom icons update using //icomoon.io
+15. include snaphot marbel(rxjs) Testing  using jest
+16. 
+
+prettier
+cypress
+typescript
+eslint/tslint
+styled-componets
+next(for serverside)
+
+--------------------------------------------------
+Angular
+1. include a custom css and js using gulp in angular
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+

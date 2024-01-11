@@ -1,0 +1,270 @@
+class Product {
+  name?: string;
+  price?: number;
+}
+---------------------------------------------
+readonly readonlyField: TypeName;
+
+
+---------------------------------------------
+in js private members
+#name: string;
+#price: number;
+
+---------------------------------------------
+
+class Table extends Product {
+  constructor(public name: string, public price: number, public legs: number) {
+    super(name, price);
+  }
+}
+
+
+---------------------------------------------
+
+
+class Calculator {
+  static add(a: number, b: number) {
+    return a + b;
+  }
+}
+
+GENERIC TYPES
+---------------------------------------------
+Promise<T>
+Record<K,V>
+ex.
+type Result = {
+  firstName: string;
+  surname: string;
+  score: number;
+};
+type ResultRecord = Record<string, Result>; // -or-
+type ResultRecord = Record<"rodj" | "janes" | "fredp", Result>;
+
+
+---------------------------------------------
+function someFunc<T1, T2, ...>(...) {
+ ...
+}
+
+or
+
+
+function firstOrNull<T>(array: T[]): T | null { ... }
+
+---------------------------------------------
+interface Form<T> {
+  errors: {
+    [K in keyof T]?: string;
+  };
+  values: T;
+}
+~~~~~~~~~or~~~~~~~~~~~~~~~
+type Form<T> = {
+  errors: { [K in keyof T]?: string };
+  values: T;
+};
+
+
+---------------------------------------------
+const numberList = new List<number>();
+const numberList = new List<return type of any method inside class>();
+numberList.add(1);
+---------------------------------------------
+
+function logItems<T extends Logable>(items: T[]): void {
+  items.forEach(item => item.log());
+}
+
+
+---------------------------------------------
+(string | number)[]
+
+---------------------------------------------
+
+type Comment = {
+  comment: string;
+  email: string;
+}
+
+:// use case
+Readonly<Comment>  -- all the property are readonly
+Required<Comment>  -- all the property are required
+Partial<Comment>  -- all the property are optional
+---------------------------------------------
+
+interface User<UserIdType> {
+  id: UserIdType;
+  name: string;
+  email: string
+}
+
+https://learntypescript.dev/course-summary
+---------------------------------------------
+
+function logName<T extends {name: string}>(object: T) {
+  console.log("My name is " + object.name);
+}
+
+
+---------------------------------------------
+
+<TypeName>expression;  //  expression as TypeName;
+---------------------------------------------
+const button = <HTMLButtonElement>document.querySelector(".go");
+const button = document.querySelector(".go") as HTMLButtonElement;
+
+
+Non-null assertion operator syntax(!)
+---------------------------------------------
+return text!.concat(text!);
+
+Typeof type guard(typeof item, contact instanceof Person, propertyName in objectVariable)
+---------------------------------------------
+function double(item: string | number) {
+  if (typeof item === "string") {
+    return item.concat(item);
+  } else {
+    return item + item;
+  }
+}
+
+---------------------------------------------
+
+function isPerson(contact: Contact): contact is Person {
+  return (contact as Person).firstName !== undefined;
+}
+
+
+---------------------------------------------
+type UnionType = Type1 | Type2 | ... | TypeN
+
+---------------------------------------------
+
+
+type Button =
+  | { kind: "round"; renderIcon: () => void }
+  | { kind: "normal"; renderText: () => void };
+function render(button: Button) {
+  if (button.kind === "round") {
+    button.renderIcon();
+  } else {
+    button.renderText();
+  }
+}
+---------------------------------------------
+
+
+let keys: keyof ContactDetails;
+
+---------------------------------------------
+type ContactDetails = { [K in "name" | "email"]: string };
+
+---------------------------------------------
+{
+  [K in keyof T]-?: TypeName
+}
+
+---------------------------------------------
+{
+  -readonly [K in keyof T]: TypeName
+}
+
+---------------------------------------------
+let newObject: typeof existingObject;
+
+---------------------------------------------
+
+type Person = {
+  readonly name: string;
+  readonly age: number;
+}
+
+Ans
+type Writable<T> = {
+    -readonly [P in keyof T]: T[P];
+}
+
+
+---------------------------------------------
+
+CONDITIONAL TYPES
+---------------------------------------------
+
+
+type ObjectWithKeys<T, K extends keyof T> = {
+  [P in K]: T[P];
+};
+
+---------------------------------------------
+
+
+IMMUTABLE TYPES
+---------------------------------------------
+
+readonly scores: readonly number[];
+
+
+
+---------------------------------------------
+let bill = Object.freeze({
+  name: "Bill",
+  age: 30,
+});
+
+
+
+Readonly<{
+    name: string;
+    age: number;
+}>
+
+---------------------------------------------
+Object.freeze() performs a shallow freeze on an object. -- not nested arrows / objects
+
+---------------------------------------------
+
+const bob = {
+  name: {
+    firstName: "Bob",
+    surname: "Keel"
+  },
+  profile: {
+    rating: "medium"
+  }
+} as const;
+bob.name.surname = "Smith";
+bob.profile.rating = "high";
+
+error will throw "as const" immutable
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
+
+---------------------------------------------
+
