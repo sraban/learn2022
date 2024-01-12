@@ -1,13 +1,13 @@
 ref
 
------------------------------
+-----------------------------------------------------------------
 react
 react native
 electron
 next
 
 
------------------------------
+-----------------------------------------------------------------
 useState()
 useEffect()
 useRef()
@@ -16,7 +16,7 @@ useMemo()
 useCallback()
 use
 
------------------------------
+-----------------------------------------------------------------
 Q. How to dynamically create a component and its propertires (props, states, html)
 Q. How to create a directive and use it in html-jsx
 Q. How to watch a props varilable in react like "ngOnChanges"
@@ -27,7 +27,7 @@ Q. any event bus concept like to pass the data from one to other like in ng (@Ho
 Q. 
 
 
------------------------------
+-----------------------------------------------------------------
 
 constructor() − 
 getDerivedStateFromProps(props, state) -- ngOnChanges()
@@ -35,213 +35,330 @@ getSnapshotBeforeUpdate() --
 render() --> ngAfterViewInit()
 componentDidMount() --  ngOnInit()
 componentDidUpdate(prevProps, prevState, snapshot) -- ngOnChanges()
-componentWillUnmount() --- ngONDestroy()
+componentWillUnmount() --- ngOnDestroy()
 
 <tr *ngFor="let item of List"></tr> | this.state.items.map((item) => {})
------------------------------
+-----------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------
+componentDidMount / componentWillUnmount
+componentDidUpdate
+
+
+useEffect( <update function>, <dependency> )  ----- for each side effects
+-----------------------------------------------------------------
+
+const ThemeContext = React.createContext({
+   color: 'black',
+   backgroundColor: 'white'
+});
 
 
+~~~~~~~~~~~~~
+<ThemeContext.Provider value={{
+         color: 'white',
+         backgroundColor: 'green'
+      }}>
+<HelloWorld />
+</ThemeContext.Provider>
 
------------------------------
+~~~~~~~~~~~~~
+<ThemeContext.Consumer>
+         {
+            ( {color, backgroundColor} ) =>
+            (<div style={{
+               color: color,
+               backgroundColor: backgroundColor }}>
+               Hello World
+            </div>)
+         }
+</ThemeContext.Consumer>
 
+let theme = useContext(ThemeContext); -- get the context value in direct subchild
 
+-----------------------------------------------------------------
+<refObj> = useRef(<val>)
+const refElement = refObj.current
 
------------------------------
+<input ref={refObj} />
 
 
 
------------------------------
+-----------------------------------------------------------------
 
+const [todoData, setTodoData] = useState({
+   action: '',
+   items: [],
+   newItem: null,
+   id: 0
+})
+~~~~~~~~~~~~~
+const [items, dispatch] = useReducer(todoReducer, [])
+_____________todoReducer(items, action)
+dispatch({
+  type: 'add',
+  payload: items // {todo: todo}
+});
+
+-----------------------------------------------------------------
+const memoizedCallbackFn = useCallback(() => {
+   // code
+}, [a, b])
+
+
+const sum = useCallback(callback_fn, dependency_array)
+const sum = useMemo(() => callback_fn, dependency_array)
+-----------------------------------------------------------------
+var x = [10, 20]
+var y = [10, 20]
+x == y // false
+useMemo(x) == useMemo(y) // true
+
+-----------------------------------------------------------------
+
+React.useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+         window.removeEventListener("scroll", handleScroll);
+      };
+   }, []);
 
+function handleScroll() {
+      if (window.innerHeight + document.documentElement.scrollTop
+         != document.documentElement.offsetHeight) {
+         return;
+      }
+      setBottom(true)
+   }
+~~~~~~NG~~~~~~~~~
+@HostListener('window:scroll', ['$event'])
+onWindowScroll($event) {
+    console.log("scrolling...");
+}
+~~~~~Rxjs~~~~~~~~~~~
+import { fromEvent } from "rxjs";
+this.eventSubscription = fromEvent(window, "scroll").subscribe(e => {
+    this.onWindowScroll();
+});
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
+## Angular
+-----------------------------------------------------------------
+Q. buffer class ---> binary data
+buffer pool ---> outside v8 engine heap
 
------------------------------
+Q. which class allows to register objects for clean up --- new WeakMap()
+Q. webpack.js technique to simplify the scope of modules to reduce size of generated bundle ---> 
 
+    - dynamic import of modules import('./...')
+    - code spliting into chunks
+    - 
+Q. Queue for handing rendeing related task -  rendering task queue.
+Q. Async attr in </script> to load asynchrnoously
+Q. 
+Q. 
+Q. 
+Q. 
 
 
------------------------------
+0. JS: web-component -- connectedCallback(), this.attachShadow({mode: 'open'})
+1. Javascript Garbage Collector Optimisation
+2. Webpack.js Module Linking
+2. Webpack.js deadcode elemenitaiotn- trr shaking
+3. JS: Envirnment Queues
+3. JS: Function Generator (async)
+4. JS: Generator Delegation to other generator --- ex. yeild* asyncGen1()
+5. JS: GZIP Compression --> content-encoding: gzip and accept-encoding in gzip compression
+6. CSS: custom css property :root { --main-color: red; }
+7. CSS: BEM naming convention
+8. CSS: performance layout recalucation --- excess use of media qieries
+9. CSS: property judiciously
+10. jest.config.js
+11. coverageThreshold in js
+12. jest static assets --- ModuleNameWrapper
+13. morcha.js pauses execution on flag - event based pause
+14. module bundler config(webpack config/parcel config)
+15. js: custom-elelement using web-component
 
+16. ngrx implemeration in constructot() example
+17. Angular lazy loadng syntax
+18. Operator in ngrx and Rxjs are same
+19. Angular Design Patterns
+20. Pluraling the text in NG
+-----------------------------------------------------------------
 
 
------------------------------
+## React
+-----------------------------------------------------------------
+Q. react lazy loading syntax
+Q. :host context scss in react
+   - modify top-level(parent) class css
+   - modify sub-child class css
+Q. react translation syntax
+Q. react routing syntax
+Q. React Unit Testing Syntax
+Q. React Redux Saga Syntax
 
+-----------------------------------------------------------------
+### Before Exams Review Cheatsheet
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
+-----------------------------------------------------------------
 
 
 
------------------------------
-
-
-
------------------------------
-
-
-
------------------------------
-
-
-
------------------------------
-
-
-
------------------------------
-
-
-
------------------------------
+-----------------------------------------------------------------
 
 
