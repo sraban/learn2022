@@ -1,0 +1,24 @@
+// global.scss
+@import './variables';
+@import './mixins';
+// @import './fonts';
+@import './icon';
+@import './text';
+@import './component/_button';
+@import './component/_navbar';
+// Import other component styles as needed
+
+// @import 'bootstrap/scss/functions';
+// @import 'bootstrap/scss/variables';
+// @import 'bootstrap/scss/mixins';
+// @import 'bootstrap/scss/grid';
+
+
+body {
+    font-size: $font-size;
+    color: $primary-color;
+}
+
+.sraban-icon {
+    @extend .icon; // Extend styles from _icon.scss
+}
