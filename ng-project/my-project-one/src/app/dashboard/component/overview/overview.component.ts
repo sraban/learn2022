@@ -37,7 +37,6 @@ export class OverviewComponent implements OnInit {
   private createComponentDynamically(componentType: Type<any>) {
     // const componentRef =
     this.dynamicContainer.createComponent(componentType);
-    console.log(componentType);
 
     // Logic to create and attach the component dynamically
     // You can use ViewContainerRef and ComponentFactoryResolver for this

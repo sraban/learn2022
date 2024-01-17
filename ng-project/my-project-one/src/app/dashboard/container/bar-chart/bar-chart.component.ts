@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 
 @Component({
   selector: 'wss-bar-chart',
   templateUrl: './bar-chart.component.html',
   styleUrls: ['./bar-chart.component.scss'],
 })
-export default class BarChartComponent {}
+export default class BarChartComponent {
+  @Input() data: any;
+}
 
 @NgModule({
   declarations: [BarChartComponent],

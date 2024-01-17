@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
+import { PieFiltersComponent } from './pi-filters.component';
 
 @Component({
   selector: 'wss-pie-chart',
@@ -9,7 +10,7 @@ import { Component, NgModule } from '@angular/core';
 export default class PieChartComponent {}
 
 @NgModule({
-  declarations: [PieChartComponent],
+  declarations: [PieChartComponent, PieFiltersComponent],
   imports: [CommonModule],
   bootstrap: [PieChartComponent],
 })

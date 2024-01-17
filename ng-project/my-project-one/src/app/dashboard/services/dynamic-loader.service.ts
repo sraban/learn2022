@@ -6,7 +6,7 @@ import { Compiler, Injectable, Injector, NgModuleRef, Type } from '@angular/core
 export class DynamicLoaderService {
   constructor(
     private compiler: Compiler,
-    public injector: Injector,
+    private injector: Injector,
   ) {}
 
   async loadModule(selectorName: string, moduleName: string): Promise<NgModuleRef<any>> {
@@ -22,6 +22,7 @@ export class DynamicLoaderService {
       .split('-')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join('');
+      
     const moduleName = `${selectorClass}Module`;
     const module = await this.loadModule(selector, moduleName);
     const componentName = (module as any)._bootstrapComponents[0] || `${selectorClass}Component`;
