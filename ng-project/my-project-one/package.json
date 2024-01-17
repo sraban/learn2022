@@ -10,10 +10,11 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
+    "eslint": "eslint .",
     "lint:fix": "ng lint --fix",
     "prettify": "prettier --write \"src/**/*.+(ts|html|scss)\"",
     "prettify-check": "prettier --check \"src/**/*.+(ts|html|scss)\"",
-    "verify": "npm run lint && npm test && npm run prettify"
+    "verify": "npm run lint && npm run prettify"
   },
   "husky": {
     "hooks": {
@@ -22,7 +23,7 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "npm run lint",
+      "npm run eslint",
       "npm test",
       "npm run prettify",
       "git add"
@@ -40,7 +41,7 @@
     "@angular/router": "^15.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "zone.js": "^0.12.0"
   },
   "devDependencies": {
     "@angular-builders/jest": "^17.0.0",

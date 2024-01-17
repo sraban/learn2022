@@ -1,11 +1,11 @@
 .icon {
-    // font-family: 'YourCustomIconFont', sans-serif;
+  // font-family: 'YourCustomIconFont', sans-serif;
 }
 
 .minus::before {
-    content: '\e001';
+  content: '\e001';
 }
 
 .plus::before {
-    content: '\e002';
+  content: '\e002';
 }

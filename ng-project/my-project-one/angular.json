@@ -82,7 +82,9 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "setupFilesAfterEnv": ["<rootDir>/src/setup-jest.ts"],
+            "setupFilesAfterEnv": [
+              "<rootDir>/src/setup-jest.ts"
+            ],
             "jestConfig": "jest.config.js",
             "polyfills": [
               "zone.js",

@@ -1,15 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { OverviewComponent } from './overview/overview.component';
-
-
+import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { OverviewComponent } from './overview/overview.component'
 
 @NgModule({
-  declarations: [
-    OverviewComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [OverviewComponent],
+  imports: [CommonModule],
 })
-export class DashboardModule { }
+export class DashboardModule {}

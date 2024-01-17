@@ -62,7 +62,7 @@ do $npm run verify  which should verify the eslint and test spec and prettify or
 .Unsubscribe from observables to avoid memory leaks
 .Use operators like switchMap and mergeMap to avoid nested subscriptions
 .Write self-explanatory code, proper name for members/methods(verbs), use CONST_DATA, readonly, private, public for members in component
-.reduce the if else conditions(use ternary, ??, :?, ?., ..., in oneline for data manipulation)
+.reduce the if else conditions(use ternary, ??, :?, ?., ..., &&, |, & in oneline for data manipulation)
 .Write unit tests for components, services, directive and other Angular constructs, Snapshot Test for ngRx Store(Marble Test for Observables)
 .Keep templates clean by avoiding complex logic. Move logic to the component class
 .Avoid using the : any type unless absolutely necessary. Provide explicit type definitions for variables, parameters, and return types
@@ -75,6 +75,7 @@ do $npm run verify  which should verify the eslint and test spec and prettify or
 .do `$npm run verify` before commit  which should verify the `eslint` and `test.spec` and `prettify`
    use .husky to verify on commit of the code
 .`$npm audit` for checking the js vunerability in packages
+.$git squash all commits into one if multiple commits done
 ----------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------
 

@@ -13,12 +13,11 @@
 // @import 'bootstrap/scss/mixins';
 // @import 'bootstrap/scss/grid';
 
-
 body {
-    font-size: $font-size;
-    color: $primary-color;
+  font-size: $font-size;
+  color: $primary-color;
 }
 
 .sraban-icon {
-    @extend .icon; // Extend styles from _icon.scss
+  @extend .icon; // Extend styles from _icon.scss
 }

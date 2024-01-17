@@ -3,5 +3,4 @@
     "semi": false,
     "arrowParens": "always",
     "printWidth": 120
-    // Add other Prettier options as needed
 }

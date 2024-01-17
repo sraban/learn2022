@@ -1,7 +1,9 @@
 {
   "root": true,
   "ignorePatterns": [
-    "projects/**/*"
+    "**/node_modules/**",
+    "**/coverage/**",
+    "**/jest.config.js"
   ],
   "overrides": [
     {
@@ -10,8 +12,8 @@
       ],
       "plugins": ["prettier"],
       "extends": [
-        "plugin:prettier/recommended",
         "eslint:recommended",
+        "plugin:prettier/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"

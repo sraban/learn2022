@@ -1,9 +1,9 @@
 // _mixins.scss
 @mixin center-absolute() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // $breakpoints: (
@@ -28,76 +28,65 @@
 //     }
 // }
 
-
 @mixin media-mobile() {
-    @media (max-width: 1199.98px) {
-        @content;
-    }
+  @media (max-width: 1199.98px) {
+    @content;
+  }
 }
 
 @mixin media-tablet() {
-    @media (max-width: 1199.98px) {
-        @content;
-    }
+  @media (max-width: 1199.98px) {
+    @content;
+  }
 }
 
 @mixin media-desktop() {
-    @media (max-width: 1199.98px) {
-        @content;
-    }
+  @media (max-width: 1199.98px) {
+    @content;
+  }
 }
 
 @mixin media-desktop-large() {
-    @media (max-width: 1199.98px) {
-        @content;
-    }
+  @media (max-width: 1199.98px) {
+    @content;
+  }
 }
 
 // Define mixin for media query breakpoints
 @mixin media-breakpoint-down($breakpoint) {
-    @if $breakpoint ==xs {
-        @media (max-width: 575.98px) {
-            @content;
-        }
+  @if $breakpoint ==xs {
+    @media (max-width: 575.98px) {
+      @content;
     }
-
-    @else if $breakpoint ==sm {
-        @media (max-width: 767.98px) {
-            @content;
-        }
+  } @else if $breakpoint ==sm {
+    @media (max-width: 767.98px) {
+      @content;
     }
-
-    @else if $breakpoint ==md {
-        @media (max-width: 991.98px) {
-            @content;
-        }
+  } @else if $breakpoint ==md {
+    @media (max-width: 991.98px) {
+      @content;
     }
-
-    @else if $breakpoint ==lg {
-        @media (max-width: 1199.98px) {
-            @content;
-        }
+  } @else if $breakpoint ==lg {
+    @media (max-width: 1199.98px) {
+      @content;
     }
-
-    @else if $breakpoint ==xl {
-        @media (max-width: 1599.98px) {
-            @content;
-        }
+  } @else if $breakpoint ==xl {
+    @media (max-width: 1599.98px) {
+      @content;
     }
+  }
 }
-
-
 
 // Usage example:
 
 .my-component {
-    width: 100%;
+  width: 100%;
 
-    @include media-breakpoint-down(sm) {
-        width: 50%;
-    }
+  @include media-breakpoint-down(sm) {
+    width: 50%;
+  }
 
-    @include media-breakpoint-down(xs) {
-        width: 25%;
-    }
+  @include media-breakpoint-down(xs) {
+    width: 25%;
+  }
 }
