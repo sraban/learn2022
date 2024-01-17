@@ -5,12 +5,13 @@
     "outDir": "./out-tsc/spec",
     "module": "commonjs",
     "types": [
-      "jasmine",
+      "jest",
       "node"
     ]
   },
   "include": [
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "src/app/dashboard/container/**/*.ts"
   ]
 }

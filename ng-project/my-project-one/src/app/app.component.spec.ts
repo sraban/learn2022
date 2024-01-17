@@ -1,26 +1,26 @@
-import { ComponentFixture, TestBed, fakeAsync, waitForAsync } from '@angular/core/testing'
-import { RouterTestingModule } from '@angular/router/testing'
-import { AppComponent } from './app.component'
+import { ComponentFixture, TestBed, fakeAsync, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  let fixture: ComponentFixture<AppComponent>
-  let component: AppComponent
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
       declarations: [AppComponent],
-    }).compileComponents()
-  }))
+    }).compileComponents();
+  }));
 
   beforeEach(fakeAsync(() => {
-    fixture = TestBed.createComponent(AppComponent)
-    component = fixture.componentInstance
-  }))
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
+  }));
 
   it('should test 1=1', () => {
-    expect(component).toBeTruthy()
-  })
+    expect(component).toBeTruthy();
+  });
 
   // it('should create the app', () => {
   //   const fixture = TestBed.createComponent(AppComponent);
@@ -40,4 +40,4 @@ describe('AppComponent', () => {
   //   const compiled = fixture.nativeElement as HTMLElement;
   //   expect(compiled.querySelector('.content span')?.textContent).toContain('app is running');
   // });
-})
+});

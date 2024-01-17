@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'wss-root',
@@ -6,6 +6,6 @@ import { Component } from '@angular/core'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'my-project-one'
-  name = 'Hello'
+  title = 'my-project-one';
+  name = 'Hello';
 }
