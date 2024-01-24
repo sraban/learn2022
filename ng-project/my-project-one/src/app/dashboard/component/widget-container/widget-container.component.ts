@@ -1,5 +1,5 @@
-import { Component, ViewChild, ViewContainerRef } from '@angular/core';
-import { DynamicModuleLoaderService } from '../../services/dynamic-module-loader.service';
+import { AfterViewInit, Component, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { DynamicSimpleLoaderService } from '../../services/dynamic-simple-loader.service';
 import { VIEW_NAMES } from '../../constants/view-name.constant';
 
 @Component({
@@ -7,29 +7,30 @@ import { VIEW_NAMES } from '../../constants/view-name.constant';
   templateUrl: './widget-container.component.html',
   styleUrls: ['./widget-container.component.scss'],
 })
-export class WidgetContainerComponent {
+export class WidgetContainerComponent implements AfterViewInit {
   @ViewChild('dynamicContainer', { read: ViewContainerRef }) dynamicContainer!: ViewContainerRef;
 
-  constructor(private dynamicLoaderService: DynamicModuleLoaderService, private viewContainerRef: ViewContainerRef) {}
+  constructor(private dynamicSimpleLoaderService: DynamicSimpleLoaderService) {}
 
-  async ngOnInit() {
+  async ngAfterViewInit() {
     // API Data
     const jsonData = [
       { chartName: 'PI', data: {} },
       { chartName: 'BAR', data: {} },
       { chartName: 'LINE', data: {} },
-      { chartName: 'DOUGHNUT', data: {} },
     ];
+
+    this.dynamicContainer.clear();
 
     for (const entry of jsonData) {
       const selector = VIEW_NAMES[entry.chartName];
-      const factory = await this.dynamicLoaderService.createDynamicModule(selector);
+      const factory = await this.dynamicSimpleLoaderService.createDynamicComponent(selector);
 
       // Create an instance of the dynamic component
-      const componentRef = this.viewContainerRef.createComponent(factory);
+      let component: ComponentRef<any> = this.dynamicContainer.createComponent(factory);
 
       // Access the instance of the dynamic component
-      const dynamicComponentInstance = componentRef.instance as any;
+      const dynamicComponentInstance = component.instance;
 
       // Set properties or perform any other necessary initialization
       dynamicComponentInstance.data = 'Hello from Dynamic Component!';

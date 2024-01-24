@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DynamicModuleLoaderService } from './dynamic-module-loader.service';
+import { DynamicSimpleLoaderService } from './dynamic-simple-loader.service';
 
 describe('DynamicModuleLoaderService', () => {
-  let service: DynamicModuleLoaderService;
+  let service: DynamicSimpleLoaderService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DynamicModuleLoaderService);
+    service = TestBed.inject(DynamicSimpleLoaderService);
   });
 
   it('should be created', () => {
