@@ -53,7 +53,7 @@ chrome.exe --js-flags="--trace-opt --trace-deopt --trace-bailout"
 chrome://flags
 chrome://version
 chrome://flags/#ignore-gpu-blocklist
-
+disable ssl ---> 
 --------------------------------------------
 node --inspect
 127.0.0.1:9229

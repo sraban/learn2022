@@ -27,10 +27,10 @@ export class WidgetContainerComponent implements AfterViewInit {
       const factory = await this.dynamicSimpleLoaderService.createDynamicComponent(selector);
 
       // Create an instance of the dynamic component
-      let component: ComponentRef<any> = this.dynamicContainer.createComponent(factory);
+      const compRef: ComponentRef<any> = this.dynamicContainer.createComponent(factory);
 
       // Access the instance of the dynamic component
-      const dynamicComponentInstance = component.instance;
+      const dynamicComponentInstance: any = compRef.instance;
 
       // Set properties or perform any other necessary initialization
       dynamicComponentInstance.data = 'Hello from Dynamic Component!';

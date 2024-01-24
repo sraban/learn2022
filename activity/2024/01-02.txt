@@ -23,19 +23,14 @@ https://freehypnosisscripts.info/free-hypnosis-scripts/
 # Supporting @Mushtaq Bijapurvala to fix the header of a teams app - wissen intra
 
 
-
 #03-01-2024
 -------------------------------------
 # preparing for interview angular0do select exam
 
 
-
-
 #04-01-2024
 -------------------------------------
 # preparing for interview angular doselect exam
-
-
 
 
 #05-01-2024
@@ -48,12 +43,9 @@ https://freehypnosisscripts.info/free-hypnosis-scripts/
 # Learning Typescript Fundamentals
 
 
-
 #09-01-2024
 -------------------------------------
 # Learning Typescript Fundamentals
-
-
 
 
 #10-01-2024
@@ -61,11 +53,9 @@ https://freehypnosisscripts.info/free-hypnosis-scripts/
 # Learning React Opensource Project -- for doselect assessment
 
 
-
 #11-01-2024
 -------------------------------------
 # Learning React Opensource Project -- for doselect assessment
-
 
 
 #12-01-2024
@@ -75,41 +65,42 @@ https://freehypnosisscripts.info/free-hypnosis-scripts/
 
 #15-01-2024
 -------------------------------------
-# react interview Questions
+# react interview Questions -- for doselect assessment
 
 
 #16-01-2024
 -------------------------------------
 # Study on d3 charts with the dashboard
 
+
 #17-01-2024
 -------------------------------------
-
+Study on plot.ly graphs
 
 
 #18-01-2024
 -------------------------------------
-
+# type checking of d3 graphs in d3 project
 
 
 #19-01-2024
 -------------------------------------
-
+# lazy loading of componets set ups in d3 project
 
 
 #22-01-2024
 -------------------------------------
-
+# lazy loading of componet functionality test
 
 
 #23-01-2024
 -------------------------------------
-
+# lazy loading of d3 graphs
 
 
 #24-01-2024
 -------------------------------------
-
+# Jest set up in angular project
 
 
 #25-01-2024
